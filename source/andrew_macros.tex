@@ -1,0 +1,76 @@
+% Packages that we may wish to include:
+% Note that these should all be approved by TAPS:
+% https://authors.acm.org/proceedings/production-information/accepted-latex-packages
+% \usepackage{url}  % URLs
+% \usepackage[normalem]{ulem}  % underlines and strikethroughs
+% \usepackage{wrapfig}
+% \usepackage{listings}
+% \usepackage{fancyvrb}
+
+% Colors
+% \usepackage{xcolor}
+\definecolor{andrewpurple}{HTML}{A53DFF}
+\definecolor{andreworange}{HTML}{E07400}
+\definecolor{darkgreen}{HTML}{009B55}
+\definecolor{darkblue}{HTML}{004d80}
+\definecolor{magenta}{HTML}{99195d}
+
+% Annotations
+\newcommand\andrew[1]{\textcolor{andrewpurple}{#1}}
+% \newcommand\zed[1]{{#1}}
+\newcommand\important[1]{\textcolor{darkgreen}{#1}}
+\newcommand\unimportant[1]{\textcolor{gray}{\sout{#1}}}
+\newcommand\move[1]{\textcolor{andreworange}{#1}}
+\newcommand{\change}[1]{\textcolor{andrewpurple}{#1}}
+\newenvironment{changes}
+{\begingroup\color{andrewpurple}}
+{\endgroup}
+
+% Fonts
+\def\computer#1{{\small\texttt{#1}}}
+\AtBeginEnvironment{quote}{\itshape}
+
+% Sectioning
+\def\subparagraph#1{\textbf{#1.}}
+
+% URL formatting
+\def\UrlBigBreaks{\do\/\do-\do\#}
+
+% Spacing helpers
+\def\shortspace{\kern 0.1em}
+
+% Common strings
+\def\KaTeX{K\kern-.2em\raisebox{.2em}{\scriptsize A}\kern-.12em\TeX}
+
+% Drawing boxes as isotypes in table
+% Based on feedback from https://tex.stackexchange.com/questions/32597/vertically-centered-horizontal-rule-filling-the-rest-of-a-line
+% and here https://texfaq.org/FAQ-rule#:~:text=The%20%5Crule%20command%20is%20used,as%20for%20characters%20with%20descenders).
+% and here https://tex.stackexchange.com/questions/173042/is-it-possible-to-create-a-barchart-in-a-table
+% and https://tex.stackexchange.com/questions/74353/what-commands-are-there-for-horizontal-spacing
+% and https://moodle.org/mod/forum/discuss.php?d=431982
+\definecolor{niceblue}{HTML}{8295ff}
+\def\bigbox{\color{niceblue}\rule[.25ex]{1ex}{1ex} \hskip .1ex}
+\def\smallbox{\hskip .25ex \color{gray}\rule[.5ex]{.5ex}{.5ex} \hskip .25ex \hskip .1ex}
+\def\boxes#1#2{
+\hskip .1ex % Add a bit of space, because this seems necessary for the boxes not to take up the whole line?
+\newcount\boxnum
+\boxnum=0
+\loop
+\ifnum \boxnum<#1 \bigbox \else \smallbox \fi
+
+\advance \boxnum by 1
+\ifnum \boxnum<#2
+\repeat
+}
+
+% Inline figures
+\newenvironment{inlinefigureenv}
+{\setlength{\topsep}{2.5ex}\center}
+{\endcenter}
+
+\newcommand{\inlinefigure}[2][.5\textwidth]{%
+\begin{inlinefigureenv}%
+\includegraphics[width=#1]{#2}%
+\vspace{-1.25ex}%
+\end{inlinefigureenv}%
+}

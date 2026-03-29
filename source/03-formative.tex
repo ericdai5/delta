@@ -1,0 +1,44 @@
+\section{Formative Study}\label{FormativeStudy}
+
+\jeff{I would call this a Content Analysis?}
+
+To understand the current design space for interactive formulas, we conducted a structured examples analysis of existing interactive mathematical content on the web. \jeff{You should clarify that you were looking to analyze patterns of interaction}
+
+\subsection{Method}
+
+We surveyed interactive math content across established sources including Distill.pub, Setosa.io, Explorable Explanations, complex-analysis.com, Georgia Tech's Interactive Linear Algebra textbook, and individual developer sites. We first identified exhibits that present a formula in a multiple-representation or interactive context, then one author developed a coding scheme iteratively through open coding of the first ten examples before applying the stabilized scheme to the remainder. For each of 46 instances across 35 unique pages, we coded six dimensions \jeff{I think it's more appropriate to call these ``paterns'' than ``dimensions''}.
+
+\subsection{Findings}
+
+Three findings directly informed the design of Delta.
+
+\subsubsection{Finding 1: Dynamic formulas in interactive math 
+exhibits are common.}
+
+More than half of instances (25 of 46) featured formula values that 
+update in response to interaction. This suggests that authors already 
+view formulas as living objects rather than static \LaTeX{} 
+renderings, and that readers benefit from seeing how changing one 
+quantity ripples through an expression. Yet as later findings show, 
+the mechanisms for driving these updates remain indirect and 
+inconsistent.
+
+\subsubsection{Finding 2: Most formulas are linked to 
+visualizations.}
+
+29 of 46 instances (63\%) established some form of linked selection 
+between a formula and an accompanying visualization. Formulas and 
+graphs frequently co-occur in mathematical exposition, and authors 
+are clearly investing effort to connect them. However, as noted in 
+our earlier analysis of directionality, the vast majority of these 
+links run in only one direction, limiting readers' ability to 
+translate freely between representations.
+
+\subsubsection{Finding 3: Some exhibits use step-by-step 
+revelation.}
+
+3 instances used step controls to walk readers through a 
+visualization incrementally, almost all in the context of graphs and 
+vectors. Although uncommon, this pattern points to an authorial 
+desire to scaffold complex ideas by revealing structure gradually 
+rather than presenting a fully formed formula all at once.

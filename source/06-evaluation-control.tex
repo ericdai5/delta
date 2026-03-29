@@ -1,0 +1,70 @@
+\section{Controlled Study}\label{results}
+To evaluate Delta's impact on the experience of authoring augmentations, we conducted a remote comparative usability study. The study was designed to answer the following questions:
+
+\vspace{0.5em}
+\noindent\textbf{RQ1.} Does Delta reduce the time to augment an existing interactive formula compared to a baseline React approach?
+\\
+\noindent\textbf{RQ2.} Does Delta reduce the effort to augment an existing interactive formula compared to a baseline React approach?
+\vspace{0.5em}
+
+\subsection{Methodology}
+
+\paragraph{Participants} We recruited 19 graduate students and upper division undergraduates from a private university's engineering school, across computer science, data science, computer graphics, and robotics. Our target users are potential authors of interactive math web documents — a role without a well-defined professional category. Since such authors likely combine mathematical typesetting fluency with web development skills, we operationalized eligibility around three competencies - \LaTeX{} formulas, JavaScript, and basic React, verified through a screening survey. Participants rated their comfort writing \LaTeX{} formulas as a median of 4 on a 5-point Likert scale ($\sigma = 0.91$); 11 wrote \LaTeX{} weekly, 5 monthly, and 3 less than monthly. They rated their comfort writing JavaScript as a median of 4 ($\sigma = 1.12$); 9 wrote JS weekly, 8 monthly, 1 daily, and 1 less than monthly. Regarding React experience, 6 had professional experience, 6 had personal or academic experience, and 7 had limited personal or academic experience\andrew{how limited? so limited we shouldn't take them as representative users?}. We refer to these participants by anonymized random double-digit numeric identifiers (e.g., P21, P48).
+
+\paragraph{Setup} Study sessions took place remotely over Zoom and were recorded. Participants used their own computers to retain familiar input configurations, and logged into GitHub in Google Chrome using their personal accounts. Each task had a dedicated branch in a GitHub Codespace — an online IDE — pre-loaded with template code. Survey data was collected via Google Forms within the same browser session.
+
+\paragraph{Tasks} The task exercised the core aspects distinguishing Delta's config-based structure from a baseline React approach: variable declaration, interaction configuration, labels, and derived computation. Participants were given a starter implementation of an interactive formula for kinetic energy ($K = \frac{1}{2}mv^2$), where $K$ and $v$ were already interactive---dragging $v$ updated the computed value of $K$---but $m$ was static. Participants were asked to make $m$ draggable (with values ranging from 0 to 10 in increments of 1, defaulting to 1), add a label displaying its current value and description, and ensure $K$ updated correctly based on both $m$ and $v$. A reference video demonstrated the target behavior. Participants were given 20 minutes per task, a limit determined through informal pilot testing \andrew{why was it chosen to be 20?}. 
+
+The study was within-subjects: each participant completed the task with both libraries in sequence. Library order was counterbalanced (9 baseline-first, 10 Delta-first) to mitigate learning effects.\andrew{within-subjects pretty unconventional for programming studies (usually learning effects are massive), will have to justify why learning effects don't undermine results here} Instead of a demonstration or practice session, participants received written API tutorial materials they could reference freely throughout.\andrew{why on-demand references instead of practice session?}
+
+\paragraph{Baseline} We compared Delta to a baseline React implementation where authors manually manage React state, annotate LaTeX strings with \texttt{\textbackslash cssId\{\}} references, and wire up components with matching props for hover, drag, and display. This represents the conventional approach, where interactivity is assembled imperatively from low-level primitives rather than declared in a configuration. Both conditions began from examples with identical appearance interactive behavior, allowing us to observe viscosity\andrew{first time this term appears} in a controlled manner. Since Delta provides formula-rendering UI components, we moved the baseline's UI component code into separate, non-editable files to minimize confounding factors---particularly diffuseness and cognitive load from UI boilerplate.\andrew{not totally sure what you are saying here\ldots{} I think it is something about reducing confounds due to poor organization of React starter code by hiding away as much unnecessary complexity as possible} This allowed participants in both conditions to avoid navigating unrelated infrastructure. The resulting editable file was 61 lines in the baseline and 40 lines in Delta.
+
+\paragraph{Measures.} We collected behavioral measures from screen recordings and subjective measures from post-task questionnaires. Behavioral measures included \textit{completion time}, \textit{guide reading time}, \textit{number of guide views}, and \textit{notes on irrelevant edits}.\andrew{why were these captured, what were you hoping to determine using them?} Participants could indicate when they believed they were finished; completion time was measured from first edit to researcher verification that all requirements were met, with participants asked to continue if any were unmet. Those who exceeded the 20-minute limit were stopped and their time recorded as 20 minutes. For subjective measures, participants completed a questionnaire after both conditions. On a 7-point Likert scale (1 = baseline, 4 = about the same, 7 = Delta), they rated which library was (1) easier to complete the task with, (2) better suited for the task, and (3) a better match for the language they would use to describe the task. Participants also provided free-text explanations for each rating.
+
+\paragraph{Analysis.} Because our data are paired and not assumed to be normally distributed, we use the Wilcoxon signed-rank test for all behavioral comparisons. For subjective Likert ratings, we test whether responses differ significantly from the neutral midpoint (4) using a one-sample Wilcoxon signed-rank test. We report Cohen's $d$ for paired samples as a measure of effect size where applicable.
+
+\subsection{Results}
+
+\paragraph{Effect on task speed (RQ1).}
+Nearly all tasks (37 of 38, 97\%) were completed within the 20-minute time limit. All 19 tasks done with Delta were completed within the limit; one participant (P30) did not finish with the baseline. Participants completed the task significantly faster with Delta ($\text{Mdn} = 5.4$ min, $\text{M} = 5.3$ min, $\text{SD} = 1.8$ min) than with the baseline ($\text{Mdn} = 9.4$ min, $\text{M} = 10.5$ min, $\text{SD} = 4.4$ min); Wilcoxon $W = 6.0$, $p < .001$, Cohen's $d = 1.16$. Of 19 participants, 16 were faster with Delta. The median speedup was $1.87\times$.\andrew{checking --- to me this implies (1) computing speedup individually for all participants; (2) sorting list of speedups; (3) picking middle value. if that's not what this is, may need another phrase}
+
+We observed a significant order effect on the magnitude of the time difference between conditions (Mann-Whitney $U = 88.0$, $p < .001$). Participants who used the baseline first showed a larger advantage for Delta (mean difference $= 8.9$ min) than those who used Delta first (mean difference $= 1.8$ min). This suggests that task familiarity compressed completion times in the second condition regardless of library. Critically, even within the more conservative subgroup that used Delta \textit{first}, Delta was still significantly faster (Wilcoxon $W = 6.0$, $p = .027$, $n = 10$), with 7 of 10 participants completing the task faster with Delta.
+
+\begin{figure}[H]
+  \centering
+  \framedfig{fig/completion_time.pdf}
+  \caption{Task completion times by tool. Delta led to significantly faster completion times than the baselines regardless of order effects.}
+  \label{fig:completion_time}
+\end{figure}
+
+Six of 19 participants (32\%) attempted edits in irrelevant parts of
+the codebase with the baseline, compared to only 1 (5\%) with Delta.
+\andrew{how was this measured?}
+Three participants resorted to using browser developer tools to
+inspect element with the baseline; none did so with Delta.
+
+\paragraph{Subjective ratings.}
+Participants rated Delta significantly above the neutral midpoint on all three scales: ease ($\text{Mdn} = 7$, $\text{M} = 6.42$; $W = 1.5$, $p < .001$), suitability ($\text{Mdn} = 6$, $\text{M} = 5.84$; $W = 9.0$, $p = .001$), and language match ($\text{Mdn} = 7$, $\text{M} = 5.53$; $W = 26.5$, $p = .014$). Eighteen of 19 participants rated Delta as easier (scores of 5--7); the one exception was P30, who valued the baseline's proximity to idiomatic React (``Library A felt easier to understand'').\andrew{what were the levels for the baseline?}
+
+\begin{figure}[H]
+  \centering
+  \framedfig{fig/subjective_ratings.pdf}
+  \caption{\textbf{Post-task subjective ratings.} Participants rated which library was easier, better suited, and a better language match on a 7-point scale (1\,=\,Baseline, 4\,=\,Same, 7\,=\,Delta; $n = 19$). All 3 measures favored Delta significantly ($p \leq .014$).}
+  \label{fig:subjective_ratings}
+\end{figure}
+
+\paragraph{Qualitative findings.}
+Participants' free-text responses revealed qualitative differences in \textit{where} each tool imposed cognitive load. 
+
+The most frequently cited pain point with the baseline was the \texttt{\textbackslash cssId\{\}} mechanism---manually annotating LaTeX strings with CSS identifiers and ensuring they match across component props. Seven participants (P11, P14, P20, P79, P87, P88, P99) reported confusion or errors with this step (e.g., P88: ``I forgot to add the cssId on the LaTeX element `m'\,''; P87: ``Felt a little clunky using \texttt{\textbackslash\textbackslash cssId}''). More broadly, seven participants (P45, P55, P79, P80, P87, P88, P99) described the baseline as requiring edits across multiple disconnected locations---state declarations, component props, and the LaTeX string---even within the abstracted file (P55: ``making the small change to make m modifiable with a drag motion required changes in several parts of the code''). 
+
+By contrast, 14 of 19 participants reported no confusion or difficulty with Delta, attributing this to co-located variable configuration: all properties for a given variable were specified in a single place (P48: ``Less places to adjust code''; P80: ``all I had to do was add a few lines of code that were very similar to the existing code''). Several participants (P11, P20, P45, P57, P79, P80) noted that Delta's structure matched their mental model of the task---P45 observed it let them ``place all the requirements in one config, using the same language as described by the task.''\andrew{this will not be seen as particularly compelling --- we controlled the language of the task, so it might be seen as obvious that it would reflect how we designed the language} The most common Delta error was forgetting to update the \texttt{semantics} function after adding a new
+variable (P11, P17, P19, P50, P55, P87), a mistake participants quickly self-corrected once the computed value did not update.
+
+Two participants (P29, P14) preferred the baseline on suitability
+and language dimensions despite completing the task faster with
+Delta. Both cited familiarity with React idioms: P14, among the
+most experienced React developers in the sample, felt the baseline
+``gave me more control,'' and P29 noted it ``works more seamlessly
+with the rest of a React app''---pointing to a tension between
+task-specific efficiency and integration with existing workflows.

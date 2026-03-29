@@ -1,0 +1,471 @@
+% Guidelines for references:
+% * Don't show 'n.d.' if there's no date
+% * Include all authors' full names
+% * Proceedings format: Names. Title. Venue, publisher (Year). Pages.
+% * Journal format: Names. Title. Journal Volume Issue (Year), Pages. [Publisher can sometimes be left out if already included in the journal name.]
+% * Online attributed: Author. Title. URL.
+% * Online non-attributed: Title. URL.
+%
+% Checks to perform:
+% * Are author names correct?
+% * Are conference names consistent?
+% * Are page numbers right?
+% * Are years correct?
+% * Is the title correct, with the right casing?
+%
+% Guidelines relevant to specific types of documents:
+% - Articles
+%   - Often the publisher is not needed in the reference because it already appears in the name of the journal (e.g., "ACM Transactions on Computer-Human Interaction")
+% - Online
+%   - Online sources should generally use "online" (and not "misc")
+%   - The listing should include an author and a 'urlyear' or date or urldate
+% - "Tool"
+%   - This bibliography file uses the convention of the "tool:" citation key prefix for
+%     entries meant to be referenced as an existing tool, and not as a publication about
+%     that tool.
+%   - Each tool should have a 'title' and a 'urlyear'.
+%
+% Entries should be sorted, formatted, and de-duplicated using
+% https://flamingtempura.github.io/bibtex-tidy/index.html?opt=%7B%22curly%22%3Atrue%2C%22numeric%22%3Atrue%2C%22space%22%3A2%2C%22tab%22%3Afalse%2C%22align%22%3A1%2C%22blankLines%22%3Atrue%2C%22sort%22%3A%5B%22type%22%2C%22key%22%2C%22author%22%2C%22title%22%5D%2C%22duplicates%22%3A%5B%22key%22%5D%2C%22stripEnclosingBraces%22%3Afalse%2C%22dropAllCaps%22%3Afalse%2C%22escape%22%3Afalse%2C%22sortFields%22%3A%5B%22title%22%2C%22shorttitle%22%2C%22author%22%2C%22year%22%2C%22month%22%2C%22day%22%2C%22journal%22%2C%22booktitle%22%2C%22location%22%2C%22on%22%2C%22publisher%22%2C%22address%22%2C%22series%22%2C%22volume%22%2C%22number%22%2C%22pages%22%2C%22doi%22%2C%22isbn%22%2C%22issn%22%2C%22url%22%2C%22urldate%22%2C%22copyright%22%2C%22category%22%2C%22note%22%2C%22metadata%22%5D%2C%22stripComments%22%3Afalse%2C%22trailingCommas%22%3Afalse%2C%22encodeUrls%22%3Afalse%2C%22tidyComments%22%3Atrue%2C%22removeEmptyFields%22%3Afalse%2C%22removeDuplicateFields%22%3Afalse%2C%22lowercase%22%3Atrue%2C%22backup%22%3Atrue%7D
+@preamble{"
+\def\articleno#1{Article #1}
+\def\paperno#1{Paper #1}
+\def\toappear{To appear}
+\def\eatnexttoken#1{} 
+\def\pubmit{The MIT Press}
+\def\pubieee{IEEE}
+\def\pubacm{ACM}
+\def\pubwiley{John Wiley \& Sons, Ltd.}
+\def\pubspringer{Springer}
+\def\pubelsevier{Elsevier}
+\def\pubmorgankaufmann{Morgan Kaufmann}
+\def\pubemerald{Emerald Group Publishing Limited}
+\def\journalspae{Software---Practice and Experience}
+\def\journalsoftware{IEEE Software}
+\def\journalcacm{Communications of the ACM}
+\def\journaljvlc{Journal of Visual Languages and Computing}
+\def\journalmms{International Journal of Man-Machine Studies}
+\def\journaltosem{ACM Transactions on Software Engineering and Methodology}
+\def\journaltse{IEEE Transactions on Software Engineering}
+\def\journaltochi{ACM Transactions on Computer-Human Interaction}
+\def\journalsigplan{ACM SIGPLAN Notices}
+\def\journaltog{ACM Transactions on Graphics}
+\def\journaltvcg{IEEE Transactions of Visualization and Computer Graphics}
+\def\confinteract{Proceedings of the International Conference on Human-Computer Interaction}
+\def\confoopsla{Proceedings of the Conference on Object-Oriented Programming Systems, Languages, and Applications}
+\def\confpldi{Proceedings of the Conference on Programming Language Design and Implementation}
+\def\confcscw{Proceedings of the Conference on Computer-Supported Cooperative Work and Social Computing}
+\def\confpopl{Proceedings of SIGPLAN Symposium on Principles of Programming Languages}
+\def\conficsme{Proceedings of the International Conference on Software Maintenance and Evolution}
+\def\conffsesymposium{Proceedings of the International Symposium on Foundations of Software Engineering}
+\def\conffsemeeting{Proceedings of the Joint Meeting on Foundations of Software Engineering}
+\def\conficsm{Proceedings of the International Conference on Software Maintenance}
+\def\confcgit{Proceedings of the International Conference on Computer Graphics and Interactive Techniques}
+\def\confaaai{Proceedings of the AAAI Conference on Artificial Intelligence}
+\def\confchi{Proceedings of the CHI Conference on Human Factors in Computing Systems}
+\def\confemnlp{Proceedings of the Conference on Empirical Methods in Natural Language Processing}
+\def\confiui{Proceedings of the International Conference on Intelligent User Interfaces}
+\def\confuist{Proceedings of the Symposium on User Interface Software and Technology}
+\def\confase{Proceedings of the International Conference on Automated Software Engineering}
+\def\confissta{Proceedings of the International Symposium on Software Testing and Analysis}
+\def\conffase{Proceedings of the International Conference on Fundamental Approaches to Software Engineering}
+\def\conficpc{Proceedings of the International Conference on Program Comprehension}
+\def\conficse{Proceedings of the International Conference on Software Engineering}
+\def\confchase{Proceedings of the International Workshop on Cooperative and Human Aspects of Software Engineering}
+\def\confacl{Proceedings of the Annual Meeting of the Association for Computational Linguistics}
+\def\confvlhcc{Proceedings of the Symposium on Visual Languages and Human-Centric Computing}
+\def\conflas{Proceedings of the Conference on Learning at Scale}
+\def\confisese{Proceedings of the International Symposium on Empirical Software Engineering}
+\def\confsigcse{Proceedings of the Technical Symposium on Computer Science Education}
+\def\confwcre{Proceedings of the Working Conference on Reverse Engineering}
+\def\confhatra{Proceedings of the Workshop on Human Aspects of Types and Reasoning Assistants}
+\def\confonward{Proceedings the Symposium on New Ideas in Programming and Reflections on Software}
+\def\confvldb{Proceedings of the International Conference on Very Large Data Bases}
+"}
+
+
+@inproceedings{ref:head2022math,
+  title     = {Math Augmentation: How Authors Enhance the Readability of Formulas Using Novel Visual Design Practices},
+  author    = {Head, Andrew and Xie, Amber and Hearst, Marti A.},
+  year      = {2022},
+  booktitle = {\confchi},
+  publisher = {\pubacm},
+  note = {\paperno{491}},
+
+}
+
+@online{tool:annotateequations,
+  title = {Annotate equations in LaTeX using {TikZ}},
+  author = {John, {ST} and other contributors},
+  url = {https://github.com/st--/annotate-equations},
+  lastaccessed = {July 6, 2023}
+}
+
+@article{ref:matthews2019craft,
+  title={Craft beautiful equations in Word with LaTeX},
+  author={Matthews, David},
+  year={2019},
+  journal={Nature},
+  publisher={Nature},
+  volume={570},
+  number={7760},
+  pages={263--264},
+}
+
+
+% this one seems unused
+@article{ref:loch2015master,
+  title={Master’s students’ perceptions of Microsoft Word for mathematical typesetting},
+  author={Loch, Birgit and Lowe, Tim W. and Mestel, Ben D.},
+  journal={Teaching Mathematics and Its Applications: International Journal of the IMA},
+  volume={34},
+  number={2},
+  pages={91--101},
+  year={2015},
+  publisher={OUP}
+}
+
+
+
+@article{ref:misfeldt2011computers,
+  title={Computers as medium for mathematical writing},
+  author={Misfeldt, Morten},
+  year={2011},
+journal = {Semiotica},
+  publisher={Walter de Gruyter GmbH \& Co. KG},
+volume = {2011},
+pages = {239}
+}
+
+% seems unused
+@inproceedings{ref:quinby2020effects,
+  title={Effects of digitally typesetting mathematics on working memory},
+  author={Quinby, Francis and Pollanen, Marco and Reynolds, Michael G. and Burr, Wesley S.},
+  booktitle={Engineering Psychology and Cognitive Ergonomics. Mental Workload, Human Physiology, and Human Energy: 17th International Conference, EPCE 2020, Held as Part of the 22nd HCI International Conference, HCII 2020, Copenhagen, Denmark, July 19--24, 2020, Proceedings, Part I 22},
+  pages={69--80},
+  year={2020},
+  publisher={\pubspringer}
+}
+
+
+
+@inproceedings{ref:anthony2005evaluation,
+  title={Evaluation of multimodal input for entering mathematical equations on the computer},
+  author={Anthony, Lisa and Yang, Jie and Koedinger, Kenneth R.},
+  booktitle={\confchi},
+  pages={1184--1187},
+  year={2005},
+  publisher = {\pubacm}
+}
+
+
+@article{ref:knauff2014efficiency,
+  title={An efficiency comparison of document preparation systems used in academic research and development},
+  author={Knauff, Markus and Nejasmic, Jelica},
+  journal={PloS one},
+  volume={9},
+  number={12},
+  pages={e115069},
+  year={2014},
+  publisher={Public Library of Science}
+}
+
+
+
+@article{ref:marghetis2016mastering,
+  title={Mastering algebra retrains the visual system to perceive hierarchical structure in equations},
+  author={Marghetis, Tyler and Landy, David and Goldstone, Robert L.},
+  journal={Cognitive research: principles and implications},
+  volume={1},
+  year={2016},
+  publisher={\pubspringer},
+}
+
+
+
+@article{ref:harrison2020spacing,
+  title={Spacing out! Manipulating spatial features in mathematical expressions affects performance},
+  author={Harrison, Avery and Smith, Hannah and Hulse, Taylyn and Ottmar, Erin R.},
+  journal={Journal of Numerical Cognition},
+  volume={6},
+  number={2},
+  pages={186--203},
+  year={2020}
+}
+
+
+
+@article{ref:goldstone2017adapting,
+  title={Adapting perception, action, and technology for mathematical reasoning},
+  author={Goldstone, Robert L. and Marghetis, Tyler and Weitnauer, Erik and Ottmar, Erin R. and Landy, David},
+  journal={Current Directions in Psychological Science},
+  volume={26},
+  number={5},
+  pages={434--441},
+  year={2017},
+  publisher={SAGE Publications Sage CA: Los Angeles, CA}
+}
+
+
+
+@inproceedings{ref:topping1999using,
+  title={Using MathType to create TeX and MathML equations},
+  author={Topping, Paul},
+  booktitle={Proceedings of the 1999 TEX Annual Meeting, TUGBoat},
+  volume={20},
+  number={3},
+  year={1999}
+}
+
+@manual{tool:wordformulaeditor,
+  title = {Write an equation or formula},
+  author = {Microsoft},
+  url = {https://support.microsoft.com/en-au/office/write-an-equation-or-formula-4f799df7-4ca4-4670-afd3-6135768b01d0},
+  year = {Retrieved {July 7, 2023}}
+}
+
+
+@incollection{ref:leitner2010nice,
+  title={{NiCE} Formula Editor},
+  author={Leitner, Jakob and Rendl, Christian and Perteneder, Florian and Gokcezade, Adam and Seifried, Thomas and Haller, Michael and Zeleznik, Robert and Bragdon, Andrew},
+  booktitle={ACM SIGGRAPH 2010 Talks},
+  articleno = {55},
+  numpages = {1},
+  year={2010},
+  publisher = {\pubacm}
+}
+
+
+
+@inproceedings{ref:gobert2022ilatex,
+  title={{i-LaTeX}: Manipulating Transitional Representations between LaTeX Code and Generated Documents},
+  author={Gobert, Camille and Beaudouin-Lafon, Michel},
+  booktitle={\confchi},
+  note = {\paperno{554}},
+  year={2022},
+  publisher = {\pubacm}
+}
+
+% seems unused
+@online{ref:igalia2023igalia,
+  author = {Igalia},
+  title = {Igalia Brings {MathML} Back to Chromium},
+  year = 2023,
+  url = {https://www.igalia.com/2023/01/10/Igalia-Brings-MathML-Back-to-Chromium.html},
+  year = {Retrieved {July 7, 2023}}
+}
+
+@software{tool:latex,
+  title = {\LaTeX{}},
+  author = {The \LaTeX{} Project},
+  url = {https://www.latex-project.org},
+  year = {Retrieved {July 7, 2023}}
+}
+
+@software{tool:googleslides,
+  author = {Google},
+  title = {Google Slides},
+  url = {https://slides.google.com},
+  year = {Retrieved {July 7, 2023}}
+}
+
+@software{tool:inkscape,
+  author = {Open-source contributors},
+  title = {Inkscape},
+  url = {https://inkscape.org/},
+  year = {Retrieved {July 7, 2023}}
+}
+
+@software{tool:mathcha,
+  author = {Bui Duc Nha},
+  title = {Mathcha},
+  url = {https://www.mathcha.io/},
+  year = {Retrieved {July 7, 2023}}
+}
+
+@software{tool:powerpoint,
+  title = {PowerPoint},
+  author = {Microsoft},
+  url = {https://microsoft.com/powerpoint},
+  year = {Retrieved {July 7, 2023}}
+}
+
+@manual{tool:codecogs,
+  author = {Zyba Ltd.},
+  title = {CodeCogs Equation Editor},
+  url = {https://editor.codecogs.com/},
+  year = {Retrieved {July 7, 2023}}
+}
+
+
+@article{ref:ma2021latexify,
+  title={Latexify Math: Mathematical Formula Markup Revision to Assist Collaborative Editing in Math Q\&A Sites},
+  author={Ma, Suyu and Chen, Chunyang and Khalajzadeh, Hourieh and Grundy, John},
+  journal={\confcscw},
+  volume={5},
+  number={CSCW2},
+  year={2021},
+  publisher={\pubacm}
+}
+
+@inproceedings{ref:weitnauer2016graspable,
+  title={Graspable {Math}: Towards dynamic algebra notations that support learners better than paper},
+  author={Weitnauer, Erik and Landy, David and Ottmar, Erin},
+  booktitle={Proceedings of the Future Technologies Conference},
+  pages={406--414},
+  year={2016},
+  publisher={\pubieee}
+}
+
+@inproceedings{ref:mendes2014structure,
+  title={Structure editing of handwritten mathematics: Improving the computer support for the calculational method},
+  author={Mendes, Alexandra and Backhouse, Roland and Ferreira, Jo\~ao F.},
+  booktitle={Proceedings of the ACM International Conference on Interactive Tabletops and Surfaces},
+  pages={139--148},
+  year={2014},
+  publisher={\pubacm}
+}
+
+
+@article{ref:laviola2006mathpad2,
+  year = {2004},
+  issue_date = {August 2004},
+  author = {LaViola, Joseph J. and Zeleznik, Robert C.},
+  journal = {ACM Trans. Graph.},
+  title = {MathPad$^2$: A System for the Creation and Exploration of Mathematical Sketches},
+  pages = {432–440},
+  publisher={\pubacm}
+}
+
+% seems unused
+@article{ref:bahls2015latexnics,
+  title={LaTeXnics: The effect of specialized typesetting software on STEM students’ composition processes},
+  author={Bahls, Patrick and Wray, Amanda},
+  journal={Computers and Composition},
+  volume={37},
+  pages={104--116},
+  year={2015},
+  publisher={Elsevier}
+}
+
+@masterthesis{ref:pollock2022bluefish,
+  title={Bluefish: A Grammar of Discrete Diagrams},
+  author={Pollock, Joshua Maxwell},
+  year={2022},
+  institution={Massachusetts Institute of Technology},
+  note={Master's thesis}
+}
+
+@inproceedings{ref:han2020textlets,
+  title={Textlets: supporting constraints and consistency in text documents},
+  author={Han, Han L. and Renom, Miguel A. and Mackay, Wendy E. and Beaudouin-Lafon, Michel},
+  booktitle={\confchi},
+  note = {\paperno{675}},
+  publisher = {\pubacm},
+  year={2020}
+}
+
+
+@online{ref:litt2022potluck,
+  author = {Litt, Geoffrey and Schoening, Max and Shen, Paul and Sonnentag, Paul},
+  title = {Potluck: Dynamic documents as personal software},
+  url = {https://www.inkandswitch.com/potluck/},
+  lastaccessed = {July 12, 2023}
+}
+
+
+@inproceedings{ref:mysore2023how,
+author = {Mysore, Sheshera and Jasim, Mahmood and Song, Haoru and Akbar, Sarah and Randall, Andre Kenneth Chase and Mahyar, Narges},
+title = {How Data Scientists Review the Scholarly Literature},
+year = {2023},
+publisher = {\pubacm},
+booktitle = {Proceedings of the Conference on Human Information Interaction and Retrieval},
+pages = {137–152},
+}
+
+% not sure
+@inproceedings{ref:crichton2021new,
+  title = {A New Medium for Communicating Research on Programming Languages},
+  author = {Crichton, Will},
+  year = 2022,
+  booktitle = {\confhatra},
+  publisher = {\pubacm}
+}
+
+
+@online{tool:curvenote,
+  author = {Curvenote},
+  title = {Equation},
+  url = {https://curvenote.dev/article/equation},
+  lastaccessed = {July 12, 2023}
+}
+
+
+@inproceedings{ref:li2022heartdown,
+  title={H{\ensuremath\varheartsuit}rtDown: Document Processor for Executable Linear Algebra Papers},
+  author={Li, Yong and Kamil, Shoaib and Jacobson, Alec and Gingold, Yotam},
+  booktitle={SIGGRAPH Asia 2022 Conference Papers},
+  articleno = {51},
+  year={2022}
+}
+
+@inproceedings{ref:ni2021recode,
+  title={\textsc{reCode}: A Lightweight Find-and-Replace Interaction in the IDE for Transforming Code by Example},
+  author={Ni, Wode and Sunshine, Joshua and Le, Vu and Gulwani, Sumit and Barik, Titus},
+  booktitle={\confuist},
+  pages={258--269},
+  year={2021},
+  publisher = {\pubacm}
+}
+
+
+@misc{ref:openai2023gpt4,
+      title={GPT-4 Technical Report}, 
+      author={OpenAI},
+      year={2023},
+      eprint={2303.08774},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+
+% seems unused
+@article{ref:nothdurft1993role,
+  title={The role of features in preattentive vision: Comparison of orientation, motion and color cues},
+  author={Nothdurft, Hans-Christoph},
+  journal={Vision research},
+  volume={33},
+  number={14},
+  pages={1937--1958},
+  year={1993},
+  publisher={Elsevier}
+}
+
+@inproceedings{ref:wongsuphasawat2015voyager,
+  title={Voyager: Exploratory analysis via faceted browsing of visualization recommendations},
+  author={Wongsuphasawat, Kanit and Moritz, Dominik and Anand, Anushka and Mackinlay, Jock and Howe, Bill and Heer, Jeffrey},
+  journal={\journaltvcg},
+  volume={22},
+  pages={649--658},
+  year={2015},
+  publisher={\pubieee}
+}
+
+@article{ref:rein2018exploratory,
+  title={Exploratory and Live, Programming and Coding},
+  author={Rein, Patrick and Ramson, Stefan and Lincke, Jens and Hirschfeld, Robert and Pape, Tobias},
+  journal={The Art, Science, and Engineering of Programming},
+  publisher = {Aspect-Oriented Software Association ({AOSA})},
+  volume={3},
+  number={1},
+  year={2018},
+}
+
+@article{ref:dejong1998discovery,
+  author  = {de Jong, Ton and van Joolingen, Wouter R.},
+  title   = {Scientific Discovery Learning With Computer Simulations of Conceptual Domains},
+  journal = {Review of Educational Research},
+  volume  = {68},
+  number  = {2},
+  pages   = {179--201},
+  year    = {1998},
+}

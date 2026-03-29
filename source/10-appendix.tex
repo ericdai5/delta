@@ -1,0 +1,86 @@
+\section{Appendix}
+
+\begin{figure*}[h]
+\centering
+\includegraphics[width=\textwidth]{fig/gradient.png}
+\caption{Delta configuration for the gradient descent walkthrough (Figure~\ref{fig:system}). The specification declares two formulas, five interactive variables, and a semantics function that loops through training iterations, emitting \texttt{step()} calls with labels keyed by formula \texttt{id}.}
+\label{fig:gradient-config}
+\end{figure*}
+
+\subsection{Delta API Reference}
+
+\begin{table}[h]
+\small
+\centering
+\begin{tabular}{@{}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\toprule
+\textbf{Traditional MathJax} & \textbf{Delta} \\
+\midrule
+Configure \texttt{window.MathJax} & Automatic \\
+Inject \texttt{<script>} tag & Dynamic injection \\
+Await startup promise & Gated rendering \\
+Call \texttt{tex2chtml()} & Handled by \texttt{Formula} \\
+Manual re-typesetting & Reactive via MobX \\
+\bottomrule
+\end{tabular}
+\caption{MathJax setup responsibilities absorbed by Delta.}
+\label{tab:mathjax-comparison}
+\end{table}
+
+\begin{table}[h]
+\small
+\centering
+\caption{Variable properties in Delta.}
+\label{tab:variable-properties}
+\begin{tabularx}{\columnwidth}{@{}lXX@{}}
+\toprule
+Property & Purpose & Example \\
+\midrule
+\texttt{input} & Interaction type & \texttt{"drag"}, \texttt{"inline"} \\
+\texttt{default} & Starting value & \texttt{0.5} \\
+\texttt{range} & Min/max bounds & \texttt{[-1, 4]} \\
+\texttt{step} & Drag increment & \texttt{0.05} \\
+\texttt{name} & Display label & \texttt{"Learning Rate"} \\
+\texttt{precision} & Decimal places & \texttt{2} \\
+\texttt{sigFigs} & Significant figures & \texttt{4} \\
+\texttt{latexDisplay} & Name or value in formula & \texttt{"name"}, \texttt{"value"}, \texttt{"svg"} \\
+\texttt{labelDisplay} & Label rendering mode & \texttt{"name"}, \texttt{"value"}, \texttt{"svg"}, \texttt{"none"} \\
+\texttt{dataType} & Variable data type & \texttt{"scalar"}, \texttt{"vector"}, \texttt{"set"} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[h]
+\footnotesize
+\centering
+\caption{Semantics context: \texttt{vars} proxy and helper functions.}
+\label{tab:vars-access}
+\begin{tabular}{@{}p{0.28\columnwidth}p{0.22\columnwidth}p{0.42\columnwidth}@{}}
+\toprule
+Syntax & Use case & Example \\
+\midrule
+\texttt{vars.x} & Simple symbols & \texttt{vars.K = 0.5 * vars.m} \\
+\texttt{vars["..."]} & \LaTeX{} tokens & \texttt{vars["\textbackslash\textbackslash mu"] = sum / n} \\
+\texttt{sample(id, \{x, y\})} & Emit data point & \texttt{sample("curve", \{x: t, y: f\})} \\
+\texttt{latex(n).precision(d)} & Format number & \texttt{latex(3.14).precision(2)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\small
+\centering
+\caption{\texttt{Custom()} component API for building reactive visualizations.}
+\label{tab:custom-api}
+\begin{tabularx}{\columnwidth}{@{}lX@{}}
+\toprule
+Feature & Description \\
+\midrule
+\texttt{Custom(render)} & Wraps a render function to create a reactive component \\
+\texttt{vars.x} (read) & Returns current value of variable \texttt{x} \\
+\texttt{vars.x = v} (write) & Updates variable \texttt{x}, triggering re-computation \\
+\texttt{Object.keys(vars)} & Enumerates all declared variable identifiers \\
+Auto re-render & Component re-renders when any accessed variable changes \\
+\bottomrule
+\end{tabularx}
+\end{table}

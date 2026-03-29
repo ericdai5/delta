@@ -1,0 +1,1110 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+ \def\articleno#1{Article #1} \def\paperno#1{Paper #1} \def\toappear{To appear}
+  \def\eatnexttoken#1{} \def\pubmit{The MIT Press} \def\pubieee{IEEE}
+  \def\pubacm{ACM} \def\pubwiley{John Wiley \& Sons, Ltd.}
+  \def\pubspringer{Springer} \def\pubelsevier{Elsevier}
+  \def\pubmorgankaufmann{Morgan Kaufmann} \def\pubemerald{Emerald Group
+  Publishing Limited} \def\journalspae{Software---Practice and Experience}
+  \def\journalsoftware{IEEE Software} \def\journalcacm{Communications of the
+  ACM} \def\journaljvlc{Journal of Visual Languages and Computing}
+  \def\journalmms{International Journal of Man-Machine Studies}
+  \def\journaltosem{ACM Transactions on Software Engineering and Methodology}
+  \def\journaltse{IEEE Transactions on Software Engineering}
+  \def\journaltochi{ACM Transactions on Computer-Human Interaction}
+  \def\journalsigplan{ACM SIGPLAN Notices} \def\journaltog{ACM Transactions on
+  Graphics} \def\journaltvcg{ACM Transactions of Visualization and Computer
+  Graphics} \def\confinteract{Proceedings of the International Conference on
+  Human-Computer Interaction} \def\confoopsla{Proceedings of the Conference on
+  Object-Oriented Programming Systems, Languages, and Applications}
+  \def\confpldi{Proceedings of the Conference on Programming Language Design
+  and Implementation} \def\confcscw{Proceedings of the Conference on
+  Computer-Supported Cooperative Work and Social Computing}
+  \def\confpopl{Proceedings of SIGPLAN Symposium on Principles of Programming
+  Languages} \def\conficsme{Proceedings of the International Conference on
+  Software Maintenance and Evolution} \def\conffsesymposium{Proceedings of the
+  International Symposium on Foundations of Software Engineering}
+  \def\conffsemeeting{Proceedings of the Joint Meeting on Foundations of
+  Software Engineering} \def\conficsm{Proceedings of the International
+  Conference on Software Maintenance} \def\confcgit{Proceedings of the
+  International Conference on Computer Graphics and Interactive Techniques}
+  \def\confaaai{Proceedings of the AAAI Conference on Artificial Intelligence}
+  \def\confchi{Proceedings of the CHI Conference on Human Factors in Computing
+  Systems} \def\confemnlp{Proceedings of the Conference on Empirical Methods in
+  Natural Language Processing} \def\confiui{Proceedings of the International
+  Conference on Intelligent User Interfaces} \def\confuist{Proceedings of the
+  Symposium on User Interface Software and Technology} \def\confase{Proceedings
+  of the International Conference on Automated Software Engineering}
+  \def\confissta{Proceedings of the International Symposium on Software Testing
+  and Analysis} \def\conffase{Proceedings of the International Conference on
+  Fundamental Approaches to Software Engineering} \def\conficpc{Proceedings of
+  the International Conference on Program Comprehension}
+  \def\conficse{Proceedings of the International Conference on Software
+  Engineering} \def\confchase{Proceedings of the International Workshop on
+  Cooperative and Human Aspects of Software Engineering}
+  \def\confacl{Proceedings of the Annual Meeting of the Association for
+  Computational Linguistics} \def\confvlhcc{Proceedings of the Symposium on
+  Visual Languages and Human-Centric Computing} \def\conflas{Proceedings of the
+  Conference on Learning at Scale} \def\confisese{Proceedings of the
+  International Symposium on Empirical Software Engineering}
+  \def\confsigcse{Proceedings of the Technical Symposium on Computer Science
+  Education} \def\confwcre{Proceedings of the Working Conference on Reverse
+  Engineering} \def\confhatra{Proceedings the Workshop on Human Aspects of
+  Types and Reasoning Assistants} \def\confonward{Proceedings the Symposium on
+  New Ideas in Programming and Reflections on Software}
+  \def\confvldb{Proceedings of the International Conference on Very Large Data
+  Bases}  \def\articleno#1{Article #1} \def\paperno#1{Paper #1}
+  \def\toappear{To appear} \def\eatnexttoken#1{} \def\pubmit{The MIT Press}
+  \def\pubieee{IEEE} \def\pubacm{ACM} \def\pubwiley{John Wiley \& Sons, Ltd.}
+  \def\pubspringer{Springer} \def\pubelsevier{Elsevier}
+  \def\pubmorgankaufmann{Morgan Kaufmann} \def\pubemerald{Emerald Group
+  Publishing Limited} \def\journalspae{Software---Practice and Experience}
+  \def\journalsoftware{IEEE Software} \def\journalcacm{Communications of the
+  ACM} \def\journaljvlc{Journal of Visual Languages and Computing}
+  \def\journalmms{International Journal of Man-Machine Studies}
+  \def\journaltosem{ACM Transactions on Software Engineering and Methodology}
+  \def\journaltse{IEEE Transactions on Software Engineering}
+  \def\journaltochi{ACM Transactions on Computer-Human Interaction}
+  \def\journalsigplan{ACM SIGPLAN Notices} \def\journaltog{ACM Transactions on
+  Graphics} \def\journaltvcg{IEEE Transactions of Visualization and Computer
+  Graphics} \def\confinteract{Proceedings of the International Conference on
+  Human-Computer Interaction} \def\confoopsla{Proceedings of the Conference on
+  Object-Oriented Programming Systems, Languages, and Applications}
+  \def\confpldi{Proceedings of the Conference on Programming Language Design
+  and Implementation} \def\confcscw{Proceedings of the Conference on
+  Computer-Supported Cooperative Work and Social Computing}
+  \def\confpopl{Proceedings of SIGPLAN Symposium on Principles of Programming
+  Languages} \def\conficsme{Proceedings of the International Conference on
+  Software Maintenance and Evolution} \def\conffsesymposium{Proceedings of the
+  International Symposium on Foundations of Software Engineering}
+  \def\conffsemeeting{Proceedings of the Joint Meeting on Foundations of
+  Software Engineering} \def\conficsm{Proceedings of the International
+  Conference on Software Maintenance} \def\confcgit{Proceedings of the
+  International Conference on Computer Graphics and Interactive Techniques}
+  \def\confaaai{Proceedings of the AAAI Conference on Artificial Intelligence}
+  \def\confchi{Proceedings of the CHI Conference on Human Factors in Computing
+  Systems} \def\confemnlp{Proceedings of the Conference on Empirical Methods in
+  Natural Language Processing} \def\confiui{Proceedings of the International
+  Conference on Intelligent User Interfaces} \def\confuist{Proceedings of the
+  Symposium on User Interface Software and Technology} \def\confase{Proceedings
+  of the International Conference on Automated Software Engineering}
+  \def\confissta{Proceedings of the International Symposium on Software Testing
+  and Analysis} \def\conffase{Proceedings of the International Conference on
+  Fundamental Approaches to Software Engineering} \def\conficpc{Proceedings of
+  the International Conference on Program Comprehension}
+  \def\conficse{Proceedings of the International Conference on Software
+  Engineering} \def\confchase{Proceedings of the International Workshop on
+  Cooperative and Human Aspects of Software Engineering}
+  \def\confacl{Proceedings of the Annual Meeting of the Association for
+  Computational Linguistics} \def\confvlhcc{Proceedings of the Symposium on
+  Visual Languages and Human-Centric Computing} \def\conflas{Proceedings of the
+  Conference on Learning at Scale} \def\confisese{Proceedings of the
+  International Symposium on Empirical Software Engineering}
+  \def\confsigcse{Proceedings of the Technical Symposium on Computer Science
+  Education} \def\confwcre{Proceedings of the Working Conference on Reverse
+  Engineering} \def\confhatra{Proceedings the Workshop on Human Aspects of
+  Types and Reasoning Assistants} \def\confonward{Proceedings the Symposium on
+  New Ideas in Programming and Reflections on Software}
+  \def\confvldb{Proceedings of the International Conference on Very Large Data
+  Bases}  \def\articleno#1{Article #1} \def\paperno#1{Paper #1}
+  \def\toappear{To appear} \def\eatnexttoken#1{} \def\pubmit{The MIT Press}
+  \def\pubieee{IEEE} \def\pubacm{ACM} \def\pubwiley{John Wiley \& Sons, Ltd.}
+  \def\pubspringer{Springer} \def\pubelsevier{Elsevier}
+  \def\pubmorgankaufmann{Morgan Kaufmann} \def\pubemerald{Emerald Group
+  Publishing Limited} \def\journalspae{Software---Practice and Experience}
+  \def\journalsoftware{IEEE Software} \def\journalcacm{Communications of the
+  ACM} \def\journaljvlc{Journal of Visual Languages and Computing}
+  \def\journalmms{International Journal of Man-Machine Studies}
+  \def\journaltosem{ACM Transactions on Software Engineering and Methodology}
+  \def\journaltse{IEEE Transactions on Software Engineering}
+  \def\journaltochi{ACM Transactions on Computer-Human Interaction}
+  \def\journalsigplan{ACM SIGPLAN Notices} \def\journaltog{ACM Transactions on
+  Graphics} \def\journaltvcg{IEEE Transactions of Visualization and Computer
+  Graphics} \def\confinteract{Proceedings of the International Conference on
+  Human-Computer Interaction} \def\confoopsla{Proceedings of the Conference on
+  Object-Oriented Programming Systems, Languages, and Applications}
+  \def\confpldi{Proceedings of the Conference on Programming Language Design
+  and Implementation} \def\confcscw{Proceedings of the Conference on
+  Computer-Supported Cooperative Work and Social Computing}
+  \def\confpopl{Proceedings of SIGPLAN Symposium on Principles of Programming
+  Languages} \def\conficsme{Proceedings of the International Conference on
+  Software Maintenance and Evolution} \def\conffsesymposium{Proceedings of the
+  International Symposium on Foundations of Software Engineering}
+  \def\conffsemeeting{Proceedings of the Joint Meeting on Foundations of
+  Software Engineering} \def\conficsm{Proceedings of the International
+  Conference on Software Maintenance} \def\confcgit{Proceedings of the
+  International Conference on Computer Graphics and Interactive Techniques}
+  \def\confaaai{Proceedings of the AAAI Conference on Artificial Intelligence}
+  \def\confchi{Proceedings of the CHI Conference on Human Factors in Computing
+  Systems} \def\confemnlp{Proceedings of the Conference on Empirical Methods in
+  Natural Language Processing} \def\confiui{Proceedings of the International
+  Conference on Intelligent User Interfaces} \def\confuist{Proceedings of the
+  Symposium on User Interface Software and Technology} \def\confase{Proceedings
+  of the International Conference on Automated Software Engineering}
+  \def\confissta{Proceedings of the International Symposium on Software Testing
+  and Analysis} \def\conffase{Proceedings of the International Conference on
+  Fundamental Approaches to Software Engineering} \def\conficpc{Proceedings of
+  the International Conference on Program Comprehension}
+  \def\conficse{Proceedings of the International Conference on Software
+  Engineering} \def\confchase{Proceedings of the International Workshop on
+  Cooperative and Human Aspects of Software Engineering}
+  \def\confacl{Proceedings of the Annual Meeting of the Association for
+  Computational Linguistics} \def\confvlhcc{Proceedings of the Symposium on
+  Visual Languages and Human-Centric Computing} \def\conflas{Proceedings of the
+  Conference on Learning at Scale} \def\confisese{Proceedings of the
+  International Symposium on Empirical Software Engineering}
+  \def\confsigcse{Proceedings of the Technical Symposium on Computer Science
+  Education} \def\confwcre{Proceedings of the Working Conference on Reverse
+  Engineering} \def\confhatra{Proceedings of the Workshop on Human Aspects of
+  Types and Reasoning Assistants} \def\confonward{Proceedings the Symposium on
+  New Ideas in Programming and Reflections on Software}
+  \def\confvldb{Proceedings of the International Conference on Very Large Data
+  Bases}
+\begin{thebibliography}{78}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Adams(2003)]%
+        {ref:adams2003reading}
+\bibfield{author}{\bibinfo{person}{Thomasenia~Lott Adams}.}
+  \bibinfo{year}{2003}\natexlab{}.
+\newblock \showarticletitle{Reading mathematics: More than words can say}.
+\newblock \bibinfo{journal}{\emph{The Reading Teacher}} \bibinfo{volume}{56},
+  \bibinfo{number}{8} (\bibinfo{year}{2003}), \bibinfo{pages}{786--795}.
+\newblock
+
+
+\bibitem[Anthony et~al\mbox{.}(2005)]%
+        {ref:anthony2005evaluation}
+\bibfield{author}{\bibinfo{person}{Lisa Anthony}, \bibinfo{person}{Jie Yang},
+  {and} \bibinfo{person}{Kenneth~R. Koedinger}.}
+  \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{Evaluation of multimodal input for entering
+  mathematical equations on the computer}. In
+  \bibinfo{booktitle}{\emph{\confchi}}. \bibinfo{publisher}{\pubacm},
+  \bibinfo{pages}{1184--1187}.
+\newblock
+
+
+\bibitem[Azad({[n.\,d.]})]%
+        {W4}
+\bibfield{author}{\bibinfo{person}{Kalid Azad}.}
+\newblock \bibinfo{booktitle}{\emph{An Interactive Guide To The Fourier
+  Transform}}.
+\newblock
+\urldef\tempurl%
+\url{https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform}
+\showURL{%
+Retrieved July 25, 2023 from \tempurl}
+
+
+\bibitem[Blackwell and Green(2003)]%
+        {ref:blackwell2003notational}
+\bibfield{author}{\bibinfo{person}{Alan Blackwell} {and}
+  \bibinfo{person}{Thomas Green}.} \bibinfo{year}{2003}\natexlab{}.
+\newblock \showarticletitle{Notational Systems---The {C}ognitive {D}imensions
+  of {N}otations Framework}.
+\newblock In \bibinfo{booktitle}{\emph{HCI Models, Theories, and Frameworks:
+  Toward a Multidisciplinary Science}}.
+  \bibinfo{publisher}{\pubmorgankaufmann}, \bibinfo{pages}{103--134}.
+\newblock
+
+
+\bibitem[Blandford et~al\mbox{.}(2016)]%
+        {ref:blandford2016qualitative}
+\bibfield{author}{\bibinfo{person}{Ann Blandford}, \bibinfo{person}{Dominic
+  Furniss}, {and} \bibinfo{person}{Stephann Makri}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Qualitative {HCI} Research: {G}oing Behind
+  the Scenes}}.
+\newblock \bibinfo{publisher}{Morgan \& Claypool Publishers}.
+\newblock
+
+
+\bibitem[Brown(2021)]%
+        {LmmR}
+\bibfield{author}{\bibinfo{person}{Violet~A. Brown}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{An introduction to linear mixed-effects modeling in
+  R}.
+\newblock \bibinfo{journal}{\emph{Advances in Methods and Practices in
+  Psychological Science}} \bibinfo{volume}{4}, \bibinfo{number}{1}
+  (\bibinfo{year}{2021}).
+\newblock
+
+
+\bibitem[Cai and Guo(2019)]%
+        {ref:cai2019software}
+\bibfield{author}{\bibinfo{person}{Carrie~J. Cai} {and}
+  \bibinfo{person}{Philip~J. Guo}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Software Developers Learning Machine Learning:
+  Motivations, Hurdles, and Desires}. In
+  \bibinfo{booktitle}{\emph{\confvlhcc}}. \bibinfo{pages}{25--34}.
+\newblock
+
+
+\bibitem[Carlisle(1997)]%
+        {tool:carlisle1997color}
+\bibfield{author}{\bibinfo{person}{David~P. Carlisle}.}
+  \bibinfo{year}{1997}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{The \texttt{color} package}}.
+\newblock CTAN-Archive.
+\newblock
+
+
+\bibitem[Cockett et~al\mbox{.}(2016)]%
+        {ref:cockett2016pixels}
+\bibfield{author}{\bibinfo{person}{Rowan Cockett}, \bibinfo{person}{Lindsey
+  Heagy}, {and} \bibinfo{person}{Doug Oldenburg}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Pixels and their neighbors: Finite volume}.
+\newblock \bibinfo{journal}{\emph{The Leading Edge}} \bibinfo{volume}{35},
+  \bibinfo{number}{8} (\bibinfo{year}{2016}), \bibinfo{pages}{703--706}.
+\newblock
+
+
+\bibitem[Conlen and Heer(2018)]%
+        {ref:conlen2018idyll}
+\bibfield{author}{\bibinfo{person}{Matthew Conlen} {and}
+  \bibinfo{person}{Jeffrey Heer}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Idyll: A Markup Language for Authoring and
+  Publishing Interactive Articles on the Web}. In
+  \bibinfo{booktitle}{\emph{\confuist}}. \bibinfo{publisher}{\pubacm},
+  \bibinfo{pages}{977--989}.
+\newblock
+
+
+\bibitem[Crichton(2022)]%
+        {ref:crichton2021new}
+\bibfield{author}{\bibinfo{person}{Will Crichton}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{A New Medium for Communicating Research on
+  Programming Languages}. In \bibinfo{booktitle}{\emph{\confhatra}}.
+  \bibinfo{publisher}{\pubacm}.
+\newblock
+
+
+\bibitem[Curvenote({[n.\,d.]})]%
+        {tool:curvenote}
+\bibfield{author}{\bibinfo{person}{Curvenote}.}
+\newblock \bibinfo{booktitle}{\emph{Equation}}.
+\newblock
+\urldef\tempurl%
+\url{https://curvenote.dev/article/equation}
+\showURL{%
+Retrieved July 12, 2023 from \tempurl}
+
+
+\bibitem[David~Majda and open-source contributors({[n.\,d.]})]%
+        {Peggy}
+\bibfield{author}{\bibinfo{person}{Joe~Hildebrand David~Majda} {and}
+  \bibinfo{person}{open-source contributors}.}
+\newblock \bibinfo{booktitle}{\emph{Peggy}}.
+\newblock
+\urldef\tempurl%
+\url{https://peggyjs.org/index.html}
+\showURL{%
+Retrieved July 22, 2023 from \tempurl}
+
+
+\bibitem[Dragicevic et~al\mbox{.}(2011)]%
+        {ref:dragicevic2011gliimpse}
+\bibfield{author}{\bibinfo{person}{Pierre Dragicevic},
+  \bibinfo{person}{St{\'e}phane Huot}, {and} \bibinfo{person}{Fanny
+  Chevalier}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Gliimpse: Animating from Markup Code to Rendered
+  Documents and Vice Versa}. In \bibinfo{booktitle}{\emph{\confuist}}.
+  \bibinfo{publisher}{\pubacm}, \bibinfo{pages}{257--262}.
+\newblock
+
+
+\bibitem[Dragunov and Herlocker(2003)]%
+        {ref:dragunov2003designing}
+\bibfield{author}{\bibinfo{person}{Anton~N. Dragunov} {and}
+  \bibinfo{person}{Jonathan~L. Herlocker}.} \bibinfo{year}{2003}\natexlab{}.
+\newblock \showarticletitle{Designing intelligent and dynamic interfaces for
+  communicating mathematics}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  International Conference on Intelligent User Interfaces}}.
+  \bibinfo{publisher}{\pubacm}, \bibinfo{pages}{236–238}.
+\newblock
+
+
+\bibitem[Eisenberg and Alpert({[n.\,d.]})]%
+        {tool:katex}
+\bibfield{author}{\bibinfo{person}{Emily Eisenberg} {and}
+  \bibinfo{person}{Sophie Alpert}.}
+\newblock \bibinfo{booktitle}{\emph{KaTeX}}.
+\newblock
+\urldef\tempurl%
+\url{https://katex.org}
+\showURL{%
+Retrieved September 16, 2020 from \tempurl}
+
+
+\bibitem[Fisher(1922)]%
+        {fisher}
+\bibfield{author}{\bibinfo{person}{Ronald~A. Fisher}.}
+  \bibinfo{year}{1922}\natexlab{}.
+\newblock \showarticletitle{On the interpretation of $\chi$2 from contingency
+  tables, and the calculation of P}.
+\newblock \bibinfo{journal}{\emph{Journal of the royal statistical society}}
+  \bibinfo{volume}{85}, \bibinfo{number}{1} (\bibinfo{year}{1922}),
+  \bibinfo{pages}{87--94}.
+\newblock
+
+
+\bibitem[Froumentin({[n.\,d.]})]%
+        {tool:mathml}
+\bibfield{author}{\bibinfo{person}{Max Froumentin}.}
+\newblock \bibinfo{booktitle}{\emph{Mathematical Markup Language (MathML)}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.w3.org/Math/whatIsMathML.html}
+\showURL{%
+Retrieved September 16, 2020 from \tempurl}
+
+
+\bibitem[Ge et~al\mbox{.}(2020)]%
+        {ref:ge2020canis}
+\bibfield{author}{\bibinfo{person}{Tong Ge}, \bibinfo{person}{Yue Zhao},
+  \bibinfo{person}{Bongshin Lee}, \bibinfo{person}{Donghao Ren},
+  \bibinfo{person}{Baoquan Chen}, {and} \bibinfo{person}{Yunhai Wang}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Canis: A High‐Level Language for Data‐Driven
+  Chart Animations}.
+\newblock \bibinfo{journal}{\emph{Computer Graphics Forum}}
+  \bibinfo{volume}{39} (\bibinfo{year}{2020}).
+\newblock
+
+
+\bibitem[Gobert and Beaudouin-Lafon(2022)]%
+        {ref:gobert2022ilatex}
+\bibfield{author}{\bibinfo{person}{Camille Gobert} {and}
+  \bibinfo{person}{Michel Beaudouin-Lafon}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{{i-LaTeX}: Manipulating Transitional
+  Representations between LaTeX Code and Generated Documents}. In
+  \bibinfo{booktitle}{\emph{\confchi}}. \bibinfo{publisher}{\pubacm}.
+\newblock
+\newblock
+\shownote{\paperno{554}}.
+
+
+\bibitem[Goldstone et~al\mbox{.}(2017)]%
+        {ref:goldstone2017adapting}
+\bibfield{author}{\bibinfo{person}{Robert~L. Goldstone}, \bibinfo{person}{Tyler
+  Marghetis}, \bibinfo{person}{Erik Weitnauer}, \bibinfo{person}{Erin~R.
+  Ottmar}, {and} \bibinfo{person}{David Landy}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Adapting perception, action, and technology for
+  mathematical reasoning}.
+\newblock \bibinfo{journal}{\emph{Current Directions in Psychological Science}}
+  \bibinfo{volume}{26}, \bibinfo{number}{5} (\bibinfo{year}{2017}),
+  \bibinfo{pages}{434--441}.
+\newblock
+
+
+\bibitem[Google(2023)]%
+        {tool:googleslides}
+\bibfield{author}{\bibinfo{person}{Google}.} \bibinfo{year}{Retrieved {July 7,
+  2023}}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Google Slides}}.
+\newblock
+\urldef\tempurl%
+\url{https://slides.google.com}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Han et~al\mbox{.}(2020)]%
+        {ref:han2020textlets}
+\bibfield{author}{\bibinfo{person}{Han~L. Han}, \bibinfo{person}{Miguel~A.
+  Renom}, \bibinfo{person}{Wendy~E. Mackay}, {and} \bibinfo{person}{Michel
+  Beaudouin-Lafon}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Textlets: supporting constraints and consistency in
+  text documents}. In \bibinfo{booktitle}{\emph{\confchi}}.
+  \bibinfo{publisher}{\pubacm}.
+\newblock
+\newblock
+\shownote{\paperno{675}}.
+
+
+\bibitem[Harrison et~al\mbox{.}(2020)]%
+        {ref:harrison2020spacing}
+\bibfield{author}{\bibinfo{person}{Avery Harrison}, \bibinfo{person}{Hannah
+  Smith}, \bibinfo{person}{Taylyn Hulse}, {and} \bibinfo{person}{Erin~R.
+  Ottmar}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Spacing out! Manipulating spatial features in
+  mathematical expressions affects performance}.
+\newblock \bibinfo{journal}{\emph{Journal of Numerical Cognition}}
+  \bibinfo{volume}{6}, \bibinfo{number}{2} (\bibinfo{year}{2020}),
+  \bibinfo{pages}{186--203}.
+\newblock
+
+
+\bibitem[Head et~al\mbox{.}(2021)]%
+        {ref:head2021augmenting}
+\bibfield{author}{\bibinfo{person}{Andrew Head}, \bibinfo{person}{Kyle Lo},
+  \bibinfo{person}{Dongyeop Kang}, \bibinfo{person}{Raymond Fok},
+  \bibinfo{person}{Sam Skjonsberg}, \bibinfo{person}{Daniel~S. Weld}, {and}
+  \bibinfo{person}{Marti~A. Hearst}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Augmenting Scientific Papers with Just-in-Time,
+  Position-Sensitive Definitions of Terms and Symbols}. In
+  \bibinfo{booktitle}{\emph{\confchi}}. \bibinfo{publisher}{\pubacm}.
+\newblock
+\newblock
+\shownote{\paperno{413}}.
+
+
+\bibitem[Head et~al\mbox{.}(2022)]%
+        {ref:head2022math}
+\bibfield{author}{\bibinfo{person}{Andrew Head}, \bibinfo{person}{Amber Xie},
+  {and} \bibinfo{person}{Marti~A. Hearst}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Math Augmentation: How Authors Enhance the
+  Readability of Formulas Using Novel Visual Design Practices}. In
+  \bibinfo{booktitle}{\emph{\confchi}}. \bibinfo{publisher}{\pubacm}.
+\newblock
+\newblock
+\shownote{\paperno{491}}.
+
+
+\bibitem[Hohman et~al\mbox{.}(2019)]%
+        {ref:hohman2019gamut}
+\bibfield{author}{\bibinfo{person}{Fred Hohman}, \bibinfo{person}{Andrew Head},
+  \bibinfo{person}{Rich Caruana}, \bibinfo{person}{Robert DeLine}, {and}
+  \bibinfo{person}{Steven~M. Drucker}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Gamut: A Design Probe to Understand How Data
+  Scientists Understand Machine Learning Models}. In
+  \bibinfo{booktitle}{\emph{\confchi}}. \bibinfo{publisher}{\pubacm}.
+\newblock
+\newblock
+\shownote{\paperno{579}}.
+
+
+\bibitem[Hohman and {other contributors}(2020)]%
+        {ref:hohman2020awesome}
+\bibfield{author}{\bibinfo{person}{Fred Hohman} {and} \bibinfo{person}{{other
+  contributors}}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \bibinfo{title}{Awesome Mathematical Notation Design}.
+\newblock
+\urldef\tempurl%
+\url{https://github.com/fredhohman/awesome-mathematical-notation-design}
+\showURL{%
+Retrieved July 22, 2023 from \tempurl}
+
+
+\bibitem[Holm(1979)]%
+        {Holm}
+\bibfield{author}{\bibinfo{person}{Sture Holm}.}
+  \bibinfo{year}{1979}\natexlab{}.
+\newblock \showarticletitle{A Simple Sequentially Rejective Multiple Test
+  Procedure}.
+\newblock \bibinfo{journal}{\emph{Scandinavian Journal of Statistics}}
+  \bibinfo{volume}{6}, \bibinfo{number}{2} (\bibinfo{year}{1979}),
+  \bibinfo{pages}{65--70}.
+\newblock
+
+
+\bibitem[John and other contributors({[n.\,d.]})]%
+        {tool:annotateequations}
+\bibfield{author}{\bibinfo{person}{{ST} John} {and} \bibinfo{person}{other
+  contributors}.}
+\newblock \bibinfo{booktitle}{\emph{Annotate equations in LaTeX using {TikZ}}}.
+\newblock
+\urldef\tempurl%
+\url{https://github.com/st--/annotate-equations}
+\showURL{%
+Retrieved July 6, 2023 from \tempurl}
+
+
+\bibitem[Jupyter(2023)]%
+        {jupyterlab-katex}
+\bibfield{author}{\bibinfo{person}{Project Jupyter}.} \bibinfo{year}{Retrieved
+  {July 22, 2023}}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{jupyter-renderers}}.
+\newblock
+\urldef\tempurl%
+\url{https://github.com/jupyterlab/jupyter-renderers}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Knauff and Nejasmic(2014)]%
+        {ref:knauff2014efficiency}
+\bibfield{author}{\bibinfo{person}{Markus Knauff} {and} \bibinfo{person}{Jelica
+  Nejasmic}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{An efficiency comparison of document preparation
+  systems used in academic research and development}.
+\newblock \bibinfo{journal}{\emph{PloS one}} \bibinfo{volume}{9},
+  \bibinfo{number}{12} (\bibinfo{year}{2014}), \bibinfo{pages}{e115069}.
+\newblock
+
+
+\bibitem[Knuth(1986)]%
+        {ref:knuth1986tex}
+\bibfield{author}{\bibinfo{person}{Donald~E. Knuth}.}
+  \bibinfo{year}{1986}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{\TeX: The Program}}.
+\newblock \bibinfo{publisher}{Addison-Wesley}.
+\newblock
+
+
+\bibitem[Labs({[n.\,d.]})]%
+        {UnixMan}
+\bibfield{author}{\bibinfo{person}{Bell Labs}.}
+\newblock \bibinfo{booktitle}{\emph{Unix Programmer's Manual}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.bell-labs.com/usr/dmr/www/man71.pdf}
+\showURL{%
+Retrieved July 22, 2023 from \tempurl}
+
+
+\bibitem[LaViola and Zeleznik(2004)]%
+        {ref:laviola2006mathpad2}
+\bibfield{author}{\bibinfo{person}{Joseph~J. LaViola} {and}
+  \bibinfo{person}{Robert~C. Zeleznik}.} \bibinfo{year}{2004}\natexlab{}.
+\newblock \showarticletitle{MathPad$^2$: A System for the Creation and
+  Exploration of Mathematical Sketches}.
+\newblock \bibinfo{journal}{\emph{ACM Trans. Graph.}} (\bibinfo{year}{2004}),
+  \bibinfo{pages}{432–440}.
+\newblock
+
+
+\bibitem[Leitner et~al\mbox{.}(2010)]%
+        {ref:leitner2010nice}
+\bibfield{author}{\bibinfo{person}{Jakob Leitner}, \bibinfo{person}{Christian
+  Rendl}, \bibinfo{person}{Florian Perteneder}, \bibinfo{person}{Adam
+  Gokcezade}, \bibinfo{person}{Thomas Seifried}, \bibinfo{person}{Michael
+  Haller}, \bibinfo{person}{Robert Zeleznik}, {and} \bibinfo{person}{Andrew
+  Bragdon}.} \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{{NiCE} Formula Editor}.
+\newblock In \bibinfo{booktitle}{\emph{ACM SIGGRAPH 2010 Talks}}.
+  \bibinfo{publisher}{\pubacm}.
+\newblock
+
+
+\bibitem[Lewis(1982)]%
+        {think-aloud}
+\bibfield{author}{\bibinfo{person}{Clayton Lewis}.}
+  \bibinfo{year}{1982}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Using the ``thinking-aloud'' method in
+  cognitive interface design}}.
+\newblock \bibinfo{publisher}{IBM TJ Watson Research Center Yorktown Heights,
+  NY}.
+\newblock
+
+
+\bibitem[Li et~al\mbox{.}(2022)]%
+        {ref:li2022heartdown}
+\bibfield{author}{\bibinfo{person}{Yong Li}, \bibinfo{person}{Shoaib Kamil},
+  \bibinfo{person}{Alec Jacobson}, {and} \bibinfo{person}{Yotam Gingold}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{H{\ensuremath\varheartsuit}rtDown: Document
+  Processor for Executable Linear Algebra Papers}. In
+  \bibinfo{booktitle}{\emph{SIGGRAPH Asia 2022 Conference Papers}}. Article
+  \bibinfo{articleno}{51}.
+\newblock
+
+
+\bibitem[Litt et~al\mbox{.}({[n.\,d.]})]%
+        {ref:litt2022potluck}
+\bibfield{author}{\bibinfo{person}{Geoffrey Litt}, \bibinfo{person}{Max
+  Schoening}, \bibinfo{person}{Paul Shen}, {and} \bibinfo{person}{Paul
+  Sonnentag}.}
+\newblock \bibinfo{booktitle}{\emph{Potluck: Dynamic documents as personal
+  software}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.inkandswitch.com/potluck/}
+\showURL{%
+Retrieved July 12, 2023 from \tempurl}
+
+
+\bibitem[Ltd.({[n.\,d.]})]%
+        {tool:overleaf}
+\bibfield{author}{\bibinfo{person}{Digital Science~UK Ltd.}}
+\newblock \bibinfo{booktitle}{\emph{Overleaf}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.overleaf.com/}
+\showURL{%
+Retrieved July 22, 2023 from \tempurl}
+
+
+\bibitem[Ltd.(2023)]%
+        {tool:codecogs}
+\bibfield{author}{\bibinfo{person}{Zyba Ltd.}} \bibinfo{year}{Retrieved {July
+  7, 2023}}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{CodeCogs Equation Editor}}.
+\newblock
+\urldef\tempurl%
+\url{https://editor.codecogs.com/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Ma et~al\mbox{.}(2021)]%
+        {ref:ma2021latexify}
+\bibfield{author}{\bibinfo{person}{Suyu Ma}, \bibinfo{person}{Chunyang Chen},
+  \bibinfo{person}{Hourieh Khalajzadeh}, {and} \bibinfo{person}{John Grundy}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Latexify Math: Mathematical Formula Markup Revision
+  to Assist Collaborative Editing in Math Q\&A Sites}.
+\newblock \bibinfo{journal}{\emph{\confcscw}} \bibinfo{volume}{5},
+  \bibinfo{number}{CSCW2} (\bibinfo{year}{2021}).
+\newblock
+
+
+\bibitem[Madsen et~al\mbox{.}(2014)]%
+        {tool:madsen2014mathtools}
+\bibfield{author}{\bibinfo{person}{Lars Madsen}, \bibinfo{person}{Will
+  Robertson}, {and} \bibinfo{person}{Joseph Wright}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{The mathtools package}}.
+\newblock CTAN-Archive, ctan.org.
+\newblock
+
+
+\bibitem[Marghetis et~al\mbox{.}(2016)]%
+        {ref:marghetis2016mastering}
+\bibfield{author}{\bibinfo{person}{Tyler Marghetis}, \bibinfo{person}{David
+  Landy}, {and} \bibinfo{person}{Robert~L. Goldstone}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Mastering algebra retrains the visual system to
+  perceive hierarchical structure in equations}.
+\newblock \bibinfo{journal}{\emph{Cognitive research: principles and
+  implications}}  \bibinfo{volume}{1} (\bibinfo{year}{2016}).
+\newblock
+
+
+\bibitem[Matthews(2019)]%
+        {ref:matthews2019craft}
+\bibfield{author}{\bibinfo{person}{David Matthews}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Craft beautiful equations in Word with LaTeX}.
+\newblock \bibinfo{journal}{\emph{Nature}} \bibinfo{volume}{570},
+  \bibinfo{number}{7760} (\bibinfo{year}{2019}), \bibinfo{pages}{263--264}.
+\newblock
+
+
+\bibitem[Mendes et~al\mbox{.}(2014)]%
+        {ref:mendes2014structure}
+\bibfield{author}{\bibinfo{person}{Alexandra Mendes}, \bibinfo{person}{Roland
+  Backhouse}, {and} \bibinfo{person}{Jo\~ao~F. Ferreira}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Structure editing of handwritten mathematics:
+  Improving the computer support for the calculational method}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the ACM International Conference on
+  Interactive Tabletops and Surfaces}}. \bibinfo{publisher}{\pubacm},
+  \bibinfo{pages}{139--148}.
+\newblock
+
+
+\bibitem[Microsoft(2023a)]%
+        {tool:powerpoint}
+\bibfield{author}{\bibinfo{person}{Microsoft}.} \bibinfo{year}{Retrieved {July
+  7, 2023}}\natexlab{a}.
+\newblock \bibinfo{booktitle}{\emph{PowerPoint}}.
+\newblock
+\urldef\tempurl%
+\url{https://microsoft.com/powerpoint}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Microsoft(2023b)]%
+        {tool:wordformulaeditor}
+\bibfield{author}{\bibinfo{person}{Microsoft}.} \bibinfo{year}{Retrieved {July
+  7, 2023}}\natexlab{b}.
+\newblock \bibinfo{booktitle}{\emph{Write an equation or formula}}.
+\newblock
+\urldef\tempurl%
+\url{https://support.microsoft.com/en-au/office/write-an-equation-or-formula-4f799df7-4ca4-4670-afd3-6135768b01d0}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Miltner et~al\mbox{.}(2019)]%
+        {ref:miltner2019fly}
+\bibfield{author}{\bibinfo{person}{Anders Miltner}, \bibinfo{person}{Sumit
+  Gulwani}, \bibinfo{person}{Vu Le}, \bibinfo{person}{Alan Leung},
+  \bibinfo{person}{Arjun Radhakrishna}, \bibinfo{person}{Gustavo Soares},
+  \bibinfo{person}{Ashish Tiwari}, {and} \bibinfo{person}{Abhishek Udupa}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{On the Fly Synthesis of Edit Suggestions}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the SIGPLAN Conference on Systems,
+  Programming, Languages, and Applications: Software for Humanity}}.
+  \bibinfo{publisher}{\pubacm}, Article \bibinfo{articleno}{143}.
+\newblock
+
+
+\bibitem[Misfeldt(2011)]%
+        {ref:misfeldt2011computers}
+\bibfield{author}{\bibinfo{person}{Morten Misfeldt}.}
+  \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Computers as medium for mathematical writing}.
+\newblock \bibinfo{journal}{\emph{Semiotica}}  \bibinfo{volume}{2011}
+  (\bibinfo{year}{2011}), \bibinfo{pages}{239}.
+\newblock
+
+
+\bibitem[Mohammed et~al\mbox{.}(2020)]%
+        {mohammed2020continuous}
+\bibfield{author}{\bibinfo{person}{Haneen Mohammed}, \bibinfo{person}{Ziyun
+  Wei}, \bibinfo{person}{Eugene Wu}, {and} \bibinfo{person}{Ravi Netravali}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Continuous Prefetch for Interactive Data
+  Applications}. In \bibinfo{booktitle}{\emph{\confvldb}},
+  Vol.~\bibinfo{volume}{13}. \bibinfo{publisher}{VLDB Endowment}.
+\newblock
+
+
+\bibitem[Murad({[n.\,d.]})]%
+        {ref:murad2020navierstokes}
+\bibfield{author}{\bibinfo{person}{Jousef Murad}.}
+\newblock \bibinfo{booktitle}{\emph{Derivation of the Navier-Stokes
+  Equations}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.youtube.com/watch?v=zWdnf3Uh1RE}
+\showURL{%
+Retrieved July 22, 2023 from \tempurl}
+
+
+\bibitem[Mysore et~al\mbox{.}(2023)]%
+        {ref:mysore2023how}
+\bibfield{author}{\bibinfo{person}{Sheshera Mysore}, \bibinfo{person}{Mahmood
+  Jasim}, \bibinfo{person}{Haoru Song}, \bibinfo{person}{Sarah Akbar},
+  \bibinfo{person}{Andre Kenneth~Chase Randall}, {and} \bibinfo{person}{Narges
+  Mahyar}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{How Data Scientists Review the Scholarly
+  Literature}. In \bibinfo{booktitle}{\emph{Proceedings of the Conference on
+  Human Information Interaction and Retrieval}}. \bibinfo{publisher}{\pubacm},
+  \bibinfo{pages}{137–152}.
+\newblock
+
+
+\bibitem[Nha(2023)]%
+        {tool:mathcha}
+\bibfield{author}{\bibinfo{person}{Bui~Duc Nha}.} \bibinfo{year}{Retrieved
+  {July 7, 2023}}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Mathcha}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.mathcha.io/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Ni et~al\mbox{.}(2021)]%
+        {ref:ni2021recode}
+\bibfield{author}{\bibinfo{person}{Wode Ni}, \bibinfo{person}{Joshua Sunshine},
+  \bibinfo{person}{Vu Le}, \bibinfo{person}{Sumit Gulwani}, {and}
+  \bibinfo{person}{Titus Barik}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{\textsc{reCode}: A Lightweight Find-and-Replace
+  Interaction in the IDE for Transforming Code by Example}. In
+  \bibinfo{booktitle}{\emph{\confuist}}. \bibinfo{publisher}{\pubacm},
+  \bibinfo{pages}{258--269}.
+\newblock
+
+
+\bibitem[Pollock(2022)]%
+        {ref:pollock2022bluefish}
+\bibfield{author}{\bibinfo{person}{Joshua~Maxwell Pollock}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \bibinfo{title}{Bluefish: A Grammar of Discrete Diagrams}.
+\newblock
+\newblock
+\newblock
+\shownote{Master's thesis}.
+
+
+\bibitem[Project(2023)]%
+        {tool:latex}
+\bibfield{author}{\bibinfo{person}{The~\LaTeX{} Project}.}
+  \bibinfo{year}{Retrieved {July 7, 2023}}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{\LaTeX{}}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.latex-project.org}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Rein et~al\mbox{.}(2018)]%
+        {ref:rein2018exploratory}
+\bibfield{author}{\bibinfo{person}{Patrick Rein}, \bibinfo{person}{Stefan
+  Ramson}, \bibinfo{person}{Jens Lincke}, \bibinfo{person}{Robert Hirschfeld},
+  {and} \bibinfo{person}{Tobias Pape}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Exploratory and Live, Programming and Coding}.
+\newblock \bibinfo{journal}{\emph{The Art, Science, and Engineering of
+  Programming}} \bibinfo{volume}{3}, \bibinfo{number}{1}
+  (\bibinfo{year}{2018}).
+\newblock
+
+
+\bibitem[Sanderson({[n.\,d.]})]%
+        {ref:3Blue1Brown}
+\bibfield{author}{\bibinfo{person}{Grant Sanderson}.}
+\newblock \bibinfo{booktitle}{\emph{{3}Blue{1}Brown}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.youtube.com/c/3blue1brown}
+\showURL{%
+Retrieved September 8, 2021 from \tempurl}
+
+
+\bibitem[Saquib et~al\mbox{.}(2021)]%
+        {ref:saquib2021constructing}
+\bibfield{author}{\bibinfo{person}{Nazmus Saquib},
+  \bibinfo{person}{Rubaiat~Habib Kazi}, \bibinfo{person}{Li-yi Wei},
+  \bibinfo{person}{Gloria Mark}, {and} \bibinfo{person}{Deb Roy}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Constructing Embodied Algebra by Sketching}. In
+  \bibinfo{booktitle}{\emph{\confchi}}. \bibinfo{publisher}{\pubacm}, Article
+  \bibinfo{articleno}{428}.
+\newblock
+
+
+\bibitem[Satterthwaite(1946)]%
+        {Satterthwaite}
+\bibfield{author}{\bibinfo{person}{F.~E. Satterthwaite}.}
+  \bibinfo{year}{1946}\natexlab{}.
+\newblock \showarticletitle{An Approximate Distribution of Estimates of
+  Variance Components}.
+\newblock \bibinfo{journal}{\emph{Biometrics Bulletin}} \bibinfo{volume}{2},
+  \bibinfo{number}{6} (\bibinfo{year}{1946}), \bibinfo{pages}{110--114}.
+\newblock
+
+
+\bibitem[Satyanarayan et~al\mbox{.}(2017)]%
+        {ref:satyanarayan2017vegalite}
+\bibfield{author}{\bibinfo{person}{Arvind Satyanarayan},
+  \bibinfo{person}{Dominik Moritz}, \bibinfo{person}{Kanit Wongsuphasawat},
+  {and} \bibinfo{person}{Jeffrey Heer}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Vega-Lite: A Grammar of Interactive Graphics}.
+\newblock \bibinfo{journal}{\emph{\journaltvcg}}  \bibinfo{volume}{23},
+  \bibinfo{pages}{341--350}.
+\newblock
+
+
+\bibitem[Shepherd and van~de Sande(2014)]%
+        {ref:shepherd2014reading}
+\bibfield{author}{\bibinfo{person}{Mary~D. Shepherd} {and}
+  \bibinfo{person}{Carla~C. van~de Sande}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Reading mathematics for understanding---From novice
+  to expert}.
+\newblock \bibinfo{journal}{\emph{The Journal of Mathematical Behavior}}
+  \bibinfo{volume}{35} (\bibinfo{date}{September} \bibinfo{year}{2014}),
+  \bibinfo{pages}{74--86}.
+\newblock
+
+
+\bibitem[source contributors(2023b)]%
+        {MarkdownIt}
+\bibfield{author}{\bibinfo{person}{Open source contributors}.}
+  \bibinfo{year}{Retrieved {July 22, 2023}}\natexlab{b}.
+\newblock \bibinfo{booktitle}{\emph{markdown-it}}.
+\newblock
+\urldef\tempurl%
+\url{https://github.com/markdown-it/markdown-it}
+\showURL{%
+\tempurl}
+
+
+\bibitem[source contributors(2023a)]%
+        {tool:inkscape}
+\bibfield{author}{\bibinfo{person}{Open source contributors}.}
+  \bibinfo{year}{Retrieved {July 7, 2023}}\natexlab{a}.
+\newblock \bibinfo{booktitle}{\emph{Inkscape}}.
+\newblock
+\urldef\tempurl%
+\url{https://inkscape.org/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Tanimoto(1990)]%
+        {ref:tanimoto1990viva}
+\bibfield{author}{\bibinfo{person}{Steven~L. Tanimoto}.}
+  \bibinfo{year}{1990}\natexlab{}.
+\newblock \showarticletitle{VIVA: A Visual Language for Image Processing}.
+\newblock \bibinfo{journal}{\emph{\journaljvlc}} \bibinfo{volume}{1},
+  \bibinfo{number}{2} (\bibinfo{year}{1990}), \bibinfo{pages}{127--139}.
+\newblock
+
+
+\bibitem[{The Manim Community Developers}(2023)]%
+        {tool:manim}
+\bibfield{author}{\bibinfo{person}{{The Manim Community Developers}}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{Manim – Mathematical Animation
+  Framework}}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.manim.community/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Toomim et~al\mbox{.}(2004)]%
+        {ref:toomim2004managing}
+\bibfield{author}{\bibinfo{person}{Michael Toomim}, \bibinfo{person}{Andrew
+  Begel}, {and} \bibinfo{person}{Susan~L. Graham}.}
+  \bibinfo{year}{2004}\natexlab{}.
+\newblock \showarticletitle{Managing Duplicated Code with Linked Editing}. In
+  \bibinfo{booktitle}{\emph{\confvlhcc}}. \bibinfo{publisher}{\pubieee},
+  \bibinfo{pages}{173--180}.
+\newblock
+
+
+\bibitem[Topping(1999)]%
+        {ref:topping1999using}
+\bibfield{author}{\bibinfo{person}{Paul Topping}.}
+  \bibinfo{year}{1999}\natexlab{}.
+\newblock \showarticletitle{Using MathType to create TeX and MathML equations}.
+  In \bibinfo{booktitle}{\emph{Proceedings of the 1999 TEX Annual Meeting,
+  TUGBoat}}, Vol.~\bibinfo{volume}{20}.
+\newblock
+
+
+\bibitem[Victor({[n.\,d.]})]%
+        {tool:victortangle}
+\bibfield{author}{\bibinfo{person}{Bret Victor}.}
+\newblock \bibinfo{booktitle}{\emph{Tangle: a JavaScript library for reactive
+  documents}}.
+\newblock
+\urldef\tempurl%
+\url{http://worrydream.com/Tangle/}
+\showURL{%
+Retrieved August 15, 2021 from \tempurl}
+
+
+\bibitem[W3C({[n.\,d.]})]%
+        {tool:svg}
+\bibfield{author}{\bibinfo{person}{W3C}.}
+\newblock \bibinfo{booktitle}{\emph{SVG}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.w3.org/TR/SVG2/}
+\showURL{%
+Retrieved July 22, 2023 from \tempurl}
+
+
+\bibitem[Weitnauer et~al\mbox{.}(2016)]%
+        {ref:weitnauer2016graspable}
+\bibfield{author}{\bibinfo{person}{Erik Weitnauer}, \bibinfo{person}{David
+  Landy}, {and} \bibinfo{person}{Erin Ottmar}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Graspable {Math}: Towards dynamic algebra notations
+  that support learners better than paper}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the Future Technologies
+  Conference}}. \bibinfo{publisher}{\pubieee}, \bibinfo{pages}{406--414}.
+\newblock
+
+
+\bibitem[Wilcoxon(1945)]%
+        {Wilcoxon}
+\bibfield{author}{\bibinfo{person}{Frank Wilcoxon}.}
+  \bibinfo{year}{1945}\natexlab{}.
+\newblock \showarticletitle{Individual Comparisons by Ranking Methods}.
+\newblock \bibinfo{journal}{\emph{Biometrics Bulletin}} \bibinfo{volume}{1},
+  \bibinfo{number}{6} (\bibinfo{year}{1945}), \bibinfo{pages}{80--83}.
+\newblock
+
+
+\bibitem[Wongsuphasawat({[n.\,d.]})]%
+        {tool:labella}
+\bibfield{author}{\bibinfo{person}{Krist Wongsuphasawat}.}
+\newblock \bibinfo{booktitle}{\emph{Labella.js}}.
+\newblock
+\urldef\tempurl%
+\url{https://twitter.github.io/labella.js/}
+\showURL{%
+Retrieved September 16, 2020 from \tempurl}
+
+
+\bibitem[Wongsuphasawat et~al\mbox{.}(2015)]%
+        {ref:wongsuphasawat2015voyager}
+\bibfield{author}{\bibinfo{person}{Kanit Wongsuphasawat},
+  \bibinfo{person}{Dominik Moritz}, \bibinfo{person}{Anushka Anand},
+  \bibinfo{person}{Jock Mackinlay}, \bibinfo{person}{Bill Howe}, {and}
+  \bibinfo{person}{Jeffrey Heer}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Voyager: Exploratory analysis via faceted browsing
+  of visualization recommendations}.
+\newblock \bibinfo{journal}{\emph{\journaltvcg}}  \bibinfo{volume}{22},
+  \bibinfo{pages}{649--658}.
+\newblock
+
+
+\bibitem[Ye et~al\mbox{.}(2020)]%
+        {ref:ye2020penrose}
+\bibfield{author}{\bibinfo{person}{Katherine Ye}, \bibinfo{person}{Wode Ni},
+  \bibinfo{person}{Max Krieger}, \bibinfo{person}{Dor Ma'ayan},
+  \bibinfo{person}{Jenna Wise}, \bibinfo{person}{Jonathan Aldrich},
+  \bibinfo{person}{Joshua Sunshine}, {and} \bibinfo{person}{Keenan Crane}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Penrose: from mathematical notation to beautiful
+  diagrams}.
+\newblock \bibinfo{journal}{\emph{\journaltog}}  \bibinfo{volume}{39}, Article
+  \bibinfo{articleno}{144} (\bibinfo{year}{2020}).
+\newblock
+
+
+\bibitem[Yung and Paas(2015)]%
+        {ref:yung2015effects}
+\bibfield{author}{\bibinfo{person}{Hsin~I. Yung} {and} \bibinfo{person}{Fred
+  Paas}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Effects of Computer-Based Visual Representation on
+  Mathematics Learning and Cognitive Load}.
+\newblock \bibinfo{journal}{\emph{Educational Technology and Society}}
+  \bibinfo{volume}{18} (\bibinfo{year}{2015}), \bibinfo{pages}{70--77}.
+\newblock
+
+
+\bibitem[Zeleznik et~al\mbox{.}(2010)]%
+        {ref:zeleznik2010hands}
+\bibfield{author}{\bibinfo{person}{Robert Zeleznik}, \bibinfo{person}{Andrew
+  Bragdon}, \bibinfo{person}{Ferdi Adeputra}, {and} \bibinfo{person}{Hsu-Sheng
+  Ko}.} \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Hands-On Math: A page-based multi-touch and pen
+  desktop for technical work and problem solving}. In
+  \bibinfo{booktitle}{\emph{\confuist}}. \bibinfo{publisher}{\pubacm},
+  \bibinfo{pages}{17--26}.
+\newblock
+
+
+\end{thebibliography}

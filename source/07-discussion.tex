@@ -1,0 +1,29 @@
+\section{Discussion}
+
+\subsection{Limitations}
+
+\paragraph{Task scope and ecological validity.}
+Both studies used a single task type---augmenting or authoring an interactive formula---within a controlled IDE environment. Real-world authoring involves longer sessions, larger codebases, and integration with surrounding prose, visualizations, and build systems, where Delta's advantages on viscosity and diffuseness may interact with factors we did not measure.
+
+\paragraph{Participant population.}
+Our participant pool, while appropriate for the target user profile, consisted of graduate and advanced undergraduate students at a single institution. Professional content authors or domain experts with different tool fluencies may experience Delta differently.
+
+\paragraph{Order effects.}
+The controlled study's within-subjects design introduced a significant order effect: task familiarity compressed second-condition times regardless of library. Although Delta remained significantly faster even in the conservative Delta-first subgroup, the magnitude of the overall speedup ($1.87\times$) likely overstates what would be observed in a between-subjects design.
+
+\paragraph{Implementation gaps.}
+Delta's current lack of disambiguation for repeated symbols (G1) and the multi-step activation required for stepping (G2) introduced avoidable friction in the observation study. Resolving these would likely shift both behavioral and subjective measures further in Delta's favor.
+
+\subsection{Future Work}
+
+\paragraph{Direct manipulation of structured mathematical objects.}
+The design gaps around array-valued variables (G3) and repeated-symbol disambiguation (G1) raise a broader question: how should a DSL expose mechanisms for readers to interactively modify variables declared as vectors, matrices, or indexed sets? Answering this requires both new interaction techniques and formal models of how symbolic structure maps to manipulable regions---a problem that connects formula authoring to the wider HCI literature on structured editors and direct manipulation~\cite{hutchins1985direct}.
+
+\paragraph{Graphical authoring interfaces.}
+Delta's configuration structure is sufficiently declarative that it could serve as the backing model for higher-level authoring interfaces. Because the specification cleanly separates variable declarations, interaction settings, and semantics, a graphical editor could let non-programmers author interactive formulas without writing code. Such an interface would lower the entry barrier beyond what a text-based DSL alone can achieve and open questions about how to design direct-manipulation editors for domain-specific languages.
+ 
+\paragraph{AI-assisted authoring.}
+The pedagogical reasoning we observed---authors deliberating over which variables to make interactive, what ranges are physically meaningful, and how to sequence steps---suggests that Delta's primitives could serve as a foundation for intelligent authoring support. A system that infers plausible variable ranges from domain knowledge or suggests step decompositions from a formula's algebraic structure would shift the authoring bottleneck from implementation to pedagogical design.
+
+\paragraph{Variable-conditional semantics and solver-like interaction.}
+Delta currently re-executes a single semantics function whenever any variable changes, treating all updates uniformly. A natural extension is to allow authors to specify \textit{which} computation runs in response to \textit{which} variable changing. Under such a model, dragging one variable could solve for another. Designing an authoring abstraction that remains declarative while exposing per-variable semantic dispatch poses an open DSL design challenge.
