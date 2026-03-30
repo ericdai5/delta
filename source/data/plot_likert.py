@@ -6,6 +6,7 @@ import matplotlib.gridspec as gridspec
 import os
 
 DATA_DIR = os.path.dirname(os.path.abspath(__file__))
+FIG_DIR = os.path.join(DATA_DIR, "..", "fig")
 
 df1 = pd.read_csv(os.path.join(DATA_DIR, "Observational Task 1 Form.csv"))
 df2 = pd.read_csv(os.path.join(DATA_DIR, "Observational Task 2 Form.csv"))
@@ -15,17 +16,17 @@ for df in [df1, df2]:
             df[col] = df[col].str.strip()
 
 intuitive_labels = [
-    "Very unintuitive", "Somewhat unintuitive",
+    "Very intuitive", "Somewhat intuitive",
     "Neither intuitive nor unintuitive",
-    "Somewhat intuitive", "Very intuitive",
+    "Somewhat unintuitive", "Very unintuitive",
 ]
 difficulty_labels = [
-    "Very difficult", "Somewhat difficult",
+    "Very easy", "Somewhat easy",
     "Neither easy nor difficult",
-    "Somewhat easy", "Very easy",
+    "Somewhat difficult", "Very difficult",
 ]
 
-colors = ["#d73027", "#fc8d59", "#cccccc", "#91bfdb", "#4575b4"]
+colors = ["#4575b4", "#91bfdb", "#cccccc", "#fc8d59", "#d73027"]
 
 
 def get_counts(df, columns, scale_labels):
@@ -137,8 +138,8 @@ cd2 = get_counts(df2, dc2, difficulty_labels)
 
 plot_side_by_side(ci1, names_i1, ci2, names_i2, intuitive_labels,
                   "Self-Reported Intuitiveness (n = 10)",
-                  os.path.join(DATA_DIR, "intuitiveness_combined.pdf"))
+                  os.path.join(FIG_DIR, "intuitiveness.pdf"))
 
 plot_side_by_side(cd1, names_d1, cd2, names_d2, difficulty_labels,
                   "Self-Reported Difficulty (n = 10)",
-                  os.path.join(DATA_DIR, "difficulty_combined.pdf"))
+                  os.path.join(FIG_DIR, "difficulty.pdf"))
