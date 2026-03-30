@@ -1,0 +1,328 @@
+Session Name,Session Date,Timestamp,Note Text,Tags,Attachments
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:03:24,"Ill start with formula again, the id il give it expected-value, the latex is ... *types out latex line by line. Checks the rendered static latex while she is typing it out in the latex field",Edit formula; Experiment / Iterate,0
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:04:06,Lets work on the variables *gives the variables empty entries,Edit variables; Experiment / Iterate,1
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:04:54,"I want to label some of them at specific places, *changes the variables to use the space characters again to distinguish them",Edit variables; Unexpected usage,1
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:05:00,Was able to arrive at a fully labelled formula (without the values defined) in the first 5 minutes,Naturalness,0
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:07:01,Looks through the tutorial and finds that the default can be an array and decides to define the X to have an array,Experiment / Iterate,1
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:07:22,Sees the example in the tutorial - i should use this format to calculate over the array,Edit steps; Edit semantics; Naturalness,1
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:08:19,Declared P(x) as a array variable as well,Naturalness; Edit variables,1
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:13:11,"Worked on the labels to highlight them with specific values, also used string concatenations",Edit semantics; Naturalness; Edit steps,1
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:15:12,Wait to be able to drag and change the array value in array variables but theres no way to do it,Friction; Edit variables; Design Patterns,0
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:16:37,This is what it looks like.She wants to add another label for E such that it will show the sum,Design Patterns,1
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:17:36,Defines 2 entries for E. Which is not allowed,Error; Friction; Edit steps,1
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:18:53,The final product,Design Patterns,1
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:19:43,"""If I was solving this equation how I would think about it."" ""Like multiplying it and then adding it is multiple steps maybe for beginner but for me I would like to see it as one step""",Design Patterns,0
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:22:22,"Since theres 10 minutes left, asked her to try to iterate and have multiple steps",,0
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:22:43,"One thing I would do to ""E"" is to have this value displayed",,0
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:23:59,The new step,Experiment / Iterate; Edit steps,1
+Participant 48-2 ✅,"3/19/2026, 11:10:52 AM",00:27:49,"""I kind of wish the set of all possible outcomes, since it depends on the color, that it can display the color red black and green."" ""I would wish to see both""",Design Patterns; Friction,0
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:01:56,"""First I want to define the formula and define the id and the latex""",Edit formula; Experiment / Iterate,0
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:03:25,"Checks the rendering after she added the formula, but since the id was radioactive-decay instead of decay being in the formula component so it did not initially show anything, adjusted and fixed it successfully right afterwards",Experiment / Iterate; Edit formula,0
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:03:31,Adding in the plain variables first before any settings,Experiment / Iterate; Edit variables,0
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:04:38,"""So ill then add a description for each""",Experiment / Iterate; Edit variables,2
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:06:05,"""Okay let me make these smaller"" *after noticing the labels are too long",Experiment / Iterate; Edit variables,0
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:07:32,Immediately successfully uses vars call with a complex variable name,Naturalness; Edit variables,1
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:11:15,Set the N_0 as the same amount as N(t) assuming zero time passes. (*Does not know that the semantics will already override the variables in this case.,Edit variables; Unexpected usage,1
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:11:59,"One thing I noticed is that the t is in N(t) instead of on the right, I want to change that",Friction; Edit variables; Design Patterns,0
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:12:47,Uses a space to identify the specific t to isolate it such that it is now rendered on the right.,Unexpected usage; Edit variables; Design Patterns,1
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:13:55,Also highlighted the expression.,Edit steps; Naturalness; Design Patterns,1
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:13:55,Successfully uses sigfig settings to make this variable appear,Edit variables; Naturalness,1
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:14:35,Wanted to be able to drag and change the array variables inside the formula but there's no current ways to do it,Friction; Design Patterns,0
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:17:28,Want to calculate the time passed adjust the semantics since she specifically want to showcase the half life. Knew that she can just change the semantics only without needing to adjust most of the variables,Design Patterns; Naturalness; Edit semantics,1
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:19:10,Adjusted semantics,Naturalness; Design Patterns; Edit semantics,1
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:21:22,"The t was not working so she adjusted it after taking a bit.  ""I think I was just looking at the variables to make I sure I defined them properly""",Edit semantics; Friction; Experiment / Iterate,1
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:22:14,The resulting visualization shows the half life by changing the N_0 and the N(t) which calculates the t,Design Patterns; Unexpected usage; Naturalness,1
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:24:07,"On how she made a decision around the scenarios - ""Some of the questions relate to how much time is passed"" - so she examined that time is an important variable that people wonder about",Design Patterns; Edit variables,0
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:25:47,"On the "" t"" variable. I was looking at what is the difference between the t in N(t), and the t next to the \\lambda in the latex",Naturalness; Unexpected usage; Edit variables; Experiment / Iterate,0
+Participant 48-1 ✅,"3/19/2026, 10:26:19 AM",00:27:29,"""if you have a list common decay constants such as carbon 14 where you can just click on one and it changes the decay constant to that specific item""",Design Patterns; Friction; Experiment / Iterate,0
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:01:55,Fix missing slashes in the formula,Friction; Experiment / Iterate,1
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:04:48,I think maybe like I dont think it makes sense to have one step for each element in the outcomes unless the goal is to teach someone what a summation is,Design Patterns,0
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:05:56,Maybe just step by step?,Design Patterns,0
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:06:14,I am confused about what is the goal here what is the formula trying to show,Naturalness; Friction,0
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:08:35,"""Let me steal this for now""*Uses the example code",Edit variables; Experiment / Iterate,1
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:10:58,Defined the array variables,Edit variables,1
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:12:43,"Starts without semantics written, wrote the step first",Edit steps; Edit semantics; Experiment / Iterate,1
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:14:58,"I dont know if you can do this, but I think I would be useful to have the values split up like this. I wonder if it is possible to unwrap the equations and show the design",Design Patterns,1
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:18:54,Adding plain steps,Experiment / Iterate; Unexpected usage; Edit steps,1
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:20:35,Using plain numbers,Unexpected usage; Edit semantics,1
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:23:17,Tries to highlight expression,Design Patterns; Edit steps,1
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:25:39,Add in another plain step,Design Patterns; Edit steps,1
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:29:43,Final,Design Patterns; Edit steps,1
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:30:44,It's not super pretty but,Friction,0
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:30:44,"""I thought the steps that I wanted to do were different in the sense that the formula could not change instead of summing""",Friction; Design Patterns,0
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:30:44,"""Looking back it was kind of confusing what I did""",Friction,0
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:30:44,"""it would be cool if with the step you could also change the formula so it's like you have this example and this is how you calculate the sum and you can actually plug in the values and the whole formula changes too""",Design Patterns; Experiment / Iterate,0
+Participant 17-2 ✅,"3/18/2026, 6:30:00 PM",00:30:44,"""I think the library was very intuitive, and it is adoptible, especially when you have an example side by side""",Naturalness,0
+Participant 17-1 ✅,"3/18/2026, 5:30:00 PM",00:02:13,"""First thing I want to do is to get the formula to show up here. Seeing something will help""",Naturalness; Experiment / Iterate; Edit formula,0
+Participant 17-1 ✅,"3/18/2026, 5:30:00 PM",00:03:34,"Paste in and replaces the formula with the latex, sees the formula, says ""cool nice""",Naturalness; Edit formula,1
+Participant 17-1 ✅,"3/18/2026, 5:30:00 PM",00:05:47,"I think all three of these are going to be variables.""Why?"" because I can change them",Edit variables; Experiment / Iterate,1
+Participant 17-1 ✅,"3/18/2026, 5:30:00 PM",00:07:36,Writes out the variable declaration first and then populate them with the names,Experiment / Iterate; Edit variables,1
+Participant 17-1 ✅,"3/18/2026, 5:30:00 PM",00:09:19,Decided to use avogadros number because it is more realistic than 100,Design Patterns; Edit variables,1
+Participant 17-1 ✅,"3/18/2026, 5:30:00 PM",00:12:25,Able to set up the values,Naturalness,1
+Participant 17-1 ✅,"3/18/2026, 5:30:00 PM",00:13:38,"""I dont really like how this is looking so far. I don't like how this t is on this side. I like how both t can be dragged. Actually maybe I do like this. I wish the label was placed differently. Maybe I should be able to label both? Then maybe it will be a bit cluttered. I think it makes sense although to do the first since it takes less space.""",Design Patterns; Edit variables; Friction,0
+Participant 17-1 ✅,"3/18/2026, 5:30:00 PM",00:18:39,Starts working on the semantics (looks at the rendered static formula in the tutorial first),Edit semantics,0
+Participant 17-1 ✅,"3/18/2026, 5:30:00 PM",00:19:29,Successfully writes the variable reference,Naturalness; Edit semantics,1
+Participant 17-1 ✅,"3/18/2026, 5:30:00 PM",00:23:30,Unable to see the drag working because his number is too large and when he drags the  number is not signigicant enough to show the change,Friction; Experiment / Iterate; Edit variables,1
+Participant 17-1 ✅,"3/18/2026, 5:30:00 PM",00:24:36,Simplifies the numbers to make it more reactive,Experiment / Iterate; Friction; Edit variables,1
+Participant 17-1 ✅,"3/18/2026, 5:30:00 PM",00:25:35,Improved the steps to the 22nd 10 power and then the drag is good,Experiment / Iterate; Edit variables,0
+Participant 17-1 ✅,"3/18/2026, 5:30:00 PM",00:25:49,,,1
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:00:00,"""For UX purposes the edge connecting an expression with the label could be more prominent""",Friction,0
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:01:44,Pasted in the formula template first and replaced it latex,Edit formula; Experiment / Iterate,0
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:03:09,"""A reason I didn't work on the variable declaration is because I started with the latex so I already have any idea of the variables in my head so I can move directly to the semantics""",Experiment / Iterate; Edit semantics,0
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:04:00,"""Trying to think of a good way to do this with the steps""",Edit steps; Experiment / Iterate,0
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:04:20,"""For this thing it's like a bunch of x's""",,0
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:05:01,"""The only thing is I can break it down to x1 x2 x3""",,0
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:06:13,Was a little bit lost because there seems to be instances of variables,Friction; Edit semantics,0
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:06:42,Pointed her to the tutorial material around array-valued variables,,0
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:08:32,Made use of the example code for the for loops and arrays,Experiment / Iterate; Edit semantics,1
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:09:04,started with the string concatenation,Naturalness; Edit steps,1
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:14:12,"Created two P(x)? ""One is going to be shown, and the over is simply all the probability values""",Design Patterns; Unexpected usage; Edit variables,1
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:15:00,First checked out the rendering after defining the variables,Experiment / Iterate,1
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:16:19,Added step controls with no issue,Naturalness; Edit embedding,1
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:17:55,Adding a step inside the for-loop,Naturalness; Edit steps,1
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:18:08,"""Yes!"" sees the Probability show up",Naturalness,0
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:18:55,Adds an expression highlighting easily,Naturalness; Edit steps,1
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:20:23,"""I want to show the running sum somewhere"" ""I want to show what is E so far""",Design Patterns,0
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:24:09,"Added a description ""I want to describe the current entire step""",Design Patterns,1
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:24:53,"try to concatenate a \n character ""I want to create a new line to make it more readable"" But this was not possible",Unexpected usage; Friction,0
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:25:48,Checkpoint state,Design Patterns,1
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:27:57,Final completed,Design Patterns,1
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:29:16,"In regards to why she used one step call. ""Given the summation, each step is the same given the values, and it is in a loop, and the difference is what is being multiplied with what, so a step call is the same step and it is just the numerical value""",Design Patterns; Experiment / Iterate,0
+Participant 19-2 ✅,"3/17/2026, 8:05:33 PM",00:30:38,"""I wish that there is a way to show what are the different probability values"" in regards to her choices of P(X) and P(x)",Friction,1
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:00:59,Copies over the formula from the tutorial,Edit formula; Experiment / Iterate,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:01:18,Replaces formula with the exponential decay formula,Edit formula; Experiment / Iterate,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:01:58,Starts working on the variables,Edit variables,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:03:30,"""I found the creation of variables to be a bit annoying since it takes more effort, so Ill focus on semantics for now""",Friction; Edit variables,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:04:41,Seems to put in some placeholder variables first,Experiment / Iterate; Edit semantics,1
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:05:20,Pastes in the variable template from the tutorial and then replacing the variable id with the ones she added,Experiment / Iterate; Edit variables,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:06:05,"""Trying to figure out N_0, I know that it will be a draggable thing""",,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:09:56,Choses an extremely large default value to be realistic for the number of atoms,Design Patterns; Edit variables,1
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:10:21,Set's lambda initially but without the \\,Edit variables; Error; Friction,1
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:11:32,"""lambda is a constant so it should not be draggable""",Design Patterns; Edit variables,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:13:15,"""The only think I am trying to figure out is why is there no label for lambda""",Error,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:13:56,Goes through entire variables and semantics section to fix the mentioning of complex variable names,Naturalness; Edit semantics,1
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:15:28,Fixed the sigfigs of the lambda to be 3 instead of 4,Naturalness,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:17:06,I wish the t should be placed there *points to the right most t in the formula,Design Patterns,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:18:11,"""for the semantics, if i put everything in one line together, it would be very long""",,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:18:28,"""I want my semantics to have multiple shorter lines to look like readable code""",Edit semantics,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:21:04,"""Once i started writing down everything here (the semantics area), I would know which vars i need""",Experiment / Iterate; Edit semantics,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:21:35,"""Defining the variable seems to be just the name and given values, they are less important in my opinion""",Experiment / Iterate; Edit variables,0
+Participant 19-1 ✅,"3/17/2026, 7:25:21 PM",00:23:32,"""I wasn't expecting anything to show up, I wasnt even looking at the rendered website until I am done"" ""Looking at the description of the formula, I learned about the meaning first, so I worked on the semantics first""",Experiment / Iterate,0
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:00:50,Reads through the task description,Experiment / Iterate,0
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:01:32,Starts with formula creation,Edit formula,1
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:02:18,Creates a config variable for X,Edit variables,1
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:03:00,Creates the variables with the name first,Edit variables; Experiment / Iterate,1
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:04:19,Sets a default array variable value,Edit variables; Naturalness,1
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:06:04,"Uses helpful in-function variable names to make sense of the semantics, just like in real code",Design Patterns; Edit semantics,1
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:08:18,Playing and making sense of how to build the semantics to represent the concept,Experiment / Iterate; Edit semantics,1
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:12:21,Was wondering why the variable labels only show the existing variable array value and was wondering how to bring out the instance of a variable display while stepping through,,0
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:17:30,Used a case syntax before changing her mind due to unfamiliar syntax so used the if statement instead and created instantiated step-through,Unexpected usage; Design Patterns,1
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:18:03,Code checkpoint,Design Patterns,1
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:19:48,Asked about if there is ways to show the intermediate outcome,,0
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:21:34,Added expression label for intermediate computation,Edit steps; Design Patterns,1
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:24:21,Asked about ways for string escaping because she needed to format the number and the string inside the description. I pointed her to the latex and sigfig and precision chaining commands,Edit steps,0
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:25:26,"Designed the step through to use if statements for case by case scenarios, then also used for loop as well as iterated upon existing steps, also used expression",Design Patterns; Edit steps,1
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:27:28,"She doesnt like the appearance, the labels when there is a lot of them and they are long, the visualization might seem a little bit much",Friction; Design Patterns,1
+Participant 45-2 ✅,"3/16/2026, 6:05:40 PM",00:28:13,She also doesn't like the appearance because she wishes the label placement is better,Friction; Design Patterns,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:02:54,Starts with the id of the formula and then paste in the formula,Edit formula; Experiment / Iterate,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:05:02,Looks back at her tutorial code for the variable configs instead of the tutorial material,Edit variables; Experiment / Iterate,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:05:50,Giving the variables decently long names,Edit variables; Design Patterns,1
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:06:22,Added lambda variable config,Edit variables,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:06:27,added t variable config,Edit variables,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:06:54,added N(t) variable config,Edit variables,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:07:25,"correctly writes out a vars[""N(t)""] call",Naturalness; Experiment / Iterate; Edit semantics,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:07:57,then proceed to return line and try to add other previous computation steps above it,Experiment / Iterate; Edit semantics,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:08:08,Copies over the math.exp code,Experiment / Iterate; Edit semantics,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:08:30,"sees that the lambda is not working because it is \\lambda, correctly to a vars call",Naturalness; Edit semantics,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:10:35,Spending a while fixing this,Friction; Error; Edit semantics,1
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:11:32,"Adjusting name of N(t), making sense of the formula herself",Experiment / Iterate; Edit variables,1
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:11:53,Setting default for decay constant at 1000,Edit variables,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:12:00,Setting it as 0.000121,Edit variables,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:12:50,"""the decay constant shows up as 0.00 because the exponent is very small""",Edit variables; Friction; Naturalness; Experiment / Iterate,1
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:14:27,"Starts using sigfigs and sets it as 7, sees the extra 0s, changes it to 6 sigfigs",Experiment / Iterate; Edit variables; Design Patterns,1
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:17:27,"Cares a lot about the design and realism about the display - ""I guess you want to teach people about the mathematic concept""",Design Patterns,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:18:24,Adjusting the settings and playing with it to tune the details,Experiment / Iterate,1
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:19:58,Looks at the example scenario alot,Experiment / Iterate; Design Patterns,1
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:24:58,"Asked about circular dependency, she wants to design the formula such that the N(t) which is initially dependent",Design Patterns; Experiment / Iterate,0
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:25:52,"She was wondering about the second question, which does pose a new design for semantics as a function solver",Unexpected usage,1
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:26:32,Decides to add a new formula entirely for the second question in the example scenario,Naturalness; Design Patterns; Edit embedding,1
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:27:08,Usage of html with the formulize components,Naturalness; Design Patterns; Edit embedding,1
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:28:37,Two formulas,Design Patterns,1
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:28:59,Formulas,Design Patterns,1
+Participant 45-1 ✅,"3/16/2026, 6:00:23 PM",00:30:24,"Was asking about the variables sharing same context, i told her to maybe use new config in this scenario",Friction; Experiment / Iterate; Design Patterns,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:00:21,Came up with formula id and latex fields easily,Edit formula; Naturalness,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:03:10,"came up with intuitive variable names relatively quickly, self corrected not having name field for the first variable's name initially",Edit variables; Naturalness,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:03:57,went back to tutorial when starting the semantics section to reference the array type for X variable declaration,Edit semantics; Experiment / Iterate,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:05:57,"Assigned probabilities and input set of events, and looked at output to see if the arrays for X and P(x) were there (which they were). Correctly noted that next step was to add in steps / computation",Edit steps,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:09:33,"Referenced tutorial 2 code when completing step calls, showed understanding of the pedagogical value when designing the step calls as a for-loop and labeling each part of the expression",Experiment / Iterate; Design Patterns; Edit steps,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:11:16,Added another step call at end to show accumulated values resulting in final expected value,Design Patterns; Edit steps,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:12:57,"""I'm a bit confused why there's no steps showing""",Friction; Edit steps,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:16:42,Tried changing values of X in array,Experiment / Iterate; Edit steps; Edit variables,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:17:14,"Didn't notice typo in step call, ""E: tota""",Error; Edit steps,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:18:30,"Realized that vars.E needed to be set after referencing Tutorial2 once again, commented out the step calls he made initially in order to ""see what's wrong""",Experiment / Iterate; Edit steps,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:19:36,"""We still don't have any steps though""",Error; Edit steps,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:20:15,"Tried to create a step call without having labels to isolate the issue again: ""even when I have just a description, it's still not giving anything... uhhh...""",Friction; Edit steps,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:22:06,"Finally realized he needed ""stepping: true"" at the start after looking at Tutorial2 code again, said ""oh""",Friction; Edit steps,0
+Participant 80-2 ✅,"3/15/2026, 6:03:19 PM",00:23:48,"Looked through the resulting steps that finally appeared, added in a label at the end to display each of the values in the expression in final step call",,0
+Participant 80-1 ✅,"3/15/2026, 5:31:25 PM",00:01:44,"Copied and pasted latex from tutorial, defined variables manually",Edit formula; Edit variables; Experiment / Iterate,0
+Participant 80-1 ✅,"3/15/2026, 5:31:25 PM",00:03:36,"Initially had ""name"" for variables, self corrected quickly to put just name as field",Edit variables; Experiment / Iterate,0
+Participant 80-1 ✅,"3/15/2026, 5:31:25 PM",00:04:06,"had lambda for key initially, self corrected quickly and put \\lambda",Error; Edit variables; Naturalness,0
+Participant 80-1 ✅,"3/15/2026, 5:31:25 PM",00:07:31,"Fixed id for formula, was ""atoms"" at first",Edit embedding; Error,0
+Participant 80-1 ✅,"3/15/2026, 5:31:25 PM",00:10:10,Bro was done quickly,Naturalness,0
+Participant 57-2 ✅,"3/11/2026, 9:30:00 PM",00:00:00,Accidentally wrote something that is not a variable,Edit variables; Error,1
+Participant 57-2 ✅,"3/11/2026, 9:30:00 PM",00:01:00,“Ohh I have to use a for loop” “They all need to do the same thing”,Naturalness; Design Patterns; Edit semantics,0
+Participant 57-2 ✅,"3/11/2026, 9:30:00 PM",00:04:00,Adding in array values,Edit variables; Experiment / Iterate,1
+Participant 57-2 ✅,"3/11/2026, 9:30:00 PM",00:05:00,Replaced each variable declaration by using the existing tutorial code,Experiment / Iterate; Edit semantics,1
+Participant 57-2 ✅,"3/11/2026, 9:30:00 PM",00:06:00,comments out copied existing steps,Experiment / Iterate; Edit steps,0
+Participant 57-2 ✅,"3/11/2026, 9:30:00 PM",00:09:00,Made a mixed text and value step,Design Patterns; Naturalness,1
+Participant 57-2 ✅,"3/11/2026, 9:30:00 PM",00:10:00,“I think something is wrong syntactically”,Friction; Experiment / Iterate,0
+Participant 57-2 ✅,"3/11/2026, 9:30:00 PM",00:14:00,reached this,Design Patterns; Naturalness,1
+Participant 57-2 ✅,"3/11/2026, 9:30:00 PM",00:16:00,"“you see this is kind of annoying, why is there two brackets in every step”",Friction; Edit steps,0
+Participant 57-2 ✅,"3/11/2026, 9:30:00 PM",00:18:00,Running into syntactical issues with brackets,Friction; Edit steps,1
+Participant 57-2 ✅,"3/11/2026, 9:30:00 PM",00:19:00,This,Design Patterns,1
+Participant 57-2 ✅,"3/11/2026, 9:30:00 PM",00:24:00,Used multiple steps inside and outside of loop,Design Patterns; Edit steps,1
+Participant 57-2 ✅,"3/11/2026, 9:30:00 PM",00:26:00,Improved the explanation to highlight expression,Design Patterns; Edit steps; Naturalness,1
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:00:20,"""Ooooo fancy formula""",Naturalness,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:02:25,Copy and pasted the example code from tutorial for the formula,Experiment / Iterate; Edit formula,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:04:11,Added two formulas?,Edit formula; Design Patterns; Experiment / Iterate,1
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:05:21,Copied and pasted all the variable configs to create variables,Experiment / Iterate; Edit variables,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:05:33,"""Why does this not change"" - He is looking at the empty page",Friction; Error,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:05:52,"At the N(t) ""this might be an issue we might need to put this in quotes""",Edit variables,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:06:22,Lamba is going to be confusing... ***looks at the tutorial treatment of vec_f,Friction,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:07:36,"""I'm just not thinking too much"" ""unless i get it wrong which means I should be thinking more""",Friction,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:10:43,Writing semantics,Edit semantics,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:10:51,"Immediately did vars[""N(t)""]",Naturalness; Edit semantics,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:13:22,Applied the [] or the . vars appraoch differently for different variables,Naturalness; Edit semantics,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:14:25,Immediately realized why his formula is not showing up by going to the formula component,Naturalness; Edit embedding,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:16:22,"Trying with extreme numbers because ""there could be a lot of atoms"" because they are so small",Design Patterns; Experiment / Iterate; Edit variables,1
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:17:47,"""I dont know how to deal with these""  *points at 1e7",Edit variables; Friction,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:20:08,Testing with very dramatic numbers because he thinks it is scientifically accurate,Unexpected usage; Edit variables; Experiment / Iterate,1
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:21:16,His range is outside of the default and the step is super small,Unexpected usage; Error; Edit variables,1
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:23:42,"""Look at them die"" as he drags the time variable",,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:24:42,"""I want to make N(t) scientific notation"". *looks a tutorial example* ohhh sigfigs. *It works. Ohhhh nice",Experiment / Iterate; Edit variables; Naturalness,0
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:26:27,Arrived at this,Design Patterns,1
+Participant 57-1 ✅,"3/11/2026, 8:31:13 PM",00:27:16,Then fun thing is that when you increase t you can see the final atoms die and it shows the number doing to negatvie -100 power,,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:02:43,Adds formula and id,Edit formula; Experiment / Iterate,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:02:52,Adds variables with just the blank brackets {},Design Patterns; Edit variables; Experiment / Iterate,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:03:20,"""I wonder if capital X should be made into a variable""",Design Patterns; Edit variables,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:04:13,"""Even if it can't be directly draggable, I can make it a variable so that it is labeled""",Edit variables; Design Patterns,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:06:04,"""What i am thinking is for the first step I can define a set of possible values X with maybe two or three values and on the second step I can decompose the sum""",Design Patterns; Edit steps,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:06:37,"""Lastly then I calculate the result""",Design Patterns; Edit steps,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:06:49,"""Because I have freedom to do whatever I want right""",Naturalness,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:09:52,Directly copies a step immediately before writing semantics,Experiment / Iterate; Edit steps,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:10:31,"""Do i have to copy the labels for each step if I want them to stay there right""?",Friction; Edit steps,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:11:59,"Thought we use the same label notation as in the variables with the ""name"" as prop for the labelling in step",Friction; Edit steps,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:12:51,"""I just want a first step where everything is normal""",Friction; Edit steps,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:13:23,Gives x a default value,Edit variables,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:13:29,"""wait no I dont want to""",,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:13:45,"""How do I just get the current variables to all show up with their labels?""",,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:17:41,"""There's no way to show the default formula without the variable values showing?""",,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:18:08,"""I need to lock in and I getting too distracted""",,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:18:29,"Started using string concatenation ""how can I add custom latex""?",Naturalness; Edit steps,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:20:36,Directly wrote the value of an example set as static,Edit semantics; Unexpected usage,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:21:11,At this point he still has not added any actual semantics for calculation yet,Unexpected usage; Edit semantics,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:21:33,"""What I would like to do is to substitute in the value inside the formula""",Friction; Edit steps,0
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:26:16,Not using the for loop and is directly showing the values in their component calculation,Design Patterns; Edit steps,1
+Participant 29-2 ✅,"3/11/2026, 5:53:52 PM",00:28:18,Broke it all into component parts,Design Patterns; Edit steps,1
+Participant 29-1 ✅,"3/11/2026, 5:07:07 PM",00:02:24,Created variables,Edit variables,0
+Participant 29-1 ✅,"3/11/2026, 5:07:07 PM",00:02:45,Making the variables and added with simple brackets first,Edit variables; Design Patterns,0
+Participant 29-1 ✅,"3/11/2026, 5:07:07 PM",00:03:09,"""I thought maybe since there are special symbols I can call the variable id's with quotation marks""",Naturalness; Edit variables,0
+Participant 29-1 ✅,"3/11/2026, 5:07:07 PM",00:04:19,Started giving the variable names,Edit variables; Experiment / Iterate,0
+Participant 29-1 ✅,"3/11/2026, 5:07:07 PM",00:05:13,Started adding default,Edit variables; Experiment / Iterate,0
+Participant 29-1 ✅,"3/11/2026, 5:07:07 PM",00:05:40,Checks back and forth between the changes,Experiment / Iterate,0
+Participant 29-1 ✅,"3/11/2026, 5:07:07 PM",00:06:39,Writes the spec directly without copying,Experiment / Iterate,0
+Participant 29-1 ✅,"3/11/2026, 5:07:07 PM",00:10:09,Uses math.E to label E just cause he wanted there to be a label for that value,Design Patterns; Edit semantics,0
+Participant 29-1 ✅,"3/11/2026, 5:07:07 PM",00:11:31,Saw that the time t variable is rendered inside N(t) and wants to move it. But then decided not to,Experiment / Iterate; Edit variables,0
+Participant 29-1 ✅,"3/11/2026, 5:07:07 PM",00:13:41,"Corrected mentioned the vars[""N(t)""]",Naturalness; Edit semantics,0
+Participant 29-1 ✅,"3/11/2026, 5:07:07 PM",00:15:18,"""I should add more zeros to that, it should never go to zero"" ""Oh wait I should make it sigfigs""",Design Patterns; Experiment / Iterate; Edit steps,0
+Participant 29-1 ✅,"3/11/2026, 5:07:07 PM",00:17:39,"Asked him about writting semantics in a single line. He thought it is compact, in order to keep it simple.",Design Patterns; Experiment / Iterate; Edit semantics,0
+Participant 21-1 ✅,"3/10/2026, 5:30:00 PM",00:03:00,"“Ill first define the formula using latex code, then declare variables and then define the calculation”
+“Ill copy over the structure from the tutorial docs”",Edit formula; Experiment / Iterate,0
+Participant 21-1 ✅,"3/10/2026, 5:30:00 PM",00:05:00,“Which variables should be constant” Reading the description of the meaning of the variables and first expressing what she thinks the design should be in terms of which is draggable,Edit variables; Experiment / Iterate,0
+Participant 21-1 ✅,"3/10/2026, 5:30:00 PM",00:06:00,Initially defined lambda as just the word lambda,Edit variables; Error; Friction,1
+Participant 21-1 ✅,"3/10/2026, 5:30:00 PM",00:10:00,Defined initial number of atoms inside lambda. which is not correct meaning wise,Edit variables; Error,0
+Participant 21-1 ✅,"3/10/2026, 5:30:00 PM",00:12:00,Correct the formula id in the Formula to “decay”. Somehow wrote vars.time? which is not correct because it should not be the name of the variable but instead be the varId symbols,Edit semantics; Friction; Error,1
+Participant 21-1 ✅,"3/10/2026, 5:30:00 PM",00:16:00,Somehow added time as a variable in the formula latex.,Edit formula; Error; Friction,1
+Participant 21-1 ✅,"3/10/2026, 5:30:00 PM",00:17:00,"Afterwards, realized that N(t) is not showing up as a result so she’s investigating how to update the N(t) value. Decided to make the N(t) N_t instead. But the true issue is that she called vars.lambda instead of vars[“\\lambda”]",Edit semantics; Error; Experiment / Iterate,1
+Participant 21-1 ✅,"3/10/2026, 5:30:00 PM",00:18:00,Decides to use console.log to debug. Did not understand. Looked at tutorial code again and realized what is the issue. The writing the console log in the order of variables affected how she looked at the variables so she realized,Edit semantics; Experiment / Iterate; Unexpected usage,1
+Participant 21-1 ✅,"3/10/2026, 5:30:00 PM",00:20:00,Final product,Naturalness; Experiment / Iterate,1
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:02:30,Copy and pasting behavior from the tutorial 2,Experiment / Iterate; Edit formula,0
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:04:00,I think I need 2 or three variables which is why I decided to copy and paste 2 variables,Edit variables; Experiment / Iterate,1
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:06:00,Accidentally wrote p_x instead of P(x),Error; Edit variables,0
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:06:30,intentionally used precision of 2 because of the percentage chance,Edit variables; Design Patterns,0
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:07:00,created variable E without the default,Experiment / Iterate; Edit variables,0
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:07:30,“Do i need to declare settings for all variables present in the latex?”,Friction; Edit variables; Design Patterns,0
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:08:00,Changed P_x to P(X) but it is still different than the latex,Error; Edit variables,0
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:09:30,Copied the overall semantics function showing the loop and step in the tutorial 2 into the codebase,Edit semantics; Experiment / Iterate,0
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:13:00,Iterating on the existing step call.,Design Patterns; Experiment / Iterate; Edit steps,1
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:13:20,uses latex and sigfigs settings for the first time and did it correctly,Naturalness; Edit steps; Design Patterns,1
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:13:40,“Trying to see what other values i need to show in the labels”,,1
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:16:00,Opens the display of formula for the first time and realized “I forgot to do the stepControl render”,Edit embedding; Error,0
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:17:00,"Reviewed the formula, the stepping works but realized x_i an p_i in the step labels are not rendered as math mode because they are not using the $ signs",Edit variables; Friction,0
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:18:00,Realized the P(x) is not showing any value at the step it seems like she has omitted or forgot to include it in the step call,Edit steps; Error,0
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:18:30,"""I must show P(values) here"" Adds p variable call into the step declaration, but But she still did not correct P_X and she instead turned P(X) into P_X",Edit steps; Error; Experiment / Iterate,1
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:21:00,"Has a step with all the individual parts as shown here. With asking, she turned the x_i p_i from xp into math mode.",Design Patterns,3
+Participant 21-2 ✅,"3/10/2026, 4:30:00 PM",00:22:00,Final,,1
+Participant 11-2 ✅,"3/9/2026, 9:00:00 PM",00:01:00,"Added latex: “Oh nice, we are already half way there”",Edit formula; Experiment / Iterate,0
+Participant 11-2 ✅,"3/9/2026, 9:00:00 PM",00:03:00,Copies the entire solution config from tutorial and added it into task 2. Replaced the keys with the variables in this example,Edit variables; Experiment / Iterate,0
+Participant 11-2 ✅,"3/9/2026, 9:00:00 PM",00:06:00,Stylistically decided to add a cdot for the multiplication,Unexpected usage; Edit formula; Experiment / Iterate,1
+Participant 11-2 ✅,"3/9/2026, 9:00:00 PM",00:08:00,"Asked about the usage of inline latex with slash \\
+- Eric: “We currently only have support for the $ $”",Friction; Edit variables,1
+Participant 11-2 ✅,"3/9/2026, 9:00:00 PM",00:10:00,"Starts becoming confused when he added the stepping:true
+and also semantics but then the labels are not showing up because he did not add any steps nor the stepControl component",Friction; Naturalness; Edit embedding; Edit steps; Experiment / Iterate,0
+Participant 11-2 ✅,"3/9/2026, 9:00:00 PM",00:14:00,Copies over entire segment of provider with the formula and stepControl inside. (This is from the tutorial code),Edit embedding; Experiment / Iterate,0
+Participant 11-2 ✅,"3/9/2026, 9:00:00 PM",00:16:00,Decided quickly to get rid of stepping syntax to revert and make sure calculations first but then changed his mind when he realized he needs to add a step cal (it is a requirement),Unexpected usage; Experiment / Iterate; Edit steps; Edit semantics,0
+Participant 11-2 ✅,"3/9/2026, 9:00:00 PM",00:18:00,"Looks at the tutorial doc at the notes on the loop and found that the tutorial is very helpful
+“Idea idea idea” - Seems to imply that he has an idea
+Proceeds to paste in the loop and array value example",Naturalness; Experiment / Iterate; Edit semantics; Edit steps,0
+Participant 11-2 ✅,"3/9/2026, 9:00:00 PM",00:20:00,Sees this - “OH NICE”,Naturalness; Experiment / Iterate,1
+Participant 11-2 ✅,"3/9/2026, 9:00:00 PM",00:21:30,Proceeds to get the idea that the default for P(x) can be turned into array,Naturalness; Edit variables,1
+Participant 11-2 ✅,"3/9/2026, 9:00:00 PM",00:22:30,Does string concatenation for the first time and uses latex call and sigfigs,Edit steps; Naturalness,1
+Participant 11-2 ✅,"3/9/2026, 9:00:00 PM",00:23:00,Reached a good spot that shows value with both arrays. Continues working on that singular step call,Design Patterns; Experiment / Iterate; Edit steps,1
+Participant 11-2 ✅,"3/9/2026, 9:00:00 PM",00:26:00,OH NO - *Need to check back on this part of the recording*,,1
+Participant 11-1 ✅,"3/9/2026, 8:00:00 PM",00:00:00,has issues with the writing of the vars. access calls,Error; Edit variables; Friction,1
+Participant 11-1 ✅,"3/9/2026, 8:00:00 PM",00:21:00,"Runs into NaN with th N_0 variable, adjusted variable accessor name and was able to fix it",Error; Edit variables; Friction,0
+Participant 11-1 ✅,"3/9/2026, 8:00:00 PM",00:23:00,Added default value of 0 into variables to simply let them show up to test if their label is working,Experiment / Iterate; Edit variables,0
+Participant 11-1 ✅,"3/9/2026, 8:00:00 PM",00:24:00,"“Range ohhhh” 
+“Can I look on common decay constants?” “Can I look for common half life?”",Experiment / Iterate; Design Patterns; Edit variables,0
+Participant 11-1 ✅,"3/9/2026, 8:00:00 PM",00:27:00,“Ohh time should never be negative right? Let’s have a range for that”,Design Patterns; Edit variables; Experiment / Iterate,0
+Participant 11-1 ✅,"3/9/2026, 8:00:00 PM",00:28:00,plays with the range and the step settings various times,Edit variables; Experiment / Iterate,1
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:01:32,Start with adding formula and writes out the id and adds in the latex by pasting it,Edit formula; Experiment / Iterate,0
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:02:05,Check to see if the formula shows up after writing the formula,Edit formula; Experiment / Iterate,0
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:03:13,"starts naming the first variable E with a name of ""Expected value""",Edit variables; Experiment / Iterate,0
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:04:11,Proceed to name all the variables with their name first,Edit variables; Experiment / Iterate,0
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:05:03,"When naming the variables, reference the task material",Edit variables; Design Patterns,0
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:05:43,writes stepping as true and straight up types out the semantics function,Edit semantics; Experiment / Iterate,0
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:06:17,accesses variable and setting the variables correctly,Edit semantics; Naturalness,0
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:07:41,"Translating the vars call into an actual var single letter variable first, like
+var t = vars.t <- maybe the reason for this is to be more explicit or clear",Experiment / Iterate; Edit semantics,0
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:08:09,Adding a long string label to an expression first,Edit steps; Design Patterns,0
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:09:22,Uses latex call successfully to format the numbers,Edit steps; Naturalness,0
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:10:09,Then use sigfigs successfully to modify the formatting of the P(x) number,Edit steps; Naturalness,0
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:11:00,Uses mathematic fraction calculation to express default value,Edit variables; Naturalness; Unexpected usage,1
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:12:10,Working on his own example in his own head so that it is easier to create for expected value,Design Patterns,0
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:14:20,Used a combination of dollar sign math mode as well as string concatenation mixed with the latex and sigfigs function chaining,Edit steps; Naturalness,1
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:17:10,Created an elaborate step,Edit steps; Design Patterns,2
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:18:02,"Remembered the for loop, searched for the for loop to reference for this example",Naturalness; Edit semantics,0
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:21:01,Created a new part of the semantics aiming to be the array extension of the flat usage of variables now that he is done experimenting with the calculation,Edit semantics,1
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:24:23,Syntax issues with braces show lots during construction of the steps since they are a little bit nested,Friction; Edit steps,1
+Participant 14-2 ✅,"3/9/2026, 7:00:00 PM",00:28:33,"Added steps before, during, and after the loop",Edit steps; Design Patterns,1
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:01:51,Writes in the id first and and latex and copies in the latex,Edit formula; Experiment / Iterate,0
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:04:34,Defines one variable first and then define their name,Edit variables; Experiment / Iterate,0
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:06:26,Finish creating labels for all variables,Edit variables; Experiment / Iterate,1
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:06:45,Started adding default values first in to lambda,Edit variables; Experiment / Iterate,0
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:07:06,Added in sigfigs for the lambda variable,Experiment / Iterate; Naturalness; Edit variables,0
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:07:31,Writing variable access was very successful,Edit semantics; Naturalness,0
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:08:23,started writing the semantic function and was immediately able to handle the lambda variable complex variable key.,Naturalness; Edit semantics,1
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:08:38,Setting variable values,Edit semantics; Naturalness,0
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:09:57,Asked to add in helper functions to help with the existing calculation for the exponent. Even though we actually included the syntax for math.exp in the task file,Naturalness; Edit semantics,0
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:10:54,Clicked to see if anything rendered at this point but nothing rendered because the formula id was not correctly defined in the formula component,Error; Edit embedding,1
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:13:53,"""So now what can we change in this?"" Looks at the existing rendered formula",,1
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:16:30,"When the range is extremely large, had trouble designing the drag interaction. For instance for one of the variable he wanted to enliven he has set a value of 6.022e23 but for step he only set 1e4, and when he dragged the change was invisible because theres simply too many orders of magnitudes difference between step and the range setting where he added a max of multiple of 6.022e23",Friction; Edit variables; Design Patterns,1
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:17:11,"Because the drag interaction with the previous setting was not satisfactory, he changed the value to a more manageable and simpler value of default of 10 and then a rang of [1, 100] and a step of 1 to test if the drag was working at all",Experiment / Iterate; Friction; Edit variables,1
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:18:25,Expressed surprise that the t is rendered in a nested manner in N(t),Friction; Design Patterns,1
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:19:47,"When he made a key mismatch error in the semantics, he used console.log to debug the execution of the semantics code to see where exactly the calculation has gone wrong",Unexpected usage; Experiment / Iterate,1
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:20:56,Confirming in the console.log that the value of a variable is indeed has the NaN value,Unexpected usage; Experiment / Iterate,1
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:21:20,"Used vars.t inside the semantics when the variable was actually "" t"" since he wanted the specific highlighting, thus, the N(t) value is shown as NaN because the semantics was not actually calculating correctly. ""Maybe by regex we can do the it, so we can add a specific t interaction to a specific t in the formula""",Unexpected usage; Error,0
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:25:26,Found inline editing and liked it. Somehow added a prop called options.,Unexpected usage; Design Patterns,1
+Participant 14-1 ✅,"3/9/2026, 6:00:00 PM",00:27:59,"""I noticed that when you put t it can label one of either of the t's",Friction,0
