@@ -1,30 +1,12 @@
-
 \section{Implementation}
 
-% keeping concise based on guiding notes
+Delta is a JSON DSL with an accompanying React component library that propagates state across components. One of the intents is of Delta is to take care of common logistical aspects of making formulas interactive so that authors can instead focus on presentation. We describe those aspects here. 
 
-Delta is implemented as a React component library in TypeScript. The implementation is organized around six components: parsing and augmentation, label layout, interaction handling, reactive updates, state management, and semantic runtime data collection.
+\paragraph{Parsing and rendering}
+Delta parses and augments formulas in a manner largely consistent with other recent formula augmentation tools~\cite{Wu2023-xc,tao2025freeform}. It leverages the parser from KaTeX~\cite{tool:katex}, a widely-used LaTeX web formula renderer, to produce an AST of a formula's LaTeX. On this AST, it matches specified variables and then wraps them with macros that will wrap those variables in CSS IDs at render time. If a spec asks to replace a variable with the value, Delta replaces the variable node with a value node. Delta serializes the parse tree into LaTeX and then passes it to MathJax to render it to HTML. A re-parse and re-render of the formula is invoked whenever the contents change, i.e., whenever a substituted value is updated. Labels are rendered as elements on a ReactFlow canvas and spaced using a custom collision resolution algorithm.
 
-\subsection{Parsing and augmentation}
+\paragraph{Interaction handling}
+After MathJax renders the augmented LaTeX into the DOM, Delta attaches interaction handlers to the identified elements using synthesized CSS IDs from the earlier step. To promote continuity of interactions, event handlers are attached to transparent overlay nodes positioned over each variable. This prevents disruption of interaction as the formula changes, for instance if concrete values are substituted into the formula and are changing in response to interaction.
 
-Delta employs an AST-based strategy to parsing latex that is inspired by FreeForm. Delta parses each LaTeX formula string into an abstract syntax tree (AST) using KaTeX's internal parser. The resulting KaTeX parse tree is converted into a custom typed AST with node types for symbols, scripts, fractions, groups, and other LaTeX structures. When variables are declared in the configuration, the system walks the AST to locate nodes matching each variable key, with subtree matching enabling the capture of variables containing nested expressions such as subscripted terms rather than just individual symbols. Matched nodes are wrapped with LaTeX \texttt{\textbackslash cssId} and \texttt{\textbackslash class} commands that produce identifiable, styled DOM elements when MathJax renders the formula. If the variable's \texttt{latexDisplay} property is set to \texttt{"value"}, the system replaces the symbol's LaTeX with its current numeric value before rendering [Note this does not include array variables or strings].
-
-\subsection{Label layout}
-
-To display interactive labels outside the formula, Delta embeds the rendered MathJax output within a resizable ReactFlow canvas. ReactFlow provides a coordinate system where the formula is placed as a central node, and labels are positioned relative to the formula. Labels are automatically placed using spacing algorithms that account for the variable's coordinates and the formula's dimensions. This approach enables flexible placement as labels grow and shrink, and appear and disappear during interaction.
-
-\subsection{Interaction handling}
-
-After MathJax renders the augmented LaTeX into the DOM, Delta attaches interaction handlers to the identified elements. Because MathJax DOM nodes are re-rendered when variable values change, Delta creates transparent overlay nodes positioned over each variable's bounding box to serve as persistent event targets. These overlays handle all hover, click, and drag events on behalf of the underlying DOM elements.
-
-\subsection{Reactive updates}
-
-Delta uses MobX, a reactive state management library, to coordinate updates across the system. When any input variable changes via interaction, MobX automatically triggers re-execution of the semantics function and re-rendering of the affected formula components. This reactive architecture means the system generating new LaTeX with updated values (if any variable are displaying as their value) and re-rendering through MathJax.
-
-\subsection{State management}
-
-The computation store maintains the state required to support formula interactions. This includes variable metadata for enabling hover effects, the current values of all declared variables, and the computed output values collected after each complete execution of the semantics function. To maintain consistent state, all visualization and interaction components subscribe to this store.
-
-\subsection{Semantic runtime data collection}
-
-During semantics execution, Delta collects data emitted by special API calls. \texttt{data()} calls emit sampled data points as the semantics function is evaluated over a parameter variable's range, but they can also be accessed by users directly. In step-through mode, the semantics function runs once on the current inputs, and each \texttt{step()} call records a display snapshot that the navigation controls replay in sequence rather than restoring the full variable state.
+\paragraph{Data collection and updates}
+To support the gamut of interactions, state is saved in a shared store, comprising current values of all variables, status of which variables are hovered, and steps and samples saved from executing the semantics function. Delta uses MobX, a reactive state management library, to coordinate updates across the system. When a change is triggered in variable value, MobX triggers re-execution of the semantics function and then re-rendering of any affected formula components. Other components---such as inline variables embedded in prose and custom components---access values through React Context and are wrapped with MobX's \texttt{observer} to re-render automatically when values change.
