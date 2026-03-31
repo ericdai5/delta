@@ -1,29 +1,20 @@
 \section{Discussion}
 
-\subsection{Limitations}
+Our studies provide evidence for the usability of Delta in walk-up-and-use settings. The first study showed greater speed and ease with Delta than a React baseline. The second study showed participants producing formula calculators and walkthroughs from scratch in 30-minute periods, with constructs largely being reported as somewhat or very intuitive. Participants regularly picked up and used features for referencing variables, defining semantics and steps, and configuring interactivity. These findings suggest the fit of the basic design of Delta for basic tasks.
 
-\paragraph{Task scope and ecological validity.}
-Both studies used a single task type---augmenting or authoring an interactive formula---within a controlled IDE environment. Real-world authoring involves longer sessions, larger codebases, and integration with surrounding prose, visualizations, and build systems, where Delta's advantages on viscosity and diffuseness may interact with factors we did not measure.
+\subsection{Study limitations}
 
-\paragraph{Participant population.}
-Our participant pool, while appropriate for the target user profile, consisted of graduate and advanced undergraduate students at a single institution. Professional content authors or domain experts with different tool fluencies may experience Delta differently.
-
-\paragraph{Order effects.}
-The controlled study's within-subjects design introduced a significant order effect: task familiarity compressed second-condition times regardless of library. Although Delta remained significantly faster even in the conservative Delta-first subgroup, the magnitude of the overall speedup ($1.87\times$) likely overstates what would be observed in a between-subjects design.
-
-\paragraph{Implementation gaps.}
-Delta's current lack of disambiguation for repeated symbols (G1) and the multi-step activation required for stepping (G2) introduced avoidable friction in the observation study. Resolving these would likely shift both behavioral and subjective measures further in Delta's favor.
+Our study involved participants who are not experienced math document authors, and there may be additional gaps to uncover for this group. Tasks were relatively short (maxing out at 30 minutes) and the possibilities of exploration were limited by the equations provided. Further studies of unconstrained use are necessary to determine if the language can support the formulas and goals that authors bring to the tables themselves.
 
 \subsection{Future Work}
 
-\paragraph{Direct manipulation of structured mathematical objects.}
-The design gaps around array-valued variables (G3) and repeated-symbol disambiguation (G1) raise a broader question: how should a DSL expose mechanisms for readers to interactively modify variables declared as vectors, matrices, or indexed sets? Answering this requires both new interaction techniques and formal models of how symbolic structure maps to manipulable regions---a problem that connects formula authoring to the wider HCI literature on structured editors and direct manipulation~\cite{hutchins1985direct}.
+The Delta language, and ideas from its development, open up several avenues for interesting future research.
 
-\paragraph{Graphical authoring interfaces.}
-Delta's configuration structure is sufficiently declarative that it could serve as the backing model for higher-level authoring interfaces. Because the specification cleanly separates variable declarations, interaction settings, and semantics, a graphical editor could let non-programmers author interactive formulas without writing code. Such an interface would lower the entry barrier beyond what a text-based DSL alone can achieve and open questions about how to design direct-manipulation editors for domain-specific languages.
- 
-\paragraph{AI-assisted authoring.}
-The pedagogical reasoning we observed---authors deliberating over which variables to make interactive, what ranges are physically meaningful, and how to sequence steps---suggests that Delta's primitives could serve as a foundation for intelligent authoring support. A system that infers plausible variable ranges from domain knowledge or suggests step decompositions from a formula's algebraic structure would shift the authoring bottleneck from implementation to pedagogical design.
+\paragraph{Interactions around structured expressions.}
+How should a DSL expose mechanisms for readers to interactively modify complex expressions like vectors, matrices, or indexed sets? Currently, Delta requires authors to expand these structures in the formula and mark their members as individual variables to permit any sort of interaction. An alternative could be to represent these structures by single variables (e.g., ``$\vec{v}$,'' ``$A$''), and allow readers to unpack and interact with them in the margins. An interesting direction to explore is defining control widgets corresponding to these various data types. In some places, these control widgets may be compositional, as in a vector of strings that would allow one to change the list of elements and expose widgets for modifying individual member strings.
 
-\paragraph{Variable-conditional semantics and solver-like interaction.}
-Delta currently re-executes a single semantics function whenever any variable changes, treating all updates uniformly. A natural extension is to allow authors to specify \textit{which} computation runs in response to \textit{which} variable changing. Under such a model, dragging one variable could solve for another. Designing an authoring abstraction that remains declarative while exposing per-variable semantic dispatch poses an open DSL design challenge.
+\paragraph{Symbolic expansion and derivation.} Delta is optimized for calculations involving \emph{concrete} values. However, manipulation of formulas happens in contexts without concrete values. For instance, formulas are manipulated to derive new formulas. They are also expanded into finer terms, like when one lists out the terms of a Taylor series. It could be useful to allow authors to support interactive expansion and derivation. We conjecture that this might require integration of Delta-like DSLs with engines for symbolic manipulation (e.g., sympy), and constructs for pointing out what to expand and provide the potential for recursive expansion of terms.
+
+\medskip
+
+Additionally, we envision possibilities in Delta accelerating human-AI authoring of interactive math documents and in scaffolding the creation of graphical editing tools that produce interactive formulas.
