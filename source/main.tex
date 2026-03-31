@@ -54,9 +54,10 @@
 
 % Define code colors
 \definecolor{codegray}{gray}{0.95}
-\definecolor{framecolor}{gray}{0.65}
+\definecolor{framecolor}{gray}{0.75}
 \definecolor{codegreen}{RGB}{0, 128, 0}
 \definecolor{codeblue}{RGB}{0, 0, 200}
+\definecolor{codebrightblue}{RGB}{0, 100, 220}
 \definecolor{codepurple}{RGB}{128, 0, 128}
 \definecolor{codeorange}{RGB}{200, 100, 0}
 \definecolor{figframecolor}{gray}{0.75}
@@ -73,6 +74,9 @@
   language=JSConfig,
   basicstyle=\ttfamily\fontsize{7.5}{7.5}\selectfont,
   keywordstyle=\color{codeblue},
+  keywordstyle=[2]\color{codepurple},
+  keywordstyle=[3]\color{codebrightblue},
+  keywordstyle=[4]\color{codeorange},
   stringstyle=\color{codegreen},
   commentstyle=\color{gray},
   backgroundcolor=\color{white},
@@ -94,7 +98,14 @@
   keywords={id, latex, formulas, variables, semantics,
              visualizations, controls, input, default,
              range, step, name, precision, type, label,
-             config, variable, code},
+             config, variable, code, graph2d, xAxisVar,
+             yAxisVar, lines, points, sampleId, parameter,
+             interaction, description, labels},
+  morekeywords=[2]{function, var, let, const, for, if, else,
+             return, while, do, switch, case, break, continue,
+             new, this, true, false, null, undefined},
+  morekeywords=[3]{kineticConfig, sum, K, m, v, i, X_i, X, n},
+  morekeywords=[4]{Config, vars, sample},
 }
 
 \tcbset{
@@ -103,7 +114,7 @@
     colframe=framecolor,
     width=\linewidth,
     boxrule=0.5pt,
-    arc=2pt,
+    arc=4pt,
     left=4pt, right=4pt, top=4pt, bottom=4pt,
     fontupper=\ttfamily\small,
     before skip=4pt, after skip=4pt,
@@ -114,7 +125,7 @@
   colframe=framecolor,
   colback=white,
   boxrule=0.5pt,
-  arc=2pt,
+  arc=4pt,
   left=6pt, right=6pt,
   top=4pt, bottom=4pt,
   before skip=4pt, after skip=4pt,

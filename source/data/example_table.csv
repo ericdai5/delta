@@ -1,0 +1,48 @@
+Name,URL,Editable Text,Scrubbable Values,Linked Selection,External Controls,Formula Tags,Details,Open Source
+Why Momentum Really Works,https://distill.pub/2017/momentum/,No,No,,Sliders,Static,*,
+Why Momentum Really Works,https://distill.pub/2017/momentum/,No,Yes,Bidirectional <->,Sliders,Dynamic,,Yes
+Surprising Uses of the Pythagorean Theorem,https://betterexplained.com/articles/surprising-uses-of-the-pythagorean-theorem/,No,No,,Editable Text,Static,,
+Byrne's edition of Euclid's Geometry (first five propositions only),https://www.c82.net/euclid/book1/,No,No,Formula -> Graph,,Dynamic,,
+Conditional Probability Explained Visually,https://setosa.io/ev/conditional-probability/,No,No,,Sliders,Static,,
+Image Kernels,https://setosa.io/ev/image-kernels/,No,No,,"Hovering, Options",Dynamic,,
+Example - Sine Waves in Time or Space,https://airladon.github.io/FigureOne/examples/Traveling%20Wave%2002%20-%20Sine%20Waves/,No,No,,Draggable Points,Static,,
+Example - Sine Waves in Time or Space,https://airladon.github.io/FigureOne/examples/Traveling%20Wave%2002%20-%20Sine%20Waves/,No,No,Graph -> Formula,Draggable Points,Dynamic,,Yes
+A Primer on Bézier Curves,pomax.github.io/bezierinfo,No,No,,Sliders,Static,,
+Sphere Eversion,https://rreusser.github.io/explorations/sphere-eversion/,No,No,,Sliders,Static,,
+Tessaract,https://ciechanow.ski/tesseract/,No,No,,Sliders,Static,,
+Geodesics,https://analyticphysics.com/General%20Relativity/Visualizing%20Geodesics%20on%20Surfaces.htm,No,No,,Sliders,Static,,
+Geometric Interpretation,https://complex-analysis.com/content/geometric_interpretation_add_mult.html,No,No,Graph -> Formula,"Draggable Points, Options, Sliders",Static,,
+Geometric Interpretation,https://complex-analysis.com/content/geometric_interpretation_add_mult.html,No,No,Graph -> Formula,"Draggable Points, Options, Sliders",Static,,
+Geometric Interpretation,https://complex-analysis.com/content/principal_argument.html,No,No,Graph -> Graph,"Draggable Points, Options, Sliders",Static,,
+Geometric Interpretation,https://complex-analysis.com/content/roots_complex_numbers.html,No,No,Graph -> Formula,"Draggable Points, Options, Sliders",Dynamic,,Yes
+Geometric Interpretation,https://complex-analysis.com/content/complex_functions.html,No,No,Formula -> Graph,Options,Static,,
+Geometric Interpretation,https://complex-analysis.com/content/domain_coloring.html,Yes,No,Formula -> Graph,Options,Static,,
+Geometric Interpretation,https://complex-analysis.com/content/power_function.html,Yes,No,Graph -> Formula,"Draggable Points, Options",Dynamic,,Yes
+Ordinary Least Squares Regression,https://setosa.io/ev/ordinary-least-squares-regression/,No,No,Graph -> Formula,Draggable Points,Dynamic,,Yes
+Ordinary Least Squares Regression,https://setosa.io/ev/ordinary-least-squares-regression/,No,Yes,Formula -> Graph,,Dynamic,,
+Ordinary Least Squares Regression,https://setosa.io/ev/ordinary-least-squares-regression/,No,Yes,Formula -> Graph,,Dynamic,,
+Ordinary Least Squares Regression,https://setosa.io/ev/ordinary-least-squares-regression/,No,Yes,Formula -> Graph,Draggable Points,Dynamic,,Yes
+Ordinary Least Squares Regression (1),https://setosa.io/ev/ordinary-least-squares-regression/,No,Yes,Formula -> Graph,Draggable Points,Dynamic,,Yes
+Eigenvectors and Eigenvalues,https://setosa.io/ev/eigenvectors-and-eigenvalues/,No,No,Graph -> Formula,Draggable Points,Dynamic,,Yes
+Eigenvectors and Eigenvalues,https://setosa.io/ev/eigenvectors-and-eigenvalues/,No,No,,Steps,Dynamic,,
+Chapter 2: Vectors,https://immersivemath.com/ila/ch02_vectors/ch02.html,No,No,,"Draggable Points, Sliders, Steps",Static,,
+Pythagorean theorem,https://setosa.io/pythagorean/,No,No,Formula -> Graph,,Static,* polygons / line segments linked to graph ≠ formulas?,
+Let's remove Quaternions from every 3D Engine,https://marctenbosch.com/quaternions/,No,No,Graph -> Formula,Draggable Points,Dynamic,,No
+Let's remove Quaternions from every 3D Engine,https://marctenbosch.com/quaternions/,No,No,Graph -> Formula,"Draggable Points, Editable Text",Dynamic,,No
+Understanding Convolutions on Graphs,https://distill.pub/2021/understanding-gnns/,No,No,Formula -> Graph,"Draggable Points, Hovering, Options, Sliders",Dynamic,,Yes
+Understanding Convolutions on Graphs,https://distill.pub/2021/understanding-gnns/,No,No,Formula -> Graph,"Draggable Points, Hovering, Options, Sliders, Steps",Static,,
+A Gentle Introduction to Graph Neural Networks,https://distill.pub/2021/gnn-intro/,No,No,,Hovering,Static,* formula separate,
+A Visual Exploration of Gaussian Processes,https://distill.pub/2019/visual-exploration-gaussian-processes/,No,No,,"Draggable Points, Options, Sliders",Static,,
+Interactive Linear Algebra,https://textbooks.math.gatech.edu/ila/overview.html,No,No,,Editable Text,Static,"* questionable, similar to Pythagorean",
+Interactive Linear Algebra,https://textbooks.math.gatech.edu/ila/least-squares.html,No,No,Graph -> Formula,Draggable Points,Dynamic,,Yes
+Interactive Linear Algebra,https://textbooks.math.gatech.edu/ila/systems-of-eqns.html,No,No,Graph -> Formula,"Draggable Points, Sliders",Dynamic,,Yes
+Interactive Linear Algebra,https://textbooks.math.gatech.edu/ila/systems-of-eqns.html,No,No,Graph -> Formula,"Draggable Points, Sliders",Dynamic,,Yes
+Interactive Linear Algebra,https://textbooks.math.gatech.edu/ila/vectors.html,No,No,Graph -> Formula,"Draggable Points, Options, Sliders",Dynamic,,Yes
+Interactive Linear Algebra,https://textbooks.math.gatech.edu/ila/vectors.html,No,No,Graph -> Formula,"Draggable Points, Options, Sliders",Dynamic,,Yes
+Ladder of Abstraction,https://worrydream.com/LadderOfAbstraction/,No,No,,"Hovering, Sliders",Static,* has interactivity features - no explicit formulas,
+Backprop Explainer,https://xnought.github.io/backprop-explainer/,No,No,Formula -> Graph,"Options, Sliders",Dynamic,,Yes
+Tangle,https://worrydream.com/Tangle/,No,No,Graph -> Formula,Draggable Points,Dynamic,https://explorabl.es/all/,
+Kernel Density Estimation,https://mathisonian.github.io/kde/,No,Yes,,"Options, Sliders",Static,* scrubbable value outside of the formula - https://explorabl.es/all/,
+(A Bit of) Biological Neural Networks – Part I Spiking Neurons,http://jackterwilliger.com/biological-neural-networks-part-i-spiking-neurons/,No,No,,"Options, Sliders",Static,https://explorabl.es/all/,
+Imaginary Numbers,https://polytrope.com/simplenumbers/,No,No,Graph -> Formula,"Draggable Points, Hovering, Options",Dynamic,https://explorabl.es/all/ - Unique one,No
+Taylor Series Visualization,https://www.desmos.com/calculator/31bzav2jny,No,No,Formula -> Graph,Sliders,Static,,
