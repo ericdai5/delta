@@ -1,21 +1,37 @@
-\section{Demo}\label{Demo}
-
-\subsection{Kinetic Energy Example}\label{Kinetic}
+\section{Delta}\label{Demo}
 
 \begin{figure*}[t]
   \includegraphics[width=\textwidth]{fig/demo-1.png}
-  \caption{Kinetic energy authoring workflow. (1) Declaring variables adds labels. (2) Default values populate them. (3) Semantics compute derived variables. (4) Input modes enable drag and inline editing. (5) A graph entry creates a bidirectional plot.}
+  \caption{Outputs from creating a simple calculator. \textmd{(1) Adding labels. (2) Showing default values for exploration. (3) Computing derived variables live. (4) Input modes (variable dragging and inline editing). (5) Bidirectional connections with interactive plot.}}
   \label{fig:demo-1}
 \end{figure*}
 
-Liv is writing a passage about the kinetic energy formula $K = \frac{1}{2}mv^2$. She wants to create an interactive version showing how changes in mass and velocity affect kinetic energy, linked to a synchronized visualization. Instead of writing hundreds of lines of UI code or combining separate math and diagramming packages, Liv imports Delta into her TypeScript file and creates a configuration:
+Delta is designed to provide a low threshold and high ceiling for adding interactivity to formulas in web documents. We  illustrate the low threshold with a walkthrough of what it takes to create the very simplest augmentations in Section~\ref{Basics}. We then describe the full set of constructs and the philosophy behind them in Section~\ref{Language}. We hint at the high ceiling by reviewing a gallery of examples we have been able to create with Delta in Section~\ref{Gallery}.
+
+\subsection{Basics}\label{Basics}
+
+The main constructs of Delta are these. First, an author defines a \emph{formula} in typical LaTeX. Then, they select and attach interaction properties to \emph{variables}. They attach \emph{semantics} to the formula via a JavaScript function. Then, they optionally provide \emph{connections} to other visuals and break down explanations into \emph{steps}. Below, we name the constructs as they come up in example tasks.
+
+\subsubsection{Simple calculation}
+Imagine an author trying to make an interactive calculator out of a standard physics formula, $K = \frac{1}{2}mv^2$. Their intent is to  label the major variables, allow readers to play with different values of mass ($m$) and velocity ($v$) and see how it affects kinetic energy ($K$), and to make the relationships between variables clear in a graph (end goal appears in Figure~\ref{fig:demo-1}). The author first defines the base \textbf{\emph{formula}} in standard LaTeX:
 
 \begin{tcolorbox}[codebox]
 \begin{lstlisting}[style=jsstyle]
 const kineticConfig: Config = {
   formulas: [
     id: "kinetic-energy", latex: "K = \\frac{1}{2}mv^2",
-  ],
+  ]
+}
+\end{lstlisting}
+\end{tcolorbox}
+
+Macro commands are escaped (``\texttt{\textbackslash{}\textbackslash{}}'') since they appear in a JavaScript string. The `id' serves as a handle for later inserting this formula into a Delta React component. The \texttt{Config} houses all specification of how the formula should behave.
+
+Next, the author starts to sketch out the basics of interaction. They select the various key \textbf{\emph{variables}}, providing descriptive labels and providing recommended default values for experimentation:
+
+\begin{tcolorbox}[codebox]
+\begin{lstlisting}[style=jsstyle]
+const kineticConfig: Config = { ...
   variables: {
     K: { name: "Kinetic Energy" },
     m: { name: "Mass", default: 5 },
@@ -25,17 +41,11 @@ const kineticConfig: Config = {
 \end{lstlisting}
 \end{tcolorbox}
 
-To render the formula, Liv places a \texttt{Formula} component inside a \texttt{Provider} that supplies the Delta context:
+To refer to a variable, the author only needs to write its literal form in the original LaTeX. Variables can be multi-letter expressions. Here, they are just individual letters.
 
-\begin{tcolorbox}[codebox]
-\begin{lstlisting}[style=jsstyle]
-<Provider config={kineticConfig}>
-  <Formula id="kinetic-energy"/>
-</Provider>
-\end{lstlisting}
-\end{tcolorbox}
+If the author now puts a formula in their document with the Delta React component \verb|<Formula id="kinetic-energy"/>|, they will see a nicely typeset formula with the descriptive labels in the margins and starter values for experimentation. Labels are visually linked to expressions; highlighting over values highlights the corresponding term in formula (Figure~\ref{fig:demo-1}.2).
 
-In the configuration, each variable key matches the corresponding LaTeX token, so Delta knows which symbol to recognize. Declared variables are visually distinguished with a blue highlight when the reader hovers over their label or symbol (Step~1 in Figure~\ref{fig:demo-1}). Liv adds \texttt{default} values for each variable, which appears in the labels automatically (Step~2 in Figure~\ref{fig:demo-1}). Liv wants $K$ derived from the other variables, so she adds a semantics function. Delta re-executes this function whenever any variable changes, and the $K$ label updates to show the computed value (Step~3 in Figure~\ref{fig:demo-1}):
+To turn the formula into a calculator, the author defines the \textbf{\emph{semantics}} of the formula:
 
 \begin{tcolorbox}[codebox]
 \begin{lstlisting}[style=jsstyle]
@@ -45,25 +55,24 @@ semantics: function ({ vars }) {
 \end{lstlisting}
 \end{tcolorbox}
 
-To let readers manipulate $m$ and $v$, Liv adds input modes to their variable declarations. Draggable variables show a drag cursor; inline variables can be edited like a text box (Step~4 in Figure~\ref{fig:demo-1}):
+This is just a standard JavaScript function doing standard math. The one difference is that the semantics function is responsible for mapping from input variables to outputs. To do so is simple: the author reads off of a \texttt{vars} object variables to use as input, and writes to output variables---here, reading \texttt{m} and \texttt{v} to compute \texttt{K}. Variable keys are those defined in the \texttt{variables} spec.
+
+When the author re-renders the formula, it is now interactive (Figure~\ref{fig:demo-1}.3). A reader can click and drag on $m$ and $v$ to change their values and see $K$ update live. The author can do other desirable forms of configuration of interaction with a few simple properties. Here, they decide to allow a user to input mass as free text, and constrain the ranges of available values to be more sensible (e.g., no negative masses) (Figure~\ref{fig:demo-1}.4):
 
 \begin{tcolorbox}[codebox]
 \begin{lstlisting}[style=jsstyle]
 m: { name: "Mass", default: 5, 
-     input: "drag", range: [0, 20] },
+     input: "inline", range: [0, 20] },
 v: { name: "Velocity", default: 2,
-     input: "inline", range: [0, 10] },
+     input: "drag", range: [0, 10] },
 \end{lstlisting}
 \end{tcolorbox}
 
-Finally, Liv connects the formula to a graph. She adds a \texttt{sample()} call inside her semantics to collect plot coordinates, then declares a \texttt{graph2d} entry. Each line's \texttt{sampleId} links to a \texttt{sample()} call, and \texttt{parameter} specifies the variable Delta sweeps across its range to generate the curve. Interactions on lines and points let readers adjust variable values directly from the plot:
+\subsubsection{Linked visual}
+The author can add \textbf{\textit{connections}} between formula to other representations elsewhere in the document. Delta provides a dedicated construct for one useful class---interactive 2D and 3D plots. To create a plot where a user can tinker with values and curves in a plot in tandem with the formula, the author adds a graph:
 
 \begin{tcolorbox}[codebox]
 \begin{lstlisting}[style=jsstyle]
-semantics: function ({ vars, sample }) {
-  vars.K = 0.5 * vars.m * Math.pow(vars.v, 2);
-  sample("energy", { x: vars.v, y: vars.K });
-},
 graph2d: [{
   id: "energy-graph",
   xAxisVar: "v", yAxisVar: "K",
@@ -79,71 +88,60 @@ graph2d: [{
 \end{lstlisting}
 \end{tcolorbox}
 
-Liv renders the graph with \texttt{<Graph id="energy-graph"/>} inside the \texttt{Provider}. She now has a formula--graph pair that allows bidirectional manipulation: dragging the curve changes $m$, and dragging the point changes $v$, with both the formula labels and graph updating in lockstep (Step~5 in Figure~\ref{fig:demo-1}).
-
-\subsection{Average Example}\label{Average}
-
-\begin{figure*}[t]
-  \includegraphics[width=\textwidth]{fig/demo-2.png}
-  \caption{Average walkthrough authoring workflow. (1) Semantics produce final labels. (2) Stepping mode adds controls. (3) \texttt{step()} calls define pause points. (4) Labels anchor values to symbols. (5) LaTeX expression keys highlight notation spans.}
-  \label{fig:demo-2}
-\end{figure*}
-
-Liv is now writing about the average formula $\mu = \frac{1}{n} \sum_{i=1}^{n} X_i$. She wants to walk students through the computation, showing how the running average evolves as each value is incorporated. She declares her formula and variables---including an array-valued variable \texttt{X}---and writes a semantics function that loops over the array:
+This creates a 2D graph, associates its axes with specific variables (\texttt{xAxisVar} with \texttt{v}, \texttt{yAxisVar} with \texttt{K}), and the source of points on the curve (a sample called \texttt{energy}). The points come from samples collected in the semantics function:
 
 \begin{tcolorbox}[codebox]
 \begin{lstlisting}[style=jsstyle]
-const config: Config = {
-  formulas: [{
-    id: "average",
-    latex: "\\mu = \\frac{1}{n} \\sum_{i=1}^{n} X_i",
-  }],
-  variables: {
-    "\\mu": { name: "Mean" },
-    n: { name: "Count" },
-    i: { name: "Index", precision: 0 },
-    X_i: { name: "Value at index i", precision: 0 },
-    X: { default: [10, 20, 30], name: "Value set" },
-  },
-  semantics: function ({ vars }) {
-    vars.n = vars.X.length;
-    var sum = 0;
-    vars["\\mu"] = 0;
-    for (var i = 0; i < vars.n; i++) {
-      vars.i = i;
-      vars.X_i = vars.X[i];
-      sum = sum + vars.X_i;
-      vars["\\mu"] = sum / (i + 1);
-    }
-    vars["\\mu"] = Math.round(vars["\\mu"] * 100) / 100;
-  },
-}
-\end{lstlisting}
-\end{tcolorbox}
-
-With this configuration, the formula renders with labels showing the final computed values (Step~1 in Figure~\ref{fig:demo-2}). However, the loop executes all at once---the reader only sees the end result. To let students follow the computation one iteration at a time, Liv sets \texttt{stepping: true} and inserts \texttt{step()} calls inside the loop body. Each call marks a pause point and accepts a \texttt{description} and a \texttt{labels} object:
-
-\begin{tcolorbox}[codebox]
-\begin{lstlisting}[style=jsstyle]
-stepping: true,
-semantics: function ({ vars, step }) {
-  ...
-  for (var i = 0; i < vars.n; i++) {
-    ...
-    vars["\\mu"] = sum / (i + 1);
-    step({
-      description: "Running average is " + vars["\\mu"],
-      labels: {
-        "\\sum_{i=1}^{n} X_i": "sum is now " + sum,
-        n: "n is now " + (i + 1),
-        X_i: vars.X_i,
-        X: vars.X,
-      },
-    });
-  }
-  vars["\\mu"] = Math.round(vars["\\mu"] * 100) / 100;
+semantics: function ({ vars, sample }) {
+  vars.K = 0.5 * vars.m * Math.pow(vars.v, 2);
+  sample("energy", { x: vars.v, y: vars.K });
 },
 \end{lstlisting}
 \end{tcolorbox}
 
-With stepping enabled, Delta presents navigation controls (Step~2 in Figure~\ref{fig:demo-2}) rendered via a \texttt{StepControl} component. If \texttt{step()} calls are added in the semantics, by clicking forward, the display updates according to the step. (Step~3 in Figure~\ref{fig:demo-2}). Each key in the \texttt{labels} object is either a variable identifier or a LaTeX expression from the formula. Variable keys display values as labels beneath their symbol (Step~4 in Figure~\ref{fig:demo-2}); LaTeX expression keys highlight the corresponding notation span and attach the label to it (Step~5 in Figure~\ref{fig:demo-2}). At the first step, the summation span highlights with ``sum is now 10,'' $n$ shows ``n is now 1,'' and $X_i$ displays 10.  Students can trace the full trajectory of the running average, seeing how each new value shifts the mean, all without leaving the formula.
+The \texttt{interaction} fields in the graph spec are optional, and here they allow manipulation on the plot to map back to the formula, where vertical drag actions change the curve by altering \texttt{m}, and horizontal drag actions move \texttt{v} back and forth along the curve. Interaction is bidirectional; as someone tinkers with values in the formula labels, the curve updates, and so does the position of the point on the curve. The graph is plotted to the page with a React \texttt{Graph} component that refers to the graph ID. Connections to arbitrary custom content elsewhere on the page are possible through mechanisms described in Section~\ref{Language}.
+
+\paragraph{Simple walkthrough}\label{Average}
+
+Imagine an author wants to describe a formula by guiding someone's attention to different parts, one piece at a time. A special case of this is with formulas that can be described with incremental calculations. For instance, average function $\mu = \frac{1}{n} \sum_{i=1}^{n} X_i$ could be shown as incrementally adding up summands and then dividing by $n$. For cases like these, Delta lets authors provide explanations as series of \textbf{\emph{steps}}. These are inserted into the semantics, as the JavaScript function already support sequence and iteration, and sequence will sometimes benefit from being aligned with simulated calculation. For instance, into this part of the average computation (sum shown):
+
+\begin{figure}[t]
+  \includegraphics[width=\columnwidth]{fig/demo-2.png}
+  \caption{A step in the average formula walkthrough. LaTeX keys (e.g., \texttt{"X\_i"}) serve as selectors to anchor labels onto corresponding notation spans.}
+  \label{fig:demo-2}
+\end{figure}
+
+\begin{tcolorbox}[codebox]
+\begin{lstlisting}[style=jsstyle]
+semantics: function ({ vars }) { ...
+  // [elided] define n, sum, initial \\mu value
+  for (var i = 0; i < vars.n; i++) {
+    vars.i = i;
+    vars.X_i = vars.X[i];
+    sum += vars.X_i;
+    vars["\\mu"] = sum / (i + 1); // approximate running average
+  } ...
+},
+\end{lstlisting}
+\end{tcolorbox}
+
+The author would add this step:
+
+\begin{tcolorbox}[codebox]
+\begin{lstlisting}[style=jsstyle]
+for (var i = 0; i < vars.n; i++) {
+  // ...
+  step({
+    description: "Running average is " + vars["\\mu"],
+    labels: {
+      "\\sum_{i=1}^{n} X_i": "sum is now " + sum,
+      n: "n is now " + (i + 1),
+      X_i: vars.X_i,
+      X: vars.X,
+    },
+  });
+}
+\end{lstlisting}
+\end{tcolorbox}
+
+This results in labels that shown at each stage of the walkthrough, assembled into a walkthrough that can be walked forward and back. Labels can include values calculated values (Figure~\ref{fig:demo-2}). An arbitrary number of steps can be added, and they appear in the order of the walkthrough in the same order they were encountered when executing the semantics function.
