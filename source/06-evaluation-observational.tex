@@ -1,108 +1,97 @@
 \section{Observation Study}\label{observational}
 
-We conducted an observation study in which authors used Delta to design and build interactive formulas from scratch for two different mathematical concepts. This study targeted two additional research questions:
+Our first study assessed a comparison to a baseline on a simple task; our second study sought to assess tasks that were less constrained and more complex. We asked participants to build up two kinds of augmentations where they had freedom in the precise outcome. We sought to understand (1) if could they learn enough of Delta to succeed (2) the appropriateness of the various language constructs.
 
-\vspace{0.5em}
-\noindent\textbf{RQ3.} How do authors use Delta to build interactive formulas in a long-form, open-ended authoring task?\\
-\noindent\textbf{RQ4.} Which features of the library do authors find intuitive and where do they encounter difficulty?
-\vspace{0.5em}
+\subsection{Methods}
 
-\subsection{Methodology}
+\paragraph{Participants.}
+Ten of the 19 participants from the controlled study (Section \ref{results}) took part in an observation study. We sampled in this way for convenience; we already knew these participants could pass our inclusion criteria. A consequence of this choice is that participants already had some small amount of training in Delta. In aggregate, participant backgrounds was very similar to the prior study: participants rated their comfort writing LaTeX formulas as a median of 4 on a 5-point Likert scale ($\sigma = 1.03$) and with JavaScript as a median of 3.5 ($\sigma = 1.43$). All had some prior experience with React. Below, we refer to participants by anonymized identifiers assigned to them during the study (e.g., P21, P48).
 
-\paragraph{authors.}
-Ten of the 19 authors from the controlled study (Section \ref{results}) took part in an observation study. authors rated their comfort writing \LaTeX{} formulas as a median of 4 on a 5-point Likert scale ($\sigma = 1.03$); 6 wrote \LaTeX{} weekly, 1 monthly, and 3 less than monthly. They rated their comfort writing JavaScript as a median of 3.5 ($\sigma = 1.43$); 5 wrote JS weekly, 3 monthly, and 1 daily. Regarding React experience, 5 had professional experience, 6 had personal or academic experience, and 3 had limited personal or academic experience. We refer to these authors by the same anonymized identifiers used in the controlled study (e.g., P21, P48).
+\paragraph{Setup.} Like the controlled study, these study sessions were held on Zoom with coding taking place in a GitHub Codespace.
 
 \paragraph{Tasks.}
-Each author completed two open-ended formula authoring tasks, each lasting up to 30 minutes. Their choice of formula and the provided training is meant to better assess specific parts of the Delta config structure. Task 1 (T1) assessed the basic interaction and notation features, while Task 2 (T2) evaluated the stepping syntax. \andrew{why viz and SVG features not included?}
 
-\vspace{0.5em}
-\noindent
-\fbox{\begin{minipage}[t]{0.44\columnwidth}
-\centering
-\textbf{T1:} \textit{Radioactive decay}
-\[N(t) = N_0 \cdot e^{-\lambda t}\]
-\end{minipage}}%
-\hfill
-\fbox{\begin{minipage}[t]{0.44\columnwidth}
-\centering
-\textbf{T2:} \textit{Expected value}
-\[E = \sum_{x \in X} x\, P(x)\]
-\end{minipage}}
-\vspace{0.5em}
+Each participant completed two open-ended formula authoring tasks, each lasting up to 30 minutes. In each task, participants were given an empty Delta config as a starting point, with placeholders for formulas, variables, and semantics. They were given a task sheet that provided the formula's LaTeX, background about the formula, an example scenario with concrete values, and questions that could motivate potential augmentation ideas. Participants were instructed to augment the formula in whatever way they thought best helped a reader understand the underlying concept; the task sheets stated ``there is no single right answer'' and encouraged participants to try alternatives. Task~2 additionally required that the augmentation include at least one step.
 
-\noindent Both tasks provided starter code with imports in place and asked authors to fill in a Delta configuration---specifying formulas, variables, and semantics---to make the formula interactive. authors were given the relevant LaTeX as a starting point and were encouraged to augment the formula in whatever way they thought best helped a reader understand the underlying concept. Each task sheet included background on the formula, an example scenario with concrete values, and suggested questions for exploration. \andrew{Can you include all study materials in a supplemental materials folder?}
+Tasks were chosen to test essential parts of the Delta language. Task 1 (T1) assessed the basic interaction and notation features, while Task 2 (T2) evaluated the stepping syntax. Graphing and SVG features were excluded to keep session length feasible (already ${\sim}$2 hours); they depended on features from T1 and T2, so we prioritized those features instead.
+T1 required augmentation of a formula for radioactive decay formula $N(t) = N_0 \cdot e^{-\lambda t}$ and T2 a formula for expected value $E = \sum_{x \in X} x\, P(x)$. Prior to each task, participants followed a self-paced written tutorial introducing all features they might need for the task on an example formula. They were given 20 minutes.
 
-\paragraph{Training.}
-Prior to the tasks, each author completed two written tutorials that introduced the library's features incrementally. T1 walked authors through how to build an interactive formula from scratch using a gravitational force example ($\vec{F} = G \frac{m_1 m_2}{r^2}$). It covered defining a formula, labeling variables, formatting displayed values, defining semantics, and making variables interactive. T2 built on the same formula and introduced walkthroughs: enabling stepping mode, adding \texttt{step()} calls, highlighting expressions, and formatting intermediate values with the \texttt{latex()} helper. authors worked through these tutorials at their own pace within the 20 minute limit.
+% \vspace{0.5em}
+% \noindent
+% \fbox{\begin{minipage}[t]{0.44\columnwidth}
+% \centering
+% \textbf{T1:} \textit{Radioactive decay}
+% \[N(t) = N_0 \cdot e^{-\lambda t}\]
+% \end{minipage}}%
+% \hfill
+% \fbox{\begin{minipage}[t]{0.44\columnwidth}
+% \centering
+% \textbf{T2:} \textit{Expected value}
+% \[E = \sum_{x \in X} x\, P(x)\]
+% \end{minipage}}
+% \vspace{0.5em}
 
-\paragraph{Setup.} Study sessions took place remotely over Zoom and were recorded. authors used their own computers to retain familiar input configurations, and logged into GitHub in Google Chrome using their personal accounts. Each task had a dedicated branch in a GitHub Codespace — an online IDE — pre-loaded with template code. Tutorials and task instructions were shared as published Notion pages. Survey data was collected via Google Forms within the same browser session.
+% \noindent
+% Both tasks provided starter code with imports in place and asked participants to fill in a Delta configuration---specifying formulas, variables, and semantics---to make the formula interactive. participants were given the relevant LaTeX as a starting point and were encouraged to augment the formula in whatever way they thought best helped a reader understand the underlying concept. Each task sheet included background on the formula, an example scenario with concrete values, and suggested questions for exploration.
+
+% \vspace{0.5em}
+% \noindent
+% \fbox{\begin{minipage}[t]{0.44\columnwidth}
+% \centering
+% \textbf{T1:} \textit{Radioactive decay}
+% \[N(t) = N_0 \cdot e^{-\lambda t}\]
+% \end{minipage}}%
+% \hfill
+% \fbox{\begin{minipage}[t]{0.44\columnwidth}
+% \centering
+% \textbf{T2:} \textit{Expected value}
+% \[E = \sum_{x \in X} x\, P(x)\]
+% \end{minipage}}
+% \vspace{0.5em}
+
 
 \paragraph{Duration.}
-Each task lasted up to 30 minutes, after which the facilitator stopped the author. \andrew{Does this mean many authors got cut off before finishing something serious?} Including tutorials, questionnaires, and transitions, each session lasted approximately 2 hours.
+Each task lasted up to 30 minutes, after which the facilitator stopped the author. Although the tasks were open-ended with no fixed completion criteria, all ten participants produced a working interactive formula with correct computation and semantics behavior and had time to iterate on its design within this limit. Including tutorials, questionnaires, and transitions, each session lasted approximately 2 hours.
 
 \paragraph{Measurement and Analysis.}
-9 of the 10 sessions were facilitated and recorded by the same researcher; 1 session was facilitated by a second researcher following the same protocol. During the task, authors were told to think-aloud ~\cite{ref:ericsson1984protocol} \andrew{broken cite} and focus on authoring and that the facilitator might interrupt them with questions about their process from time-to-time. Otherwise, the facilitator did not answer questions about the library unless a author was stuck for an extended period.
-
-We also asked them to reflect on their experience in post-task questionnaires after each task. The questionaire asked authors about the usefulness of each of Delta's main features relevant to that specific task. The questionnaire assesses the intuitiveness and difficulty of features on a 5-point Likert scale. authors also provided free-text explanations for notable ratings.
-
-After the session, both researchers independently reviewed their respective recordings and compiled timestamped observation logs for each author, documenting feature usage patterns, error sequences, recovery strategies, and notable think-aloud utterances. One researcher then performed a qualitative coding procedure, a pass over the full dataset, identifying grouped them into common observed workflows, identifying design successes (P--, P--), and design gaps (P--,P--) in a process inspired by thematic analysis \andrew{weirdly vague}. The codes that were retained were those that were seen as helpful insights for future DSL design.
+9 of 10 sessions were facilitated by the same researcher; 1 session was facilitated by a second researcher following the same protocol. During the task, participants were told to think-aloud and told the facilitator might interrupt them with questions about their process. We also asked them to reflect on their experience in post-task questionnaires after each task. The questionnaire asked participants to rate usefulness, intuitiveness, and difficulty of using each of Delta's main features on Likert scales and elaborate in free text responses. Because each task introduced different Delta features, the post-task questionnaires asked participants to rate only the features relevant to that task—basic interaction and notation features for T1, and stepping features for T2. After the session, both researchers independently reviewed their respective recordings and compiled timestamped observation logs for each participant, documenting feature usage patterns, error sequences, recovery strategies, and notable think-aloud utterances. One researcher then performed qualitative coding, reviewing all data, identifying common workflows, design successes and gaps. The codes retained were those that were seen as lending insight into how to design future DSLs like Delta.
 
 \subsection{Results}
 
-All ten authors completed both tasks within the allotted 30 minutes each. We report self-reported intuitiveness and difficulty ratings from the post-task questionnaires alongside qualitative observations from the think-aloud sessions. Figure~\ref{fig:obs-intuitiveness} summarizes the intuitiveness Likert-scale ratings for both tasks. Self-reported difficulty ratings followed a largely similar distribution and are included in the appendix (Figure~\ref{fig:obs-difficulty}).
+All ten participants completed both tasks within the allotted 30 minutes each.
+% We report self-reported intuitiveness and difficulty ratings from the post-task questionnaires alongside qualitative observations from the think-aloud sessions. Figure~\ref{fig:obs-intuitiveness} summarizes the intuitiveness Likert-scale ratings for both tasks. Self-reported difficulty ratings followed a largely similar distribution and are included in the appendix (Figure~\ref{fig:obs-difficulty}).
+We first describe design successes and then gaps. Design successes are organized using the Cognitive Dimensions of Notations framework~\cite{Blackwell2003-gv}, which provides a vocabulary for evaluating the usability of notational systems like DSLs. We foreground two dimensions that were central concerns in our design process: \emph{closeness of mapping} (how naturally the notation maps to the problem domain) and \emph{viscosity} (effort to make small changes).
 
-\begin{figure*}[t]
+\begin{figure}[t]
   \centering
-  \includegraphics[width=\textwidth]{fig/intuitiveness.pdf}
-  \caption{\textbf{Self-reported intuitiveness ratings.} Authors rated the intuitiveness of library features on a 5-point Likert scale ($n = 10$). Task~1 covers nine basic interaction and notation features; Task~2 covers eleven stepping features (some $n = 9$ due to ``did not do'' responses). Numbers indicate response counts per category.}
+  \includegraphics[width=\columnwidth]{fig/intuitiveness.png}
+  \caption{\textbf{Self-reported intuitiveness ratings.} participants rated the intuitiveness of library features on a 5-point Likert scale ($n = 10$). Task~1 covers nine basic interaction and notation features; Task~2 covers eleven stepping features.}
   \Description{Diverging stacked bar chart showing Likert-scale intuitiveness responses for both tasks side by side. Most bars are dominated by blue (very intuitive / somewhat intuitive), with more spread visible for holistic items like getting the formula or walkthrough working as desired.}
   \label{fig:obs-intuitiveness}
-\end{figure*}
+\end{figure}
 
-\subsubsection{Observed Workflows}
+\subsubsection{Closeness of mapping}
+All participants reported intuitiveness and difficulty of all language constructs and overall process for both tasks. Construct intuitiveness was our proxy for closeness of mapping; distributions of ratings appear in in Figure~\ref{fig:obs-intuitiveness}; difficult followed similar distributions and is in the appendix (Figure~\ref{fig:obs-difficulty}). Nearly all features were rated majority ``very'' or ``somewhat intuitive,'' with basic features (from T1) appearing particularly intuitive. Below, we single out particular features here that were the sites of interesting behavior and participant commentary.
 
-Delta supported two distinct authoring workflows across the 20 task sessions.
+\medskip
 
-\paragraph{Incremental authoring through progressive evaluation.} 
-At least 8 of 10 authors (P48, P11, P45, P57, P21, P29, P14, P19) regularly alternated between editing code and checking rendered output---a tight loop enabled by Delta's reactive propagation, which re-renders on every change without requiring a complete specification. Many authors (P48, P17, P14, P11) checked formula rendering before declaring any variables; as P17 noted, ``First thing I want to do is to get the formula to show up. Seeing something will help.'' This validates Delta's compositional design (Section~\ref{System}): authors began with a bare \LaTeX{} string, then progressively layered on variables, semantics, and visualizations. 6 of 10 authors applied a uniform scaffolding strategy---3 (P48, P29, P11) initialized empty variable objects and verified their existence by hovering on formula symbols, while 3 (P17, P45, P14) assigned descriptive names and checked that labels appeared at expected positions. Both strategies relied on variables being defined apart from formulas as universal indices (Section~\ref{Visualizations}), allowing authors to stub out variables minimally and immediately see their effect.
+% We report self-reported intuitiveness and difficulty ratings from the post-task questionnaires alongside qualitative observations from the think-aloud sessions. Figure~\ref{fig:obs-intuitiveness} summarizes the intuitiveness Likert-scale ratings for both tasks. Self-reported difficulty ratings followed a largely similar distribution and are included in the appendix (Figure~\ref{fig:obs-difficulty}).
 
-\paragraph{Pedagogical reasoning for iterating.}
-Several authors (P48, P11, P19, P17, P29) paused to reason about pedagogical effectiveness. In T1, P48 concluded that ``some questions relate to how much time has passed,'' making time interactive. P19 chose not to make $\lambda$ draggable, reasoning ``lambda is a constant.'' P11 reasoned about physical constraints: ``Time should never be negative. Let's have a range for that.'' P29 said ``For the first step I can define a set of possible values X and on the second step I can decompose the sum.'' These observations indicate that Delta's primitives---variable settings (range, step, default) and the stepping API---gave authors a vocabulary for expressing pedagogical intent.
+\emph{Variables as IDs.} Our language uses LaTeX variable strings as indexes into the formula and calculation state. This seemed to work well, with 6 participants describing it ``very intuitive'' and 4 ``somewhat.'' Participants named variable IDs capably; 6 were able to reference complex variables like ``$N(t)$ and ``$\lambda$'' correctly on their first try, and 7 were able to select expressions in walkthrough steps correctly on their first try.
 
-\subsubsection{Design Successes}\label{design-successes}
+\emph{Computation.} The semantics function---plain JavaScript---was well received: accessing variable values was rated ``very intuitive'' by 8 of 10 participants, and expressing computation by 7 of 10. It seems that for some participants the control flow of semantics transferred well to structuring walkthroughs, with \texttt{for} loops for summations (P57: ``Oh, I have to use a for loop---they all need to do the same thing''), \texttt{if} statements for case logic (P45), and local variables for readability (9 of 10 participants). P48 noted ``placing steps [is] pretty intuitive because [it] follows how your brain thinks about math expressions,'' and P57 observed ``once the template of the formula was setup, writing the steps was fast.''
 
-We organize design successes using the Cognitive Dimensions of Notations framework~\cite{Blackwell2003-gv}, which provides a vocabulary for evaluating the usability of notational systems like DSLs. We focus on two dimensions that emerged most clearly: \emph{viscosity} (effort to make small changes) and \emph{closeness of mapping} (how naturally the notation maps to the problem domain).
+\emph{Walkthrough labels}
+Delta's formatting utilities for walkthrough labels---\texttt{sigFigs}, \texttt{precision}, and \texttt{latex()}---were adopted successfully on first use as 7 participants refined their displays. 3 participants \texttt{latex()} with \texttt{sigfigs()} or \texttt{precision()} to format step labels on their first attempts.
 
-\paragraph{S1: Viscosity.}
-Delta's config-driven structure---formulas, variables, semantics---provided a scaffold that authors found natural to iterate upon. In 16 of 20 sessions, authors followed the configuration's structure: LaTeX first, then variables, then semantics. P45 treated her own tutorial code as a template reference rather than the tutorial document. Two authors (P57, P19) deviated by writing semantics before fully specifying variables---P19 explained: ``Once I started writing everything in the semantics area, I would know which vars I need''---yet both completed their tasks, suggesting the scaffold accommodates different workflows. Post-task ratings reflect this (Figure~\ref{fig:obs-intuitiveness}): creating the static formula and labeling a variable were unanimously rated ``very intuitive,'' and making a variable draggable was rated ``very intuitive'' by 8 of 10.
+\medskip
 
-Authors (P80, P48, P17, P45, P11) found that declarative abstractions helped localize edits, letting them modify one aspect without ripple effects across the specification. P48 recognized she could change her computation to derive the initial substance amount from the final by editing only the semantics function, without adjusting variable declarations. P45 reiterated that ``having all the variable definitions in one place makes setting labels and ranges very simple.'' Low viscosity extended to debugging: P14 and P21 immediately used \texttt{console.log} within the semantics function to diagnose NaN values.
+One further piece of evidence of the constructs' appropriateness was that participants reached for them driven by higher-level intent about how best to present the formula.
+Several participants (P48, P11, P19, P17, P29) paused to reason about pedagogical effectiveness. In T1, P48 concluded that ``some questions relate to how much time has passed,'' making time interactive. P19 chose not to make $\lambda$ draggable, reasoning ``lambda is a constant.'' P11 reasoned about physical constraints: ``Time should never be negative. Let's have a range for that.'' P29 said ``For the first step I can define a set of possible values X and on the second step I can decompose the sum.''
 
-Delta's formatting utilities---\texttt{sigFigs}, \texttt{precision}, and \texttt{latex()}---were adopted successfully on first use as authors (P17, P19, P48, P57, P21, P14, P45) refined their displays. P57 discovered the API through the tutorial: ``I want to make $N(t)$ scientific notation\ldots\ ohhh, sigfigs. It works. Nice!'' Participants (P21, P14, P45) chained \texttt{latex()} with \texttt{sigfigs()} (P21, P45) or \texttt{precision()} (P14) to format step labels on their first attempts. Across both tasks, formatting followed a two-phase pattern: authors first focused on getting computation correct---defining variables, writing semantics, and verifying values---before returning to adjust presentation with significant figures, precision, or LaTeX rendering.
+\subsubsection{Viscosity}
+Delta was designed to let authors build up formulas one bit at a time, from static formula to gradual addition and refinement of augmentations. We saw participants take advantage of this possibility. 8 of 10 participants regularly alternated between editing code and checking rendered output. 4 reviewed a static formula before declaring any variables; 3 initialized empty variable declarations and verified their correctness by highlighting them through by hovering over the formula; and 3 assigned and rendered labels before doubling back to define semantics and interactivity. Across both tasks, formatting of labels tended to follow a two-phase pattern: 8 of 10 participants first focused on getting computation correct---defining variables, writing semantics, and verifying values---before returning to adjust presentation with significant figures, precision, or LaTeX rendering. 5 participants demonstrated or expressed that the language allowed them to localize edits, modifying one aspect of the specification without ripple effects across others. Participants largely followed the default configuration structure---first providing LaTeX, then variables, then semantics (8 of 10 participants); the alternative was writing out the semantics first (P57, P19). 
 
-\paragraph{S2: Closeness of mapping.}
-We observe closeness of mapping across the DSL's constructs.
+\subsubsection{Gaps}\label{design-gaps} 
 
-\emph{LaTeX-based augmentations.} Variable declarations mapped closely to mathematical thinking: authors began by identifying symbols in their formula and translating each into a variable entry with an id, name, and default value. Labeling was rated ``very intuitive'' by 9 of 10 participants, and making a variable draggable by 8 of 10. P29 reasoned ``since there are special symbols I can call the variable id's with quotation marks''---correctly intuiting that variable ids correspond to LaTeX symbols. P21 noted ``it was very easy to define the variables and use them in formula and render.'' At least half of participants (P48, P17, P45, P57, P29, P14) correctly referenced complex variables like ``$N(t)$'' and ``$\lambda$'' on their first try. P80 initially wrote ``lambda'' but quickly self-corrected to ``\textbackslash lambda.'' Expression highlighting selectors also proved natural, with 7 of 10 authors (P48, P17, P19, P45, P80, P57, P14) successfully labeling an expression on their first attempt.
-
-\emph{Computation semantics and stepping.} The semantics function---plain JavaScript---was well received: accessing variable values was rated ``very intuitive'' by 8 of 10 authors, and expressing computation by 7 of 10. While JavaScript's intuitiveness is unsurprising, the notable finding is how naturally its control flow transferred to structuring computations: \texttt{for} loops for summations (P57: ``Oh, I have to use a for loop---they all need to do the same thing''), \texttt{if} statements for case logic (P45), and local variables for readability. Embedding \texttt{step()} calls within ordinary JavaScript let authors express the \emph{order} and \emph{nesting} of pedagogical steps using familiar sequential structures---rated ``very intuitive'' by 6 of 10, notably lower than LaTeX-based augmentations, suggesting that translating pedagogical intent into sequential code is less immediately transparent. P48 noted ``placing steps [is] pretty intuitive because [it] follows how your brain thinks about math expressions,'' and P57 observed ``once the template of the formula was setup, writing the steps was fast.''
-
-
-\subsubsection{Design Gaps}\label{design-gaps}
-
-Our study also revealed several gaps in Delta's current design that future iterations should address.
-
-\paragraph{G1: Variable disambiguation for repeated symbols.}
-When a variable symbol appears multiple times in a formula---as $t$ does in $N(t) = N_0 \cdot e^{-\lambda t}$---authors struggled to control which occurrence receives a label or interaction. In T1, 5 authors (P14, P17, P19, P29, P48) expressed frustration or surprise that the $t$ inside $N(t)$ was labeled rather than the standalone $t$ in the exponent. P48 and P19 wished the label would appear at the rightmost $t$. P48 and P14 discovered a workaround: using a space character in the variable key (e.g., \texttt{" t"}) to target a specific occurrence. While effective at labeling the rightmost $t$, this workaround is shown to be fragile when P14 later encountered a NaN error because his semantics referenced \texttt{vars.t} rather than \texttt{vars[" t"]}, creating a mismatch between the display workaround and the computation. This gap points to a need for explicit occurrence selection in the variable declaration, such as an index or a selector that specifies which occurrence of a symbol in the LaTeX should be bound to a given variable. \andrew{either skip or greatly shorten. can point out that FFL already provides a solution to this, could be added to Delta.}
-
-\paragraph{G2: Stepping requires multiple non-obvious enabling steps.}
-Activating the step-through feature requires three actions: setting \texttt{stepping: true} in the configuration, adding \texttt{step()} calls in the semantics function, and rendering a \texttt{StepControl} component in the page. Omitting any one of these produces no visible error---the formula simply renders without steps. A few people where stuck due to this error (P80, P11, P21). P80 spent over 9 minutes wondering ``I'm confused why there's no steps showing'' before discovering he had forgotten \texttt{stepping: true}. P11 became confused when he added \texttt{stepping: true} and semantics but saw no labels, because he had not yet added any step calls or the \texttt{StepControl} component. This pattern suggests that the stepping feature's activation feature should be simplified to require less spread-out actions from the author. \andrew{great. should be related back to closeness of mapping, as perhaps problem to be solved.}
-
-\paragraph{G3: Lack of flexibility.}
-Across both tasks, the holistic items---``getting the interactive formula working as desired'' (Task~1; Figure~\ref{fig:obs-intuitiveness}) and ``getting the formula walkthrough working as desired'' (Task~2; Figure~\ref{fig:obs-intuitiveness})---received the lowest intuitiveness ratings but notably more moderate difficulty ratings. This suggests that the mental model required to plan and assemble the full specification was not immediately obvious if the author thinks differently about the design of the artifact they are trying to create. \andrew{disagreed. unless people told us mental model was not obvious I think we have to be a bit more conservative in our interpretation. Looks to me like --- individual constructs and overall process were largely intuitive, particularly for the essential features; individual step constructs also generally majority intuitive, though had enough paper cuts that participants were more muted about intuitiveness of overall process.} For instance, the design of parts of the DSL are seen as overly arbitrary to certain authors (P17, P11, P29). P17 reported confusion about whether information should be placed as a description or as a label, suggesting that the conceptual distinction between these two annotation types could be made clearer \andrew{bunch up with problems from G2 of hidden dependencies and relationships between parts of the spec}. P29 initially expected the stepping feature to substitute values directly into the formula rather than adding labels alongside it---a conceptual mismatch that took time to resolve. \andrew{what about P11?}
-
-\andrew{* Surprised not to see a review of which features users described as intuitive/difficult or not from \url{https://docs.google.com/forms/d/11FhAz5XOvg6hoFMkkGnGnVC8i0hsC4SUu_cfpAU0Qro/edit} and \url{https://docs.google.com/forms/d/1QKQAuVK4n1TfG5WY9s85bgz15y_3ULKqdZwL_tGajoQ/edit}. Can you do the analysis and add the counts?}
-
-\andrew{* also could be nice to analyze the final questionnaire, where people compare to React in terms of naturalness. Should indicate --- React regularly reported as mapping less well to their conception than Delta, and cited reasons why (when they're not vague)}
-
-\andrew{* You spent 10h watching people Delta, what evidence from that do you have that the individual constructs were usable? Is there anything you can say along the lines of that in general authors did not struggle, but unless noted their usage of the various features was routine and quick? Not sure if that's accurate... but it's weird to have this super detailed study and qual. analysis and almost no observations in favor of the constructs if they were indeed easy to use.}
+We saw two recurring gaps. The first was trouble selecting the right instance of a variable when it appeared multiple times in a formula (5 participants). This problem has a syntactical solution in FFL~\cite{Wu2023-xc} which could be ported to Delta. The second gap is that  stepping requires setting a modal flag. 3 participants got stuck when they forgot to set the flag. One solution could be to enable stepping by default as soon steps are added to semantics.

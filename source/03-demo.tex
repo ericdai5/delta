@@ -103,7 +103,7 @@ The \texttt{interaction} fields in the graph spec are optional, and here they al
 
 \paragraph{Simple walkthrough}\label{Average}
 
-Imagine an author wants to describe a formula by guiding someone's attention to different parts, one piece at a time. A special case of this is with formulas that can be described with incremental calculations. For instance, average function $\mu = \frac{1}{n} \sum_{i=1}^{n} X_i$ could be shown as incrementally adding up summands and then dividing by $n$. For cases like these, Delta lets authors provide explanations as series of \textbf{\emph{steps}}. These are inserted into the semantics, as the JavaScript function already support sequence and iteration, and sequence will sometimes benefit from being aligned with simulated calculation. For instance, into this part of the average computation (sum shown):
+Imagine an author wants to describe a formula by guiding someone's attention to different parts, one piece at a time. A special case of this is with formulas that can be described with incremental calculations. For instance, average function $\mu = \frac{1}{n} \sum_{i=1}^{n} X_i$ could be shown as incrementally adding up summands and then dividing by $n$. For cases like these, Delta lets authors provide explanations as series of \textbf{\emph{steps}}. These are inserted into the semantics, as the JavaScript function already supports sequence and iteration, and sequence will sometimes benefit from being aligned with simulated calculation. For instance, into this part of the average computation (sum shown):
 
 \begin{figure}[t]
   \includegraphics[width=\columnwidth]{fig/demo-2.png}
@@ -144,4 +144,4 @@ for (var i = 0; i < vars.n; i++) {
 \end{lstlisting}
 \end{tcolorbox}
 
-This results in labels that shown at each stage of the walkthrough, assembled into a walkthrough that can be walked forward and back. Labels can include values calculated values (Figure~\ref{fig:demo-2}). An arbitrary number of steps can be added, and they appear in the order of the walkthrough in the same order they were encountered when executing the semantics function.
+This results in labels that shown at each stage of the walkthrough, assembled into a walkthrough that can be walked forward and back. Labels can include calculated values (Figure~\ref{fig:demo-2}). An arbitrary number of steps can be added, and they appear in the order of the walkthrough in the same order they were encountered when executing the semantics function.

@@ -1,6 +1,6 @@
 \newif\ifreview
-% \newif\ifpreprint
-% \newif\ifauthorversion
+\newif\ifpreprint
+\newif\ifauthorversion
 
 \reviewtrue
 % \preprinttrue
@@ -54,7 +54,7 @@
 
 % Define code colors
 \definecolor{codegray}{gray}{0.95}
-\definecolor{framecolor}{gray}{0.75}
+\definecolor{framecolor}{gray}{0.85}
 \definecolor{codegreen}{RGB}{0, 128, 0}
 \definecolor{codeblue}{RGB}{0, 0, 200}
 \definecolor{codebrightblue}{RGB}{0, 100, 220}
@@ -75,7 +75,7 @@
   basicstyle=\ttfamily\fontsize{7.5}{7.5}\selectfont,
   keywordstyle=\color{codeblue},
   keywordstyle=[2]\color{codepurple},
-  keywordstyle=[3]\color{codebrightblue},
+keywordstyle=[3]\color{codebrightblue},
   keywordstyle=[4]\color{codeorange},
   stringstyle=\color{codegreen},
   commentstyle=\color{gray},
@@ -114,7 +114,7 @@
     colframe=framecolor,
     width=\linewidth,
     boxrule=0.5pt,
-    arc=4pt,
+    arc=5pt,
     left=4pt, right=4pt, top=4pt, bottom=4pt,
     fontupper=\ttfamily\small,
     before skip=4pt, after skip=4pt,
@@ -125,7 +125,7 @@
   colframe=framecolor,
   colback=white,
   boxrule=0.5pt,
-  arc=4pt,
+  arc=5pt,
   left=6pt, right=6pt,
   top=4pt, bottom=4pt,
   before skip=4pt, after skip=4pt,
@@ -146,19 +146,24 @@
     Bib\TeX}}}
 
 
+\newcommand\andrew[1]{\textcolor{andrewpurple}{Andrew: #1}}
 \newcommand{\hita}[1]{\textcolor{orange}{[HITA: #1]}}
-
-
-\newcommand{\xiaorui}[1]{\textcolor{red}{\textbf{[XIAORUI: #1]}}}
+\newcommand{\eric}[1]{\textcolor{orange}{[ERIC: #1]}}
+\newcommand{\xiaorui}[1]{\textcolor{red}{[XIAORUI: #1]}}
+\newcommand{\jessica}[1]{\textcolor{red}{[JESSICA: #1]}}
 \newcommand{\jeff}[1]{\textcolor{blue}{[JEFF: #1]}}
+\newcommand{\litao}[1]{\textcolor{blue}{[LITAO: #1]}}
+\newcommand{\marti}[1]{\textcolor{blue}{[MARTI: #1]}}
+
+
 
 
 %% Rights management information.
-\copyrightyear{2023}
-\acmYear{2023}
+\copyrightyear{2026}
+\acmYear{2026}
 \setcopyright{rightsretained}
-\acmConference[UIST '23]{The 36th Annual ACM Symposium on User Interface Software and Technology}{October 29-November 1, 2023}{San Francisco, CA, USA}
-\acmBooktitle{The 36th Annual ACM Symposium on User Interface Software and Technology (UIST '23), October 29-November 1, 2023, San Francisco, CA, USA}
+\acmConference[UIST '26]{The 39th Annual ACM Symposium on User Interface Software and Technology}{November 2-November 5, 2026}{Detroit, MI, USA}
+\acmBooktitle{The 39 Annual ACM Symposium on User Interface Software and Technology (UIST '26), November 2-November 5, 2026, Detroit, MI, USA}
 \acmDOI{10.1145/3586183.3606731}
 \acmISBN{979-8-4007-0132-0/23/10}
 
@@ -203,7 +208,7 @@
 
 \begin{document}
 
-\title[Short title]{Delta: A DSL for Enlivening Typeset Formulas with Interactive Explanations}
+\title[Short title]{Delta: A DSL for Enlivening Typeset Formulas \\ with Interactive Explanations}
 
 \input{andrew_macros}
 
@@ -261,19 +266,18 @@
 %%
 %% Keywords. The author(s) should pick words that accurately describe
 %% the work being presented. Separate the keywords with commas.
-\keywords{interactive formulas, synchronized visualizations, direct manipulation, step-through computation, declarative configuration, interactive typesetting}
+\keywords{interactive formulas, synchronized visualizations, walkthroughs, domain-specific languages, interactive documents, typesetting}
 
 \begin{teaserfigure}
   \includegraphics[width=\textwidth]{fig/teaser.png}
-  The teaser image goes here.
   \vspace{-1ex}
-  \caption{A teaser figure. \normalfont If you are working on a systems paper, you should have a teaser figure here. Teaser figures (1) show the interface in a legible way and (2) need to clearly convey your main conceptual contribution. This is often by cuing up your system on a key use case, and adding appropriate cuing to call out those user interface elements that are central to your conceptual contribution. This caption should express the conceptual contributions in a way that someone could understand even if they didn't read any of the rest of the paper. The style format we tend to use in our captions is first sentence bolded, following sentences unbolded. Usually we add a bit of \texttt{vspace} above and below this caption to make it visually associate more strongly with the image than with the abstract below it.}
+  \caption{\textbf{Delta is a DSL for enlivening typeset formulas with interactive explanations.} \normalfont The examples above demonstrate the range of interactions one can implement with Delta, from basic variable scrubbing (1) to systems of formulas (2), graphical equations (3), and linked interactive visuals (4). See Section~\ref{Gallery} for detailed descriptions of each example.}
   \vspace{2ex}
   \Description{Add your accessibility descriptions to the caption here.}
   \label{fig:teaser}
 \end{teaserfigure}
 
-\received[Revised]{29 July 2023}
+\received[Revised]{31 March 2026}
 % \received[revised]{12 March 2009}
 % \received[accepted]{5 June 2009}
 
@@ -285,7 +289,7 @@
 \fi
 \input{01-intro}
 \input{02-relatedwork}
-\input{source/03-formative}
+\input{03-formative}
 \input{03-demo}
 \input{04-system}
 \input{05-implementation}

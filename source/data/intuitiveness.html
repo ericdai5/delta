@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Self-Reported Intuitiveness</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+          sans-serif;
+        background: #fff;
+        padding: 32px;
+      }
+      .wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .export-btn {
+        display: block;
+        margin: 24px auto 0;
+        padding: 8px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: #f8f8f8;
+      }
+      .export-btn:hover {
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <svg id="chart" xmlns="http://www.w3.org/2000/svg"></svg>
+      <button class="export-btn" id="exportBtn">Export as PNG</button>
+    </div>
+
+    <script>
+      const N = 10;
+      const colors = [
+        "#004ec2",
+        "#1f78eb",
+        "#4a5d74",
+        "#f86416",
+        "#9a0008",
+        "#f0f0f0",
+      ];
+      const scaleLabels = [
+        "Very intuitive",
+        "Somewhat intuitive",
+        "Neither intuitive\nnor unintuitive",
+        "Somewhat unintuitive",
+        "Very unintuitive",
+        "Did not do",
+      ];
+
+      const task1 = {
+        title: "Task 1: Radioactive Decay",
+        names: [
+          "Create static formula",
+          "Variable selector",
+          "Variable label",
+          "Format display value",
+          "Make draggable",
+          "Semantics function",
+          "Access variable value",
+          "Set variable value",
+          "Get formula\nworking as intended",
+        ],
+        counts: [
+          [10, 0, 0, 0, 0, 0],
+          [6, 4, 0, 0, 0, 0],
+          [10, 0, 0, 0, 0, 0],
+          [6, 2, 2, 0, 0, 0],
+          [8, 1, 1, 0, 0, 0],
+          [7, 2, 1, 0, 0, 0],
+          [8, 0, 2, 0, 0, 0],
+          [7, 2, 1, 0, 0, 0],
+          [4, 5, 1, 0, 0, 0],
+        ],
+      };
+
+      const task2 = {
+        title: "Task 2: Expected Value",
+        names: [
+          "Place step in semantics",
+          "Description (text)",
+          "Description (text+value)",
+          "Description (value)",
+          "Label variable (text)",
+          "Label variable (text+value)",
+          "Label variable (value)",
+          "Label expression (text)",
+          "Label expression (text+value)",
+          "Label expression (value)",
+          "Get walkthrough\nworking as intended",
+        ],
+        counts: [
+          [6, 3, 0, 1, 0, 0],
+          [8, 0, 2, 0, 0, 0],
+          [7, 0, 1, 1, 0, 0],
+          [6, 1, 1, 1, 0, 0],
+          [6, 0, 4, 0, 0, 0],
+          [4, 1, 4, 0, 0, 0],
+          [6, 1, 3, 0, 0, 0],
+          [6, 0, 2, 1, 0, 0],
+          [5, 1, 2, 1, 0, 0],
+          [5, 1, 3, 0, 0, 0],
+          [2, 2, 5, 0, 1, 0],
+        ],
+      };
+
+      const cfg = {
+        labelW: 340,
+        barMaxW: 320,
+        barH: 26,
+        rowGap: 5,
+        sectionGap: 36,
+        titleFontSize: 23,
+        subtitleFontSize: 21,
+        labelFontSize: 21,
+        barFontSize: 20,
+        legendFontSize: 20,
+        padL: 10,
+        padT: 10,
+      };
+
+      function buildChart() {
+        const svg = document.getElementById("chart");
+        const ns = "http://www.w3.org/2000/svg";
+        const dndOutline = "#9a9a9a";
+        const dndStrokeW = 1;
+        let y = cfg.padT;
+
+        // Main title
+        const title = document.createElementNS(ns, "text");
+        title.setAttribute("x", cfg.padL + (cfg.labelW + cfg.barMaxW) / 2);
+        title.setAttribute("y", y + cfg.titleFontSize);
+        title.setAttribute("text-anchor", "middle");
+        title.setAttribute("font-size", cfg.titleFontSize);
+        title.setAttribute("font-weight", "bold");
+        title.setAttribute(
+          "font-family",
+          "Georgia, Times New Roman, Times, serif",
+        );
+        title.textContent = "Self-Reported Intuitiveness (n = 10)";
+        svg.appendChild(title);
+        y += cfg.titleFontSize + 24;
+
+        function drawSection(task) {
+          // Subtitle
+          const sub = document.createElementNS(ns, "text");
+          sub.setAttribute("x", cfg.padL + (cfg.labelW + cfg.barMaxW) / 2);
+          sub.setAttribute("y", y + cfg.subtitleFontSize);
+          sub.setAttribute("text-anchor", "middle");
+          sub.setAttribute("font-size", cfg.subtitleFontSize);
+          sub.setAttribute("font-weight", "bold");
+          sub.setAttribute(
+            "font-family",
+            "Georgia, Times New Roman, Times, serif",
+          );
+          sub.textContent = task.title;
+          svg.appendChild(sub);
+          y += cfg.subtitleFontSize + 14;
+
+          task.names.forEach((name, i) => {
+            const lines = name.split("\n");
+            const lh = cfg.labelFontSize * 1.12;
+
+            const lbl = document.createElementNS(ns, "text");
+            lbl.setAttribute("x", cfg.padL + cfg.labelW - 10);
+            lbl.setAttribute("text-anchor", "end");
+            lbl.setAttribute("font-size", cfg.labelFontSize);
+            lbl.setAttribute("font-weight", "medium");
+            lbl.setAttribute(
+              "font-family",
+              "Georgia, Times New Roman, Times, serif",
+            );
+            svg.appendChild(lbl);
+            if (lines.length === 1) {
+              lbl.setAttribute("y", y + cfg.barH / 2 + 5);
+              lbl.textContent = lines[0];
+            } else {
+              const startY = y + cfg.labelFontSize * 0.82;
+              lines.forEach((line, lineIdx) => {
+                const tspan = document.createElementNS(ns, "tspan");
+                tspan.setAttribute("x", cfg.padL + cfg.labelW - 10);
+                if (lineIdx === 0) {
+                  tspan.setAttribute("y", startY);
+                } else {
+                  tspan.setAttribute("dy", lh);
+                }
+                tspan.textContent = line;
+                lbl.appendChild(tspan);
+              });
+            }
+
+            // Bar segments (unfilled width = implicit "did not do")
+            let x = cfg.padL + cfg.labelW;
+            const dndJ = colors.length - 1;
+
+            function drawSeg(x0, count, j) {
+              if (count <= 0) return x0;
+              const w = (count / N) * cfg.barMaxW;
+              const isDidNotDo = j === dndJ;
+              const rect = document.createElementNS(ns, "rect");
+              if (isDidNotDo) {
+                const inset = dndStrokeW / 2;
+                rect.setAttribute("x", x0 + inset);
+                rect.setAttribute("y", y + inset);
+                rect.setAttribute("width", Math.max(0, w - dndStrokeW));
+                rect.setAttribute("height", Math.max(0, cfg.barH - dndStrokeW));
+                rect.setAttribute("fill", colors[j]);
+                rect.setAttribute("stroke", dndOutline);
+                rect.setAttribute("stroke-width", String(dndStrokeW));
+              } else {
+                rect.setAttribute("x", x0);
+                rect.setAttribute("y", y);
+                rect.setAttribute("width", w);
+                rect.setAttribute("height", cfg.barH);
+                rect.setAttribute("fill", colors[j]);
+                rect.setAttribute("stroke", "white");
+                rect.setAttribute("stroke-width", "1");
+              }
+              svg.appendChild(rect);
+
+              const pct = (count / N) * 100;
+              if (pct >= 8 || (isDidNotDo && count > 0)) {
+                const txt = document.createElementNS(ns, "text");
+                txt.setAttribute("x", x0 + w / 2);
+                txt.setAttribute("y", y + cfg.barH / 2 + 5);
+                txt.setAttribute("text-anchor", "middle");
+                txt.setAttribute("font-size", cfg.barFontSize);
+                txt.setAttribute("font-weight", "bold");
+                txt.setAttribute(
+                  "font-family",
+                  "Georgia, Times New Roman, Times, serif",
+                );
+                txt.setAttribute("fill", isDidNotDo ? "#222222" : "#fff");
+                txt.textContent = count;
+                svg.appendChild(txt);
+              }
+              return x0 + w;
+            }
+
+            task.counts[i].forEach((count, j) => {
+              x = drawSeg(x, count, j);
+            });
+            const rowSum = task.counts[i].reduce((a, b) => a + b, 0);
+            if (rowSum < N) {
+              x = drawSeg(x, N - rowSum, dndJ);
+            }
+
+            y += cfg.barH + cfg.rowGap;
+          });
+        }
+
+        drawSection(task1);
+        y += cfg.sectionGap;
+        drawSection(task2);
+        y += 44;
+
+        // Legend
+        const legendLabels = [
+          "Very intuitive",
+          "Somewhat intuitive",
+          "Neither intuitive nor unintuitive",
+          "Somewhat unintuitive",
+          "Very unintuitive",
+          "Did not do",
+        ];
+        const swatchW = 16,
+          swatchH = 16,
+          colGap = 24,
+          rowGapLeg = 8;
+        const tempCanvas = document.createElement("canvas").getContext("2d");
+        tempCanvas.font =
+          cfg.legendFontSize + "px Georgia, Times New Roman, serif";
+        const itemWidths = legendLabels.map(
+          (l) => swatchW + 6 + tempCanvas.measureText(l).width,
+        );
+
+        // Row 0: intuitive; row 1: unintuitive; row 2: neither + did not do
+        const rows = [
+          [0, 1],
+          [3, 4],
+          [2, 5],
+        ];
+        const rowWidths = rows.map(
+          (r) =>
+            r.reduce((s, i) => s + itemWidths[i], 0) + colGap * (r.length - 1),
+        );
+        const maxRowW = Math.max(...rowWidths);
+        const centerX = cfg.padL + (cfg.labelW + cfg.barMaxW) / 2;
+
+        rows.forEach((rowItems) => {
+          const rowW =
+            rowItems.reduce((s, i) => s + itemWidths[i], 0) +
+            colGap * (rowItems.length - 1);
+          let lx = centerX - rowW / 2;
+          rowItems.forEach((j) => {
+            const isDidNotDo = j === colors.length - 1;
+            const rect = document.createElementNS(ns, "rect");
+            rect.setAttribute("x", lx);
+            rect.setAttribute("y", y);
+            rect.setAttribute("width", swatchW);
+            rect.setAttribute("height", swatchH);
+            rect.setAttribute("rx", "2");
+            rect.setAttribute("fill", colors[j]);
+            if (isDidNotDo) {
+              const inset = dndStrokeW / 2;
+              rect.setAttribute("x", lx + inset);
+              rect.setAttribute("y", y + inset);
+              rect.setAttribute("width", swatchW - dndStrokeW);
+              rect.setAttribute("height", swatchH - dndStrokeW);
+              rect.setAttribute("stroke", dndOutline);
+              rect.setAttribute("stroke-width", String(dndStrokeW));
+            }
+            svg.appendChild(rect);
+
+            const txt = document.createElementNS(ns, "text");
+            txt.setAttribute("x", lx + swatchW + 6);
+            txt.setAttribute("y", y + swatchH / 2 + 5);
+            txt.setAttribute("font-size", cfg.legendFontSize);
+            txt.setAttribute(
+              "font-family",
+              "Georgia, Times New Roman, Times, serif",
+            );
+            txt.textContent = legendLabels[j];
+            svg.appendChild(txt);
+
+            lx += itemWidths[j] + colGap;
+          });
+          y += swatchH + rowGapLeg;
+        });
+        y += 12;
+
+        const chartW = cfg.padL + cfg.labelW + cfg.barMaxW + 20;
+        const legendEnd = centerX + maxRowW / 2 + 20;
+        const totalW = Math.max(chartW, legendEnd);
+        svg.setAttribute("width", totalW);
+        svg.setAttribute("height", y);
+        svg.setAttribute("viewBox", `0 0 ${totalW} ${y}`);
+        svg.style.width = totalW + "px";
+        svg.style.height = y + "px";
+      }
+
+      buildChart();
+
+      document.getElementById("exportBtn").addEventListener("click", () => {
+        const svg = document.getElementById("chart");
+        const svgData = new XMLSerializer().serializeToString(svg);
+        const svgBlob = new Blob([svgData], {
+          type: "image/svg+xml;charset=utf-8",
+        });
+        const url = URL.createObjectURL(svgBlob);
+
+        const scale = 3;
+        const w = svg.viewBox.baseVal.width;
+        const h = svg.viewBox.baseVal.height;
+
+        const canvas = document.createElement("canvas");
+        canvas.width = w * scale;
+        canvas.height = h * scale;
+        const ctx = canvas.getContext("2d");
+
+        const img = new Image();
+        img.onload = () => {
+          ctx.fillStyle = "#fff";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          URL.revokeObjectURL(url);
+
+          const link = document.createElement("a");
+          link.download = "intuitiveness.png";
+          link.href = canvas.toDataURL("image/png");
+          link.click();
+        };
+        img.src = url;
+      });
+    </script>
+  </body>
+</html>

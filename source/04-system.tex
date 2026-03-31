@@ -35,18 +35,22 @@ A philosophy behind our approach to synchronization is to, across contexts, leve
 
 Delta is able to support a broad array of interactive formulas for a variety of contexts. Here we demonstrate this by reviewing examples we have created to exercise the system. They are depicted in Figure~\ref{fig:teaser}. With each one, we describe the new design patterns introduced and new language constructs used.
 
-\paragraph{Kinetic Energy (1).} Our basic running example, where a formula serves as a calculator with variables as inputs controlled by scrubbing and direct editing. Uses \emph{formula}, \emph{variable specifications}, \emph{labels}, \emph{inline values}, \emph{drag} and \emph{scrub} interactions, \emph{precision}, and \emph{semantics}.
+\medskip
 
-\paragraph{Probability Operations (2).} Two related formulas---$P(A \cap \neg B) = P(A) - P(A \cap B)$ and $P(B \cap \neg A) = P(B) - P(A \cap B)$---share a common synchronized variable $P(A \cap B)$. Scrubbing the intersection probability simultaneously updates both equations. Synchronization is coordinated by a \emph{shared variable ID} between formulas. 
+\emph{Kinetic Energy (1).} Our basic running example, where a formula serves as a calculator with variables as inputs controlled by scrubbing and direct editing. Uses \emph{formula}, \emph{variable specifications}, \emph{labels}, \emph{inline values}, \emph{drag} and \emph{scrub} interactions, \emph{precision}, and \emph{semantics}.
 
-\paragraph{Exponential Decay (3).} Dynamic visuals in the formula: glow of radiation signs and speed of clock ticking are influenced by current variable values. Uses parametric SVG \emph{graphical representations}.
+\emph{Probability Operations (2).} Two related formulas---$P(A \cap \neg B) = P(A) - P(A \cap B)$ and $P(B \cap \neg A) = P(B) - P(A \cap B)$---share a common synchronized variable $P(A \cap B)$. Scrubbing the intersection probability simultaneously updates both equations. Synchronization is coordinated by a \emph{shared variable ID} between formulas. 
 
-\paragraph{Arithmetic Mean (4).} Our basic example walkthrough that shows accumulation of a sum in computing a mean. Uses \emph{steps}, which provide \emph{descriptions} and \emph{labels} for expressions at each step.
+\emph{Exponential Decay (3).} Dynamic visuals in the formula: glow of radiation signs and speed of clock ticking are influenced by current variable values. Uses parametric SVG \emph{graphical representations}.
 
-\paragraph{Linear Combination of Vectors (5).} Computation involving vectors, where scrubbing over scalar coefficients $k_1$ and $k_2$ immediately updates the result vector. Uses same constructs as (1).
+\emph{Arithmetic Mean (4).} Our basic example walkthrough that shows accumulation of a sum in computing a mean. Uses \emph{steps}, which provide \emph{descriptions} and \emph{labels} for expressions at each step.
 
-\paragraph{Matrix Multiplication (6).} A $3 \times 3$ matrix product allows readers to scrub individual matrix entries and observe the updated values. Uses same constructs as (1), along with \emph{custom} external buttons (``Identity Matrix A,'' ``Reset All to Zero'') that provide meaningful ways to simultaneously set groups of variables.
+\emph{Linear Combination of Vectors (5).} Computation involving vectors, where scrubbing over scalar coefficients $k_1$ and $k_2$ immediately updates the result vector. Uses same constructs as (1).
 
-\paragraph{Harmonic Motion (7).} The wave equation paired with a synchronized time-series plot. Dynamic iconic glyphs above each parameter---a stretched wave for amplitude, compressed oscillations for frequency, a phase-shifted curve for $\phi$---provide visual mnemonics. Dragging the point updates $t$ and dragging the curve updates the amplitude variable in the formula. Uses \emph{graphics} in \emph{labels} with linked \emph{2D graph} and \emph{interaction} controls mapping \emph{drags} to variable changes.
+\emph{Matrix Multiplication (6).} A $3 \times 3$ matrix product allows readers to scrub individual matrix entries and observe the updated values. Uses same constructs as (1), along with \emph{custom} external buttons (``Identity Matrix A,'' ``Reset All to Zero'') that provide meaningful ways to simultaneously set groups of variables.
 
-\paragraph{Gradient Descent (8).} Gradient descent is demonstrated with a linked loss function $L = (y - w_t \cdot x)^2$, weight update rule $w_{t+1} = w_t - \alpha \cdot (-2x(y - w_t \cdot x))$, and loss landscape visualization. As readers step through iterations, points and arrows accumulate on the graph tracing the optimization path. Dragging the learning rate $\alpha$ or target $y$ triggers re-execution of all steps, updating formula annotations and graph elements. Uses nearly all features. Semantics provide discrete \emph{steps} for the plot.
+\emph{Harmonic Motion (7).} The wave equation paired with a synchronized time-series plot. Dynamic iconic glyphs above each parameter---a stretched wave for amplitude, compressed oscillations for frequency, a phase-shifted curve for $\phi$---provide visual mnemonics. Dragging the point updates $t$ and dragging the curve updates the amplitude variable in the formula. Uses \emph{graphics} in \emph{labels} with linked \emph{2D graph} and \emph{interaction} controls mapping \emph{drags} to variable changes.
+
+\emph{Gradient Descent (8).} Gradient descent is demonstrated with a linked loss function $L = (y - w_t \cdot x)^2$, weight update rule $w_{t+1} = w_t - \alpha \cdot (-2x(y - w_t \cdot x))$, and loss landscape visualization. As readers step through iterations, points and arrows accumulate on the graph tracing the optimization path. Dragging the learning rate $\alpha$ or target $y$ triggers re-execution of all steps, updating formula annotations and graph elements. Uses nearly all features. Semantics provide discrete \emph{steps} for the plot.
+
+\medskip
