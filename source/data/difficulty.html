@@ -44,12 +44,12 @@
     <script>
       const N = 10;
       const colors = [
-        "#004ec2",
-        "#1f78eb",
-        "#4a5d74",
-        "#f86416",
-        "#9a0008",
-        "#f0f0f0",
+        "#9ec8ff",
+        "#b5deff",
+        "#c8d8ea",
+        "#ffd4b8",
+        "#ffc8d0",
+        "#ffffff",
       ];
       const scaleLabels = [
         "Very easy",
@@ -237,12 +237,11 @@
                 txt.setAttribute("y", y + cfg.barH / 2 + 5);
                 txt.setAttribute("text-anchor", "middle");
                 txt.setAttribute("font-size", cfg.barFontSize);
-                txt.setAttribute("font-weight", "bold");
                 txt.setAttribute(
                   "font-family",
                   "Georgia, Times New Roman, Times, serif",
                 );
-                txt.setAttribute("fill", isDidNotDo ? "#222222" : "#fff");
+                txt.setAttribute("fill", "#000");
                 txt.textContent = count;
                 svg.appendChild(txt);
               }
