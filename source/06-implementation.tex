@@ -1,6 +1,6 @@
 \section{Implementation}
 
-Delta is a JSON DSL with an accompanying React component library that propagates state across components. One of the intents is of Delta is to take care of common logistical aspects of making formulas interactive so that authors can instead focus on presentation. We describe those aspects here. 
+Delta is a JSON DSL with an accompanying React component library that propagates state across components. One of the intents of Delta is to take care of common logistical aspects of making formulas interactive so that authors can instead focus on presentation. We describe those aspects here. 
 
 \paragraph{Parsing and rendering}
 Delta parses and augments formulas in a manner largely consistent with other recent formula augmentation tools~\cite{Wu2023-xc,tao2025freeform}. It leverages the parser from KaTeX~\cite{tool:katex}, a widely-used LaTeX web formula renderer, to produce an AST of a formula's LaTeX. On this AST, it matches specified variables and then wraps them with macros that will wrap those variables in CSS IDs at render time. If a spec asks to replace a variable with the value, Delta replaces the variable node with a value node. Delta serializes the parse tree into LaTeX and then passes it to MathJax to render it to HTML. A re-parse and re-render of the formula is invoked whenever the contents change, i.e., whenever a substituted value is updated. Labels are rendered as elements on a ReactFlow canvas and spaced using a custom collision resolution algorithm.

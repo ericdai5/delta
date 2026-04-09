@@ -6,14 +6,14 @@
   \label{fig:demo-1}
 \end{figure*}
 
-Delta is designed to provide a low threshold and high ceiling for adding interactivity to formulas in web documents. We illustrate the low threshold with a walkthrough of creating the simplest augmentations in Section~\ref{Basics}, describe the full set of constructs and their design philosophy in Section~\ref{Language}, and hint at the high ceiling by reviewing a gallery of examples in Section~\ref{Gallery}.
+Delta is designed to provide a low threshold and high ceiling for adding interactivity to formulas in web documents. We illustrate the low threshold with a walkthrough of creating the simplest augmentations in Section~\ref{Basics}, describe the full set of constructs and their design philosophy Section~\ref{Language}, and hint at the high ceiling by reviewing a gallery of examples we created with Delta in Section~\ref{Gallery}.
 
 \subsection{Basics}\label{Basics}
 
 To author interactive formulas in Delta, an author writes a \texttt{Config}, an object that holds the main constructs of the language. An author defines \emph{formulas} in typical LaTeX, selects and attaches interaction properties to \emph{variables}, and attaches \emph{semantics} via a JavaScript function. Optionally, they provide \emph{connections} to other visuals and break down explanations into \emph{steps}. We introduce each construct as it arises in example tasks below.
 
 \subsubsection{Simple calculation}
-Imagine an author making an interactive calculator from the physics formula $K = \frac{1}{2}mv^2$. Their intent is to label the major variables, let readers play with mass ($m$) and velocity ($v$) to see how kinetic energy ($K$) changes, and clarify relationships in a graph (end goal in Figure~\ref{fig:demo-1}). The author first defines the base \textbf{\emph{formula}} in standard LaTeX:
+Imagine an author making an interactive calculator from the physics formula, $K = \frac{1}{2}mv^2$. Their intent is to label the major variables, let readers play with different values of mass ($m$) and velocity ($v$) to see how kinetic energy ($K$) changes, and clarify the relationships in a graph (end goal in Figure~\ref{fig:demo-1}). The author first defines the base \textbf{\emph{formula}} in standard LaTeX:
 
 \begin{tcolorbox}[codebox]
 \begin{lstlisting}[style=jsstyle]
@@ -25,9 +25,7 @@ const kineticConfig: Config = {
 \end{lstlisting}
 \end{tcolorbox}
 
-Macro commands are escaped (``\texttt{\textbackslash{}\textbackslash{}}'') since they appear in a JavaScript string. The \texttt{id} serves as a handle for inserting this formula into a Delta React component. The remaining fields of the \texttt{Config}---\texttt{variables}, \texttt{semantics}, and optional graph and stepping fields---are added incrementally as the author builds up interactivity.
-
-Next, the author sketches out the basics of interaction by selecting key \textbf{\emph{variables}} with descriptive labels and recommended default values:
+Macro commands are escaped (``\texttt{\textbackslash{}\textbackslash{}}'') since they appear in a JavaScript string. The `id' serves as a handle for inserting this formula into a Delta React component, and \texttt{Config} houses all specification of the formula's behavior. Next, the author sketches out the basics of interaction by selecting key \textbf{\emph{variables}} with descriptive labels (Figure~\ref{fig:demo-1}.1) and recommended default values:
 
 \begin{tcolorbox}[codebox]
 \begin{lstlisting}[style=jsstyle]
@@ -41,11 +39,7 @@ const kineticConfig: Config = { ...
 \end{lstlisting}
 \end{tcolorbox}
 
-To refer to a variable, the author writes its literal form from the original LaTeX. Variables can be multi-letter expressions; here they are just individual letters.
-
-To use the formula in a React document, the author wraps their content in a \textbf{\emph{provider}} component that accepts the configuration: \verb|<Provider config={kineticConfig}>|. The provider creates a shared context through which all Delta components---formulas, inline variables, graphs---communicate and stay synchronized.
-
-Placing \verb|<Formula id="kinetic-energy"/>| inside the provider produces a typeset formula with descriptive labels in the margins and starter values for experimentation. Labels are visually linked to expressions; hovering over values highlights the corresponding term in the formula (Figure~\ref{fig:demo-1}.2).
+To refer to a variable, the author writes its literal form from the original LaTeX. Variables can be multi-letter expressions; here they are just individual letters. To use the formula in a React document, the author wraps their content in a \textbf{\emph{provider}} component that accepts the configuration: \verb|<Provider config={kineticConfig}>|. Placing \verb|<Formula id="kinetic-energy"/>| inside the provider produces a typeset formula with descriptive labels in the margins and starter values for experimentation. Labels are visually linked to expressions; hovering over values highlights the corresponding term in the formula (Figure~\ref{fig:demo-1}.2). 
 
 To turn the formula into a calculator, the author defines the \textbf{\emph{semantics}} of the formula. The semantics is a JavaScript function that serves three roles: it \emph{computes} derived variable values from inputs, it can \emph{sample} data points to populate linked graphs, and it can insert \emph{steps} that annotate the formula with labels and descriptions for guided walkthroughs. We start with the simplest use---computation:
 
@@ -57,9 +51,7 @@ semantics: function ({ vars }) {
 \end{lstlisting}
 \end{tcolorbox}
 
-This is a standard JavaScript function doing standard math. The semantics function maps input variables to outputs: the author reads from a \texttt{vars} object and writes to output variables---here, reading \texttt{m} and \texttt{v} to compute \texttt{K}. Variable keys match those defined in the \texttt{variables} spec.
-
-The formula is now interactive (Figure~\ref{fig:demo-1}.3): a reader can click and drag on $m$ and $v$ to change values and see $K$ update live. The author can further configure interaction with a few simple properties---here, allowing free-text input for mass and constraining ranges to sensible values (e.g., no negative masses) (Figure~\ref{fig:demo-1}.4):
+This is a standard JavaScript function doing math. The semantics function maps input variables to outputs: the author reads from a \texttt{vars} object and writes to output variables---here, reading \texttt{m} and \texttt{v} to compute \texttt{K}. Variable keys match those defined in the \texttt{variables} spec. The formula is now interactive (Figure~\ref{fig:demo-1}.3): a reader can click and drag on $m$ and $v$ to change values and see $K$ update live. The author can further configure interaction with a few simple properties---here, allowing free-text input for mass and constraining ranges to sensible values (e.g., no negative masses) (Figure~\ref{fig:demo-1}.4):
 
 \begin{tcolorbox}[codebox]
 \begin{lstlisting}[style=jsstyle]
@@ -71,7 +63,7 @@ v: { name: "Velocity", default: 2,
 \end{tcolorbox}
 
 \subsubsection{Linked visual}
-The author can add \textbf{\textit{connections}} between formulas and other representations elsewhere in the document. Delta provides a dedicated construct for interactive 2D and 3D plots. To create a plot where a user can tinker with values and curves in tandem with the formula, the author adds a graph:
+The author can add \textbf{\textit{connections}} between formulas and other representations elsewhere in the document. Delta provides a dedicated construct interactive 2D and 3D plots. To create a plot where a user can tinker with values and curves in tandem with the formula, the author adds a graph:
 
 \begin{tcolorbox}[codebox]
 \begin{lstlisting}[style=jsstyle]
@@ -90,7 +82,7 @@ graph2d: [{
 \end{lstlisting}
 \end{tcolorbox}
 
-This creates a 2D graph, associates axes with specific variables (\texttt{xAxisVar} with \texttt{v}, \texttt{yAxisVar} with \texttt{K}), and specifies the source of curve points (a sample called \texttt{energy}). Points come from samples collected in the semantics function, where \texttt{sample} records a named data point each time the semantics is evaluated over a range of input values:
+This creates a 2D graph, associates axes with specific variables (\texttt{xAxisVar} with \texttt{v}, \texttt{yAxisVar} with \texttt{K}), and specifies the source of curve points (a sample called \texttt{energy}). Points come from samples collected in the semantics function, where \texttt{sample} records a named set of data points each time the semantics is evaluated over a range of input values:
 
 \begin{tcolorbox}[codebox]
 \begin{lstlisting}[style=jsstyle]
